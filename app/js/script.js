@@ -16,7 +16,59 @@ $(document).ready(function(){
     },function() {
 				$('.cat__el--first').addClass('cat__el--active')
         $(this).find('.cat__el-sub').slideUp(300)
-    });
+	});
+
+	//slider staff
+		/*$('.command-list').slick({
+			slidesToShow: 4,
+			autoplay: false,
+			speed: 500,
+			vertical:false,
+			arrows:false,
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3,
+						infinite: true,
+
+					}
+				},
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2,
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						arrows: false,
+						centerMode: true,
+						centerPadding: '40px',
+						slidesToShow: 1,
+						dots:true
+					}
+				}
+
+		]
+		});
+		$('.card-img__el').click(function(){
+			var current = $(this).data('index');
+			$('.card-img__main').slick('slickGoTo', current);
+
+		});
+		$('.card-img__main-control__el--next').click(function(){
+			$(this).closest(".card-img__main-wrap").find(".card-img__main").slick('slickNext');
+		});
+
+		$('.card-img__main-control__el--prev').click(function(){
+			$(this).closest(".card-img__main-wrap").find(".card-img__main").slick('slickPrev');
+		});
+*/
+	//slider staff===end
 	/* ###### For only ies  ######*/
 	//if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)){
 	//	//code

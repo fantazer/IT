@@ -223,7 +223,8 @@ body
 	background: $blue
 
 .section
-	margin: 60px 0
+	margin: 100px 0
+	position: relative
 .section-title
 	//font-family: Museo
 	font-family: Museo
@@ -270,8 +271,8 @@ body
 	margin-top: auto
 .popular__el__price
 	font-size: 20px
-	color #910085
-	font-family:Roboto
+	color $blue
+	font-family:Museo
 	font-weight:900
 	margin-right: 20px
 //.baner-item__date
@@ -468,5 +469,136 @@ body
 	top calc(50% - 250px)
 	z-index 1
 	//flex(mid)
-.girl
+.advant-img
 	width: 60%
+
+.advant
+	flex(between)
+
+.advant-list
+	width: 40%
+	f()
+	fl()
+	justify-content: center
+.advant-list__el
+	margin-bottom: 30px
+	f()
+	align-items: center
+.advant-list__el-title
+	font-size: 24px
+	font-weight: 700
+	font-family: Museo
+	margin-bottom: 10px
+	color $blue
+.advant-list__el-icon
+	size 100px
+	round()
+	//background: #f2f2f2
+	flex(mid)
+	margin-right: 30px
+	box-shadow 0 1px 10px #d5d4d4
+	.icon
+		size 40px
+		fill $blue
+.advant-list__el-text
+	max-width 300px
+	line-height: 1.6
+	color #979797
+
+.command-el
+	f()
+	justify-content: center
+	tr(all)
+	cp()
+	padding: 20px 10px
+	border-radius 10px
+	//background: #f9f9f9
+	&:hover
+		box-shadow 0 1px 10px #d5d4d4
+.command-el__img
+	size 100px
+	round()
+	bg-full()
+	background-position: center top
+
+.command-el__content
+	//box-shadow 0 1px 10px #d5d4d4
+	padding: 20px
+	width:calc(100% - 120px)
+
+.command-el__title
+	font-size: 18px
+	font-family:Museo
+	margin-bottom: 10px
+	font-weight:700
+	color $blue
+
+.command-el__staff
+	font-family:Museo
+	margin-bottom: 20px
+.command-el__text
+	line-height: 1.6
+	font-size: 12px
+
+.slick-slide
+	margin: 0 10px
+
+.command-list
+	display: grid
+	grid-gap 10px
+	grid-template-columns repeat(3,1fr);
+
+.news-img
+	width: 50%
+
+.news
+	flex(between)
+
+.news-list
+	width: 48%
+	f()
+	fl()
+	justify-content: center
+.news-list__el
+	margin-bottom: 30px
+	f()
+.news-list__el-title
+	font-size: 18px
+	font-weight: 700
+	font-family: Museo
+	margin-bottom: 10px
+	color $blue
+
+.news-list__el-content
+	width: calc(80% - 200px)
+	line-height: 1.6
+	color #979797
+	box-shadow 0 1px 10px #d5d4d4
+	border-radius 10px
+	padding: 20px 20px 20px 40px
+	background: white
+.news-list__el-date
+	fl()
+	background: $blue
+	size 60px
+	flex(mid)
+	round()
+	margin-right: -20px
+	margin-top: -20px
+	z-index 2
+
+.news-list__el-date-val
+	font-size: 18px
+	font-weight:bold
+	margin-bottom: -5px
+	color white
+	font-family:Museo
+
+.news-list__el-date-day
+	text-align: center
+	color white
+	opacity .8
+
+.section-title--blue
+	color $blue
+	border-bottom 1px solid $blue
