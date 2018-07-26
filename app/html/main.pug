@@ -1,0 +1,160 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+.content
+	.content-filter
+	.main-cont
+		.baner
+			//.baner-nav
+				.header-nav-sub-wrap
+					-
+						var items = [
+						'Цифровой бизнес',
+						'Управление развитием',
+						'Бизнес-анализ',
+						'Архитектура',
+						'Разработка',
+						'Тестирование',
+						'Управление сервисами',
+						'Технологии',
+						'Данные и интелект',
+						'Кибер безопасность',
+						'Упарвление рисками',
+						'Упарвление компетенциями',
+						'Прорывные технологии',
+						'Soft-skills'
+						];
+					each item in items
+						.header-nav-sub__el
+							span #{item}
+							+icon("arrow-right","icon")
+			.baner__el(style="background-image:url('img/baner-17.jpg')")
+			.baner-item
+				.baner-item__sub-title курс
+				.baner-item__code MALK
+				.baner-item__title Управление жизненным циклом услуг
+				.baner-item__info Цель курса Управление жизненным циклом услуг на основе ITIL® – дать слушателям навыки поддержки предоставления
+				//	.baner-item__date 24.07
+				.baner-item-footer
+					.baner-item__price 24500 р
+					.baner-item__get записаться
+	.section
+		.main-cont
+			.section-title Категории курсов
+			.cat
+				.cat__el.cat__el--first.cat__el--active
+					.cat__el-icon
+						+icon("arrow-down","icon")
+					//.cat__el-title W
+					.cat__el__code Цифровой бизнес
+					.cat__el__title Управление жизненным циклом услуг
+					.cat__el-sub
+						-
+							var els = [
+							'Основы ITIL®',
+							'Service Desk и процессы оперативного управления ИТ-услугами..',
+							'Проведение изменений в ИТ в соответствии с ITIL®',
+							'Оптимальное проектирование ИТ-услуг в соответствии с ITIL®: инф...',
+							'Управленческие инструменты организации отношений ИТ с бизнесом ...',
+							'Управление жизненным циклом услуг',
+							'Управление ИТ-активами. Основы и практики',
+							'Практические подходы для успешной работы'
+							];
+						each el in els
+							.cat__el-sub-item #{el}
+				-
+					var items = [
+					'Управление развитием',
+					'Бизнес-анализ',
+					'Архитектура',
+					'Разработка',
+					'Тестирование',
+					'Управление сервисами',
+					'Технологии',
+					'Данные и интелект',
+					'Кибер безопасность',
+					'Упарвление рисками',
+					'Упарвление компетенциями',
+					'Прорывные технологии',
+					'Soft-skills'
+					];
+				each item in items
+					.cat__el
+						.cat__el-icon
+							+icon("arrow-down","icon")
+						//.cat__el-title W
+						.cat__el__code #{item}
+						.cat__el__title Управление жизненным циклом услуг
+						.cat__el-sub
+							-
+								var els = [
+								'Основы ITIL®',
+								'Service Desk и процессы оперативного управления ИТ-услугами..',
+								'Проведение изменений в ИТ в соответствии с ITIL®',
+								'Оптимальное проектирование ИТ-услуг в соответствии с ITIL®: инф...',
+								'Управленческие инструменты организации отношений ИТ с бизнесом ...',
+								'Управление жизненным циклом услуг',
+								'Управление ИТ-активами. Основы и практики',
+								'Практические подходы для успешной работы'
+								];
+							each el in els
+								.cat__el-sub-item #{el}
+	.section
+		.main-cont
+			.about
+				.about-info
+					.about-info__title О нашей компании
+					.about-info__text
+						p Компания IT Expert основана в 2002 году и до настоящего времени является лидером на рынке консалтинговых и тренинговых услуг в области ИТ-управления. За 15 лет мы выполнили более 350 консалтинговых и аудиторских ИТ-проектов, а также провели обучение более 30 000 специалистов и руководителей в рамках сертификационных и авторских курсов по методологии ITIL, COBIT, ISO 20000, PRINCE2.
+						p IT Expert – первая российская компания, получившая статус EXIN’s Authorized Examination Centre (AEC) и официального партнера института EXIN (Examination Institute for Information Science, Нидерланды), первый в России партнер GamingWorks.
+						p С марта 2017 года IT Expert – первая в России организация, аккредитованная институтом PEOPLECERT, проводящая обучение по ITIL, и единственный в России провайдер обучения, аккредитованный PEOPLECERT по всем курсам сертификационной схемы ITIL.
+
+				.about-company
+					.about-company-round
+					//img(src="img/main-cert--small.jpg", alt="")
+					img(src="img/group.png", alt="")
+	
+	.section
+		//.main-cont
+		img(src="img/girl.png", alt="").girl
+	.section.section--extend.section--white
+		.main-cont
+			.section-title Популярные курсы
+			.popular
+				-
+					var items = [
+						'SOA',
+						'OSA',
+						'PPO',
+						'MALK',
+						'AGILE',
+						'ITILF',
+						'ITAM',
+						'RSV'
+						];
+				each item in items
+					.popular__el
+						.popular__el-title курс
+						.popular__el__code #{item}
+						.popular__el__title Управление жизненным циклом услуг
+						.star-row
+							+icon("star","icon")
+							+icon("star","icon")
+							+icon("star","icon")
+							+icon("star","icon")
+							+icon("star","icon")
+						.popular__el__info Цель курса Управление жизненным циклом услуг на основе ITIL® – дать слушателям навыки поддержки предоставления
+						//	.popular__el__date 24.07
+						.popular__el-footer
+							.popular__el__price 24500 р
+							//.popular__el__get
+								span +
+								+icon("books-group","icon")
+						.popular__el-val
+							.popular__el-val-el
+								.popular__el-val-icon
+
+								.popular__el-val-text
+
+include ./block_html/_script.pug

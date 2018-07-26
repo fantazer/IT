@@ -1,0 +1,472 @@
+@import 'rupture'
+@import "variable/_function.styl"
+@import "variable/_fonts.styl"
+@import "variable/_ie.styl"
+@import "icon/sprite.css"
+@import "variable/_helper.styl"
+@import "variable/_default.styl"
+@import "variable/_elements.styl"
+@import "variable/_constant.styl"
+@import "../module/**/*"
+
+body
+	@extend .type--main
+	font-family $v-font
+	color $main-text-color
+	line-height 1.2
+	letter-spacing 0.01em
+
+.main-cont
+	center(1200px,10px)
+
+//.header
+//.main-cont
+.header-top
+	padding: 10px 0
+	flex(between)
+.header-top__logo
+	color black
+	font-weight:900
+	//font-family:Roboto
+	font-size: 32px
+.header-top__search
+	width: 50%
+	input
+		width: 100%
+.header-top__nav
+	f()
+	align-items: center
+.header-top__nav-lk
+	&:hover
+		.icon
+			fill $red
+	cp()
+	padding: 10px 20px
+	border-left 1px solid $border-color
+	border-right 1px solid $border-color
+	.icon
+		tr(all)
+		size 25px
+//.icon
+.header-top__nav-cource
+	&:hover
+		.icon
+			fill $red
+	cp()
+	padding: 10px 20px
+	border-left 1px solid $border-color
+	border-right 1px solid $border-color
+	margin-left: -1px
+	.icon
+		tr(all)
+		size 30px
+.header-top__nav-phone
+	font-weight:700
+	color black
+	font-family:Museo
+	font-size: 18px
+	margin-left: 20px
+.header-nav-wrap
+	//background: #000
+	background: $blue
+.header-nav
+	color white
+	f()
+.header-nav__el
+	flex(mid)
+	tr(all)
+	padding: 15px 20px
+	border-left 1px solid #ffffff0f
+	border-right 1px solid #ffffff0f
+	margin-left: -1px
+	position: relative
+	&:hover
+		background: lighten($blue,5)
+	.icon
+		size 20px
+		fill white
+	&:hover
+		.header-nav-sub
+			display: block
+		.content-filter
+			opacity 1
+			left 0
+.header-nav__el-text
+	f()
+	align-items: center
+	color white!important
+	font-family:Museo
+
+.icon-nav-menu
+	margin-right: 20px
+.header-nav-sub
+	display: none
+	position: absolute
+	top 100%
+	left 0
+	background: white
+	width: 300px
+	z-index 3
+.header-nav-sub__el
+	padding: 15px
+	color black
+	border-bottom 1px solid $border-color
+	flex(between)
+	cp()
+	font-family:Museo
+	font-weight:700
+	font-size: 13px
+	&:hover
+		& >.header-nav-sub-two
+			display: block
+	.icon
+		size 10px
+		fill #818181
+.content
+	position: relative
+	//background: #EDEDED
+.content-filter
+	position: absolute
+	width: 100%
+	height: 100%
+	z-index 2
+	background: rgba(0, 0, 0, 0.3)
+	opacity:0
+	left -9999px
+
+.content-filter--show
+	display: none
+
+
+.header-nav-sub-wrap
+	position: relative
+.header-nav-sub-two
+	position: absolute
+	left: 100%
+	top 0
+	height: 100%
+	width: 300px
+	display: none
+	background: white
+	z-index 3
+
+.header-nav-sub__el-two
+	padding: 15px
+	color black
+	border-bottom 1px solid $border-color
+	cp()
+	text-overflow: ellipsis
+	overflow: hidden
+	white-space: nowrap
+	.icon
+		display: none
+		size 10px
+		fill #818181
+
+.baner
+	flex(between)
+	align-items: stretch
+.baner__el
+	bg-full()
+	height: auto
+	//width: 73%
+	padding: 15% 10%
+	width: 75%
+	//background-position: top center
+	//background-size: contain
+.baner-nav
+	width: 25%
+	.header-nav-sub-wrap
+		background: white
+.baner-item
+	width: 25%
+	padding: 30px 20px 70px 20px
+	f()
+	fl()
+	background: #f9f9f9
+.baner-item__code
+	font-size: 36px
+	color black
+	font-weight:900
+	font-family:Museo
+	margin-bottom: 10px
+.baner-item__sub-title
+	margin-bottom: 10px
+.baner-item__title
+	font-size: 18px
+	font-weight:bold
+	color black
+	margin-bottom: 30px
+	font-family:Museo
+
+.baner-item__info
+	margin-bottom: 30px
+	color black
+	line-height: 1.6
+
+.baner-item-footer
+	flex(between)
+	margin-top: auto
+.baner-item__price
+	font-size: 24px
+	font-family:Museo
+	color black
+	font-weight:bold
+
+//.baner-item__date
+.baner-item__get
+	@extend .btn--md
+	@extend .btn--mark
+	cp()
+	padding: 15px 30px
+	font-size: 12px
+	background: $blue
+
+.section
+	margin: 60px 0
+.section-title
+	//font-family: Museo
+	font-family: Museo
+	font-size: 28px
+	font-weight: 900
+	padding-bottom: 30px
+	border-bottom 1px solid $gray
+	margin-bottom: 40px
+	color black
+	line-height: 1
+
+.popular__el
+	//border 1px solid $border-color
+	padding: 30px 30px 50px 30px
+	f()
+	fl()
+	margin-left: -1px
+	background: #f9f9f9
+	margin-top: -1px
+	br(5px)
+
+.popular__el__code
+	font-size: 26px
+	color $blue
+	//font-weight:900
+	margin-bottom: 10px
+	font-family:Museo
+
+.popular__el__title
+	font-size: 16px
+	font-weight:bold
+	color black
+	margin-bottom: 10px
+	font-family:Museo
+
+.popular__el__info
+	margin-bottom: 30px
+	color black
+	line-height: 1.6
+
+.popular__el-footer
+	f()
+	align-items: center
+	margin-top: auto
+.popular__el__price
+	font-size: 20px
+	color #910085
+	font-family:Roboto
+	font-weight:900
+	margin-right: 20px
+//.baner-item__date
+.popular__el__get
+	padding: 5px 20px
+	border-radius 10px
+	font-size: 12px
+	background: $purpure
+	margin-left: auto
+	cp()
+	color white
+	flex(mid)
+	span
+		display: inline-block
+		margin-right: 5px
+		font-weight:700
+	.icon
+		size 18px
+		fill white
+.popular
+	display: grid
+	grid-gap 10px
+	grid-template-columns repeat(4,1fr);
+
+.popular__el-title
+	margin-bottom: 10px
+
+.star-row
+	f()
+	margin-bottom: 20px
+	.icon
+		size 12px
+		margin-right: 5px
+		fill #ccce24
+
+.header-small
+	background: #ededed
+.header-small-wrap
+	f()
+.header-small-el
+	color black
+	font-size: 12px
+	margin-right: 30px
+	padding: 5px 0
+
+.cat__el
+	padding: 60px 30px
+	f()
+	fl()
+	br(5px)
+	cp()
+	tr(all)
+	margin-left: -1px
+	background: #f9f9f9
+	margin-top: -1px
+	position: relative
+	&:hover
+		box-shadow 0px 8px 10px #c7c3c3
+		background: $blue
+		border-radius 5px 5px 0 0
+		.cat__el__code
+			color white
+		.cat__el__title
+			color rgba(255, 255, 255, 0.7)
+		.icon
+			fill white
+		.cat__el-title
+			border-color rgba(255, 255, 255, 0.7)
+			color rgba(255, 255, 255, 0.7)
+		/*.cat__el-sub
+			display: block*/
+.cat__el--active
+	box-shadow 0px 8px 10px #c7c3c3
+	background: $blue
+
+	.cat__el__code
+		color white
+	.cat__el__title
+		color rgba(255, 255, 255, 0.7)
+	.icon
+		fill white
+	.cat__el-title
+		border-color rgba(255, 255, 255, 0.7)
+		color rgba(255, 255, 255, 0.7)
+.cat__el__code
+	font-size: 18px
+	color $blue
+	font-weight:700
+	font-family: Museo
+	margin-bottom: 10px
+.cat__el__title
+	font-size: 14px
+	color #b6b6b6
+
+.cat__el__info
+	margin-bottom: 80px
+	color black
+	line-height: 1.6
+
+.cat__el-footer
+	f()
+	align-items: center
+	margin-top: auto
+
+.cat__el__get
+	padding: 5px 20px
+	border-radius 10px
+	font-size: 12px
+	background: $purpure
+	margin-left: auto
+	cp()
+	color white
+	flex(mid)
+	span
+		display: inline-block
+		margin-right: 5px
+		font-weight:700
+	.icon
+		size 18px
+		fill white
+.cat
+	display: grid
+	grid-gap 10px
+	grid-template-columns repeat(4,1fr);
+
+.cat__el-title
+	margin-bottom: 60px
+	font-size: 18px
+	font-weight:bold
+	size 50px
+	flex(mid)
+	round()
+	border 1px solid #cfcece
+	font-weight:bold
+
+.cat__el-icon
+	position: absolute
+	top 30px
+	right: 30px
+	.icon
+		size 12px
+		fill #9c9b9b
+
+.cat__el-sub-item
+	margin-bottom: 10px
+	font-size: 12px
+	transition color .4s
+	&:hover
+		color $blue
+
+.cat__el-sub
+	position: absolute
+	top 100%
+	background: white
+	z-index 5
+	left 0px
+	padding: 30px
+	display: none
+	border 1px solid $blue
+	border-radius 0 0 5px 5px
+
+.section--extend
+	padding: 60px 0
+.section--white
+	background: white
+
+.about
+	f()
+	justify-content: space-between
+.about-info
+	width: 45%
+.about-info__title
+	@extend .type--xl
+	font-family:Museo
+	margin-bottom: 30px
+	color black
+	font-weight:700
+
+.about-info__text
+	//color $gray
+.about-company
+	width: 50%
+	position: relative
+	img
+		z-index 2
+		position: relative
+.about-company-round
+	position: absolute
+	width: 500px
+	height: 500px
+	background: #f2f2f2
+	border-radius 20px
+	left calc(50% - 200px)
+	top calc(50% - 250px)
+	z-index 1
+	//flex(mid)
+.girl
+	width: 60%

@@ -1,0 +1,93 @@
+mixin header()
+	//block header
+	.header-small
+		.main-cont
+			.header-small-wrap
+				-
+					var items = [
+						'Библиотека',
+						'Статьи',
+						'Комманда',
+						'Отзывы',
+						'Блог',
+						'Аренда'
+						];
+				each item in items
+					.header-small-el #{item}
+	.header
+		.main-cont
+			.header-top
+				.header-top__logo ITExpert
+				.header-top__search
+					input(type="text" placeholder="Название курса или экзамена" class="input")
+				.header-top__nav
+					.header-top__nav-lk
+						+icon("user","icon")
+					.header-top__nav-cource
+						+icon("open-book","icon")
+					.header-top__nav-phone 8(800)981-57-10
+		.header-nav-wrap
+			.main-cont
+				.header-nav
+					.header-nav__el.header-nav__el--menu
+						a(href="#").header-nav__el-text
+							+icon("menu","icon icon-nav-menu")
+							span Каталог курсов
+						.header-nav-sub
+							.header-nav-sub-wrap
+								-
+									var items = [
+										'Цифровой бизнес',
+										'Управление развитием',
+										'Бизнес-анализ',
+										'Архитектура',
+										'Разработка',
+										'Тестирование',
+										'Управление сервисами',
+										'Технологии',
+										'Данные и интелект',
+										'Кибер безопасность',
+										'Упарвление рисками',
+										'Упарвление компетенциями',
+										'Прорывные технологии',
+										'Soft-skills'
+									];
+								each item in items
+									.header-nav-sub__el
+										span #{item}
+										+icon("arrow-right","icon")
+										-
+											var els = [
+											'Основы ITIL®',
+											'Service Desk и процессы оперативного управления ИТ-услугами..',
+											'Проведение изменений в ИТ в соответствии с ITIL®',
+											'Оптимальное проектирование ИТ-услуг в соответствии с ITIL®: инф...',
+											'Управленческие инструменты организации отношений ИТ с бизнесом ...',
+											'Управление жизненным циклом услуг',
+											'Управление ИТ-активами. Основы и практики',
+											'Практические подходы для успешной работы'
+											];
+										.header-nav-sub-two
+											each el in els
+												.header-nav-sub__el-two
+													span #{el}
+													+icon("arrow-right","icon")
+					.header-nav__el
+						a(href="#").header-nav__el-text Экзамены
+						.header-nav-sub
+							- for (var i=0;i<6;i++)
+								.header-nav-sub__el Lorem ipsum dolor sit amet.
+					-
+						var items = [
+							'Акции',
+							'Новости',
+							'Команда',
+							'О компании',
+							'Проекты'
+							];
+					each item in items
+						a(href="#").header-nav__el
+							.header-nav__el-text #{item}
+
+
+	//block header end
