@@ -1,5 +1,25 @@
 $(document).ready(function(){
 
+	//fix header
+	var shrinkHeader = 250;
+	var heightHeader=$('.header-nav-wrap').height();
+	$(window).scroll(function() {
+		var scroll = $(this).scrollTop();
+		if ( scroll >= shrinkHeader ) {
+				//$('body').css('paddingTop',heightHeader);
+				$('.header-nav-wrap').addClass('shrink');
+			}
+			else {
+					$('body').css('paddingTop',0);
+					$('.header-nav-wrap').removeClass('shrink');
+			}
+	});
+
+	$(window).resize(function(){
+		heightHeader=$('.header-nav-wrap').height();
+	});
+	//fix header===end
+
 	$('.header-nav__el--menu').hover(function() {
         $('.content-filter').animate({
             opacity : '1',

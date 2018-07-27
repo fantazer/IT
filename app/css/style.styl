@@ -25,13 +25,16 @@ body
 	padding: 10px 0
 	flex(between)
 .header-top__logo
+	@extend .type--xl
 	color black
-	font-weight:900
-	//font-family:Roboto
-	font-size: 32px
+	font-family:'PT Sans'
+
+//font-family:Roboto
 .header-top__search
 	width: 50%
 	input
+		&:hover
+			border 1px solid lighten($blue,20)
 		width: 100%
 .header-top__nav
 	f()
@@ -47,6 +50,7 @@ body
 	.icon
 		tr(all)
 		size 25px
+		fill $blue
 //.icon
 .header-top__nav-cource
 	&:hover
@@ -60,11 +64,11 @@ body
 	.icon
 		tr(all)
 		size 30px
+		fill $blue
 .header-top__nav-phone
+	@extend .type--md
 	font-weight:700
 	color black
-	font-family:Museo
-	font-size: 18px
 	margin-left: 20px
 .header-nav-wrap
 	//background: #000
@@ -163,10 +167,10 @@ body
 		size 10px
 		fill #818181
 
-.baner
+.banner
 	flex(between)
 	align-items: stretch
-.baner__el
+.banner__el
 	bg-full()
 	height: auto
 	//width: 73%
@@ -174,62 +178,55 @@ body
 	width: 75%
 	//background-position: top center
 	//background-size: contain
-.baner-nav
+.banner-nav
 	width: 25%
 	.header-nav-sub-wrap
 		background: white
-.baner-item
+.banner-item
 	width: 25%
 	padding: 30px 20px 70px 20px
 	f()
 	fl()
-	background: #f9f9f9
-.baner-item__code
+	background: $gray
+.banner-item__code
 	font-size: 36px
 	color black
 	font-weight:900
 	font-family:Museo
 	margin-bottom: 10px
-.baner-item__sub-title
+.banner-item__sub-title
 	margin-bottom: 10px
-.baner-item__title
-	font-size: 18px
+.banner-item__title
+	@extend .type--md
 	font-weight:bold
 	color black
 	margin-bottom: 30px
-	font-family:Museo
 
-.baner-item__info
+.banner-item__info
 	margin-bottom: 30px
 	color black
 	line-height: 1.6
 
-.baner-item-footer
+.banner-item-footer
 	flex(between)
 	margin-top: auto
-.baner-item__price
-	font-size: 24px
-	font-family:Museo
+.banner-item__price
+	@extend .type--lxg
 	color black
-	font-weight:bold
 
-//.baner-item__date
-.baner-item__get
+//.banner-item__date
+.banner-item__get
 	@extend .btn--md
 	@extend .btn--mark
 	cp()
 	padding: 15px 30px
 	font-size: 12px
-	background: $blue
 
 .section
 	margin: 100px 0
 	position: relative
 .section-title
-	//font-family: Museo
-	font-family: Museo
-	font-size: 28px
-	font-weight: 900
+	@extend .type--xl
 	padding-bottom: 30px
 	border-bottom 1px solid $gray
 	margin-bottom: 40px
@@ -242,16 +239,14 @@ body
 	f()
 	fl()
 	margin-left: -1px
-	background: #f9f9f9
+	background: $gray
 	margin-top: -1px
 	br(5px)
 
 .popular__el__code
-	font-size: 26px
+	@extend .type--lg
 	color $blue
-	//font-weight:900
 	margin-bottom: 10px
-	font-family:Museo
 
 .popular__el__title
 	font-size: 16px
@@ -270,12 +265,11 @@ body
 	align-items: center
 	margin-top: auto
 .popular__el__price
-	font-size: 20px
+	@extend .type--md
 	color $blue
-	font-family:Museo
-	font-weight:900
+	font-weight: 700
 	margin-right: 20px
-//.baner-item__date
+//.banner-item__date
 .popular__el__get
 	padding: 5px 20px
 	border-radius 10px
@@ -306,27 +300,31 @@ body
 	.icon
 		size 12px
 		margin-right: 5px
-		fill #ccce24
+		fill $purpure
 
 .header-small
-	background: #ededed
+	background: $gray
 .header-small-wrap
 	f()
 .header-small-el
-	color black
+	//color black
 	font-size: 12px
 	margin-right: 30px
 	padding: 5px 0
+	cp()
+	tr(all)
+	&:hover
+		color black
 
 .cat__el
-	padding: 60px 30px
+	padding: 40px 30px
 	f()
 	fl()
 	br(5px)
 	cp()
 	tr(all)
 	margin-left: -1px
-	background: #f9f9f9
+	background: $gray
 	margin-top: -1px
 	position: relative
 	&:hover
@@ -336,12 +334,13 @@ body
 		.cat__el__code
 			color white
 		.cat__el__title
-			color rgba(255, 255, 255, 0.7)
+			color white
+			opacity .5
 		.icon
 			fill white
 		.cat__el-title
-			border-color rgba(255, 255, 255, 0.7)
-			color rgba(255, 255, 255, 0.7)
+			color white
+			opacity .5
 		/*.cat__el-sub
 			display: block*/
 .cat__el--active
@@ -351,21 +350,23 @@ body
 	.cat__el__code
 		color white
 	.cat__el__title
-		color rgba(255, 255, 255, 0.7)
+		color white
+		opacity:.5
 	.icon
 		fill white
 	.cat__el-title
-		border-color rgba(255, 255, 255, 0.7)
-		color rgba(255, 255, 255, 0.7)
+		color white
+		opacity:.5
+
 .cat__el__code
-	font-size: 18px
+	@extend .type--md
 	color $blue
 	font-weight:700
-	font-family: Museo
 	margin-bottom: 10px
 .cat__el__title
 	font-size: 14px
 	color #b6b6b6
+	line-height: 1.6
 
 .cat__el__info
 	margin-bottom: 80px
@@ -399,27 +400,33 @@ body
 	grid-template-columns repeat(4,1fr);
 
 .cat__el-title
-	margin-bottom: 60px
-	font-size: 18px
-	font-weight:bold
-	size 50px
-	flex(mid)
-	round()
-	border 1px solid #cfcece
-	font-weight:bold
-
+	font-size: 12px
+	//font-weight:bold
+	margin-bottom: 20px
+	font-family:Museo
+	color #3e51abcc
 .cat__el-icon
 	position: absolute
 	top 30px
 	right: 30px
 	.icon
-		size 12px
-		fill #9c9b9b
+		size 10px
+		fill darken($gray,30)
 
 .cat__el-sub-item
 	margin-bottom: 10px
 	font-size: 12px
 	transition color .4s
+	position: relative
+	padding-left: 5px
+	&:before
+		content ''
+		size 3px
+		round()
+		background: lighten($blue,10)
+		left: -4px
+		position: absolute
+		top 6px
 	&:hover
 		color $blue
 
@@ -470,13 +477,13 @@ body
 	z-index 1
 	//flex(mid)
 .advant-img
-	width: 60%
+	width: 50%
 
 .advant
 	flex(between)
 
 .advant-list
-	width: 40%
+	width: 45%
 	f()
 	fl()
 	justify-content: center
@@ -485,9 +492,7 @@ body
 	f()
 	align-items: center
 .advant-list__el-title
-	font-size: 24px
-	font-weight: 700
-	font-family: Museo
+	@extend .type--lxg
 	margin-bottom: 10px
 	color $blue
 .advant-list__el-icon
@@ -512,7 +517,7 @@ body
 	cp()
 	padding: 20px 10px
 	border-radius 10px
-	//background: #f9f9f9
+	//background: $gray
 	&:hover
 		box-shadow 0 1px 10px #d5d4d4
 .command-el__img
@@ -527,14 +532,13 @@ body
 	width:calc(100% - 120px)
 
 .command-el__title
-	font-size: 18px
-	font-family:Museo
+	@extend .type--md
 	margin-bottom: 10px
 	font-weight:700
 	color $blue
 
 .command-el__staff
-	font-family:Museo
+	font-family: Museo
 	margin-bottom: 20px
 .command-el__text
 	line-height: 1.6
@@ -563,9 +567,8 @@ body
 	margin-bottom: 30px
 	f()
 .news-list__el-title
-	font-size: 18px
+	@extend .type--md
 	font-weight: 700
-	font-family: Museo
 	margin-bottom: 10px
 	color $blue
 
@@ -579,7 +582,7 @@ body
 	background: white
 .news-list__el-date
 	fl()
-	background: $blue
+	background: $purpure
 	size 60px
 	flex(mid)
 	round()
@@ -588,11 +591,10 @@ body
 	z-index 2
 
 .news-list__el-date-val
-	font-size: 18px
+	@extend .type--md
 	font-weight:bold
 	margin-bottom: -5px
 	color white
-	font-family:Museo
 
 .news-list__el-date-day
 	text-align: center
@@ -601,4 +603,124 @@ body
 
 .section-title--blue
 	color $blue
-	border-bottom 1px solid $blue
+	border-bottom 1px solid #3e51ab12
+
+.section--category
+	margin-top: 30px
+	.section-title
+		text-align: center
+
+@keyframes slideInDown
+	from
+		transform: translate3d(0, -100%, 0);
+		visibility: visible;
+	to
+		transform: translate3d(0, 0, 0);
+
+
+.shrink
+	position fixed
+	top 0
+	left 0
+	width 100%
+	margin 0
+	animation:  slideInDown  1s 1 ease-in-out;
+	z-index 10
+	.header-nav__el
+		padding: 10px 20px
+
+.content__main
+	f()
+	justify-content: space-between
+	margin-top: 30px
+.toolbar
+	width: 25%
+.toolbar__el
+	br(10px)
+	margin-bottom: 30px
+	background: white
+	box-shadow 0 5px 10px #f1f1f1
+.content__info
+	width: 73%
+.content__info-wrap
+	padding: 30px
+	background: white
+	br(10px)
+.toolbar__title
+	padding: 15px
+	@extend .type--md
+	font-weight: bold
+	color black
+	f()
+	.icon
+		size 20px
+		fill $blue
+		margin-right: 10px
+.toolbar__list-el
+	border-bottom 1px solid #3e51ab0f
+	line-height: 1.4
+	padding: 10px 15px
+	font-family:Museo
+	font-size: 12px
+	font-weight:700
+	color black
+	/*&:last-child
+		border-bottom 0*/
+.content__info-title
+	@extend .type--lg
+	color black
+	margin-bottom: 30px
+
+.content--gray
+	background: $gray
+
+.toolbar__list-more
+	flex(between)
+	color $blue
+	font-weight bold
+	padding: 15px
+	cp()
+	.icon
+		size 12px
+		fill $blue
+		margin-right: 10px
+
+.panel
+	//padding: 20px
+	background: white
+	box-shadow 0 5px 10px #f1f1f1
+	margin-bottom: 20px
+	f()
+	border-radius 40px
+	align-items: center
+	overflow: hidden
+.panel__day
+	f()
+	align-items: center
+	padding: 0 20px 0 40px
+	border-right 1px solid $border-color
+.panel__info
+	margin-right: 10px
+.panel__day-val
+	@extend .type--lxg
+	color black
+.panel__price
+	padding: 0 20px
+	border-right 1px solid $border-color
+	f()
+	align-items: center
+	margin-right: 30px
+.panel__price-val
+	@extend .type--lxg
+	color black
+.panel__date
+	f()
+	align-items: center
+//.panel__date-val
+.panel__get
+	margin-left: auto
+	background: $yellow
+	padding: 25px 40px
+	font-weight: bold
+	color black
+	//font-family: Museo

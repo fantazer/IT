@@ -22,7 +22,11 @@ $blue-light = #1F6ED4
 $sky = #39BAE8
 $sky-light = #B9EDF8
 $red = #f20022
-$gray = #efefef
+$gray = #f9f9f9
+$text-gray = #979797
+$yellow = #ffd312
+
+
 $purpure = #631B71
 
 $main-text-color = #585858
@@ -53,21 +57,32 @@ typeSize(fontSm,font)
 	typeSize(8,8)
 
 .type--sm
-	typeSize(10,10)
+	typeSize(12,10)
 
 .type--main
 	typeSize(14,12)
 
+.type--mxd
+	typeSize(16,14)
+
 .type--md
 	typeSize(18,15)
+	font-family:Museo
+
+.type--lxg
+	typeSize(24,16)
+	font-weight:bold
+	font-family:Museo
 
 .type--lg
-	typeSize(24,16)
-	font-weight 500
+	typeSize(28,18)
+	font-weight:bold
+	font-family:Museo
 
 .type--xl
-	typeSize(30,20)
-	font-weight 500
+	typeSize(32,22)
+	font-weight bold
+	font-family:Museo
 
 .type--bold
 	font-weight bold
@@ -97,11 +112,16 @@ a
 		color black
 
 p
-	@extend .type--main
-	line-height: 1.8
+	@extend .type--mxd
+	line-height: 1.6
 	padding-top: 0
 	margin-top: 0
 
+ul
+	li
+		@extend .type--mxd
+		line-height: 1.6
+		margin-bottom: 5px
 .link--mark
 	br-animate('1px',$blue)
 	color $blue
@@ -180,7 +200,7 @@ btnStyleLight(br-btn,color-btn)
 .btn--mark
 	@extend .btn
 	color white
-	background black
+	background $blue
 	.nav-icon
 		fill white
 	&:hover

@@ -5,8 +5,8 @@ include block_html/_include.pug
 .content
 	.content-filter
 	.main-cont
-		.baner
-			//.baner-nav
+		.banner
+			//.banner-nav
 				.header-nav-sub-wrap
 					-
 						var items = [
@@ -29,24 +29,24 @@ include block_html/_include.pug
 						.header-nav-sub__el
 							span #{item}
 							+icon("arrow-right","icon")
-			.baner__el(style="background-image:url('img/baner-17.jpg')")
-			.baner-item
-				.baner-item__sub-title курс
-				.baner-item__code MALK
-				.baner-item__title Управление жизненным циклом услуг
-				.baner-item__info Цель курса Управление жизненным циклом услуг на основе ITIL® – дать слушателям навыки поддержки предоставления
-				//	.baner-item__date 24.07
-				.baner-item-footer
-					.baner-item__price 24500 р
-					.baner-item__get записаться
-	.section
+			.banner__el(style="background-image:url('img/baner-13.jpg')")
+			.banner-item
+				.banner-item__sub-title курс
+				.banner-item__code MALK
+				.banner-item__title Управление жизненным циклом услуг
+				.banner-item__info Цель курса Управление жизненным циклом услуг на основе ITIL® – дать слушателям навыки поддержки предоставления
+				//	.banner-item__date 24.07
+				.banner-item-footer
+					.banner-item__price 24500 р
+					.banner-item__get записаться
+	.section.section--category
 		.main-cont
 			.section-title Категории курсов
 			.cat
 				.cat__el.cat__el--first.cat__el--active
 					.cat__el-icon
-						+icon("arrow-down","icon")
-					//.cat__el-title W
+						+icon("arrow-right","icon")
+					.cat__el-title Категория
 					.cat__el__code Цифровой бизнес
 					.cat__el__title Управление жизненным циклом услуг
 					.cat__el-sub
@@ -82,8 +82,8 @@ include block_html/_include.pug
 				each item in items
 					.cat__el
 						.cat__el-icon
-							+icon("arrow-down","icon")
-						//.cat__el-title W
+							+icon("arrow-right","icon")
+						.cat__el-title категория
 						.cat__el__code #{item}
 						.cat__el__title Управление жизненным циклом услуг
 						.cat__el-sub
