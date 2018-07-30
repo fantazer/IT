@@ -1614,7 +1614,7 @@ body {
   z-index: 1;
 }
 .advant-img {
-  width: 60%;
+  width: 50%;
 }
 .advant {
   display: -webkit-box;
@@ -1631,7 +1631,7 @@ body {
           align-items: center;
 }
 .advant-list {
-  width: 40%;
+  width: 45%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2018,7 +2018,6 @@ body {
   padding: 25px 40px;
   font-weight: bold;
   color: #111;
-  text-transform: uppercase;
 }
 @-webkit-keyframes slideInDown {
   from {
