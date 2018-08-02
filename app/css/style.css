@@ -412,7 +412,8 @@ ul li {
 .command-el__title,
 .news-list__el-title,
 .news-list__el-date-val,
-.toolbar__title {
+.toolbar__title,
+.course-treners__name {
   font-size: 18px;
   font-family: Museo;
 }
@@ -425,7 +426,8 @@ ul li {
   .command-el__title,
   .news-list__el-title,
   .news-list__el-date-val,
-  .toolbar__title {
+  .toolbar__title,
+  .course-treners__name {
     font-size: 15px;
   }
 }
@@ -962,6 +964,8 @@ body {
   width: 50%;
 }
 .header-top__search input {
+  -webkit-border-radius: 40px;
+          border-radius: 40px;
   width: 100%;
 }
 .header-top__search input:hover {
@@ -1966,7 +1970,6 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow: hidden;
 }
 .panel__day {
   display: -webkit-box;
@@ -2014,10 +2017,169 @@ body {
 }
 .panel__get {
   margin-left: auto;
-  background: #ffd312;
+  background: #56955a;
   padding: 25px 40px;
   font-weight: bold;
-  color: #111;
+  color: #fff;
+  font-family: Museo;
+  text-transform: uppercase;
+  -webkit-border-radius: 0px 40px 40px 0;
+          border-radius: 0px 40px 40px 0;
+}
+.nice-select {
+  -webkit-border-radius: 25px !important;
+          border-radius: 25px !important;
+  display: block;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  height: auto;
+  line-height: auto;
+  z-index: 3;
+  padding-left: 20px !important;
+  padding-right: 35px !important;
+  border: 1px solid rgba(62,81,171,0.06);
+}
+.nice-select .list {
+  width: -webkit-calc(100%);
+  width: calc(100%);
+  left: 0px;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  border: 0px solid rgba(62,81,171,0.05);
+  border-top: 0;
+  margin-top: 0;
+}
+.nice-select .list li {
+  font-size: 14px;
+}
+select.select-beauty {
+  display: none !important;
+}
+.element-select {
+  padding: 20px 0;
+}
+.nice-select:active,
+.nice-select.open,
+.nice-select:focus {
+  border: 1px solid #dfdfdf;
+}
+.nice-select.open {
+  -webkit-border-radius: 25px 25px 0 0 !important;
+          border-radius: 25px 25px 0 0 !important;
+  border: 1px solid rgba(68,68,68,0.11) !important;
+  border-bottom: 0;
+}
+.nice-select.open .list {
+  margin-top: 1px;
+  -webkit-border-radius: 0 0 25px 25px !important;
+          border-radius: 0 0 25px 25px !important;
+}
+.tab {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #dfdfdf;
+  margin-bottom: 20px;
+}
+.tab__el {
+  padding: 0 20px 20px 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.tab__el:hover {
+  cursor: pointer;
+}
+.tab__el:hover {
+  font-weight: 700;
+}
+.tab__el--active {
+  border-bottom: 2px solid #3e51ab;
+  font-weight: 700;
+  margin-bottom: -1px;
+  color: #3e51ab;
+}
+.content__info-wrap {
+  margin-bottom: 20px;
+}
+.tab-content {
+  display: none;
+}
+.tab-content--active {
+  display: block !important;
+}
+.course-treners {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.course-treners__el {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+.course-treners__img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  -webkit-box-shadow: 0 5px 10px #f1f1f1;
+          box-shadow: 0 5px 10px #f1f1f1;
+  width: 90px;
+  height: 90px;
+  background-position: top center;
+  margin-right: 20px;
+}
+.course-treners__content {
+  background-color: #fff;
+  padding: 20px;
+  width: -webkit-calc(100% - 110px);
+  width: calc(100% - 110px);
+  position: relative;
+}
+.course-treners__content:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 20px 20px 0;
+  border-color: transparent #fff transparent transparent;
+  position: absolute;
+  left: -20px;
+  top: 0;
+}
+.course-treners__name {
+  font-weight: bold;
+  font-family: Museo;
+  color: #3e51ab;
+  margin-bottom: 5px;
+}
+.course-treners__info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 5px;
+}
+.course-treners__info-text {
+  margin-right: 20px;
+  color: #979797;
+}
+.course-treners__info-val {
+  font-weight: 700;
+}
+.course-treners__staf {
+  margin-bottom: 10px;
+  color: #979797;
+}
+.content__info-wrap--empty {
+  background: none;
+  padding-right: 0;
 }
 @-webkit-keyframes slideInDown {
   from {

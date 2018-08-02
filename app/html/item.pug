@@ -29,6 +29,28 @@ include block_html/_include.pug
 					.toolbar__list-more
 						span Все курсы
 						+icon("arrow-down","icon")
+				.toolbar__el
+					.toolbar__title
+						+icon("books-group","icon")
+						span Экзамены
+					.toolbar__list
+						-
+							var items = [
+							'SCHEDULE Расписание курсов',
+							'ITSS Курс «Управление стратегией ИТ-услуг на основе ITIL®»',
+							'BM Курс «Бизнес-моделирование»',
+							'BPMN Курс «Моделирование бизнес-процессов»',
+							'ITILF Курс «Основы ITIL®»',
+							'PRINCE2F Курс «Основы управления проектами в соответствии с PRINCE2®»',
+							'MLP Курс «Практика машинного обучения»',
+							'COBIT5F «Основы COBIT 5»',
+							'OSA Курс «Service Desk и процессы '
+							];
+						each item in items
+							.toolbar__list-el #{item}
+					.toolbar__list-more
+						span Все Экзамены
+						+icon("arrow-down","icon")
 			.content__info
 				.panel
 					.panel__day
@@ -39,11 +61,16 @@ include block_html/_include.pug
 						.panel__price-val 18 500 р
 					.panel__date
 						.panel__info Дата:
-						.panel__date-val 12.10 - 14.12
+						.panel__date-val
+							select.select-beauty
+								option 12.10 - 14.12
+								option 13.10 - 11.12
+								option 23.09 - 17.04
 					.panel__get Записаться
 
 				.content__info-wrap
 					.content__info-title OSA Курс «Service Desk и процессы оперативного управления ИТ-услугами в соответствии с ITIL®»
+
 					.content__info-about
 						p Организация эксплуатации качественных ИТ-услуг, своевременное выполнение запросов пользователей к ИТ и стабильная работа ИТ-инфраструктуры – критичны для большинства организаций, часто по организации управления в данных областях бизнесом оценивается работа ИТ в целом. Курс «Service Desk и процессы эксплуатации ИТ услуг в соответствии ITIL® - Operational Support and Analysis» помогает найти ответы на следующие вопросы:
 						ul
@@ -56,7 +83,34 @@ include block_html/_include.pug
 							li Как проводить анализ проблем в инфраструктуре?
 						p Курс OSA ориентирован на ИТ-менеджеров, участвующих в организации поддержки ИТ-услуг и эксплуатации ИТ-инфраструктуры. Пристальное внимание в ходе изучения тем курса уделяется проблемам, типичным для российской практики.
 						p Курс базируется на положениях библиотеки лучших практик управления ITIL® 2011 Edition, и охватывает все темы, знание которых необходимо для сдачи сертификационного экзамена и получения сертификата ITIL® CERTIFICATE IN OPERATIONAL SUPPORT AND ANALYSIS 
-
+				.content__info-wrap.content__info-wrap--empty
+					.content__info-title Преподаватели курса
+					.course-treners
+						- for (var i=0;i<4;i++)
+							.course-treners__el
+								.course-treners__img(style="background-image:url('img/staff.png')")
+								.course-treners__content
+									.course-treners__name Степан Сапегин
+									.course-treners__staf ITIL Foundation
+									.course-treners__info
+										.course-treners__info-text Оценка слушателей
+										.course-treners__info-val  9.5/10
+									.course-treners__info
+										.course-treners__info-text Проектный опыт
+										.course-treners__info-val  15 лет
+				.content__info-wrap
+					.tab-wrap
+						.tab
+							.tab__el.tab__el--active Целевая Аудитория
+							.tab__el План курса
+							.tab__el Цели курса
+							.tab__el Приобретаемые знания
+						.tab-content.tab-content--active
+							p Организация эксплуатации качественных ИТ-услуг, своевременное выполнение запросов пользователей к ИТ и стабильная работа ИТ-инфраструктуры – критичны для большинства организаций, часто по
+							p организации управления в данных областях бизнесом оценивается работа ИТ в целом. Курс «Service Desk и процессы эксплуатации ИТ услуг в соответствии ITIL® - Operational Support and Analysis» помогает найти ответы на следующие вопросы:
+						.tab-content
+							p Организация эксплуатации качественных ИТ-услуг, своевременное выполнение запросов пользователей к ИТ и стабильная работа ИТ-инфраструктуры – критичны для большинства
+							p организаций, часто по организации управления в данных областях бизнесом оценивается работа ИТ в целом. Курс «Service Desk и процессы эксплуатации ИТ услуг в соответствии ITIL® - Operational Support and Analysis» помогает найти ответы на следующие вопросы:
 
 
 include ./block_html/_script.pug
