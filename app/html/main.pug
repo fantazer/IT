@@ -128,7 +128,7 @@ include block_html/_include.pug
 							.advant-list__el-title +18200
 							.advant-list__el-text Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
-	.section.section--extend.section--white
+	.section.section--white
 		.main-cont
 			.section-title Популярные курсы
 			.popular
@@ -184,7 +184,7 @@ include block_html/_include.pug
 			.news-img
 				img(src="img/group-student.png", alt="")
 			.news-list
-				.section-title.section-title--blue Последние новости
+				.section-title Последние новости
 				- for (var i=0;i<4;i++)
 					.news-list__el
 						.news-list__el-date
@@ -193,5 +193,5 @@ include block_html/_include.pug
 						.news-list__el-content
 							.news-list__el-title Наблюдательный совет itSMF России
 							.news-list__el-text Компании IT Expert и Terrasoft заключили партнерское соглашение для реализации совместных проектов в области консалтинговых услуг и автоматизации бизнес-процессов.
-
+	+footer()
 include ./block_html/_script.pug

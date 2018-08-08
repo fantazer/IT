@@ -299,18 +299,18 @@ button
 // ============================ Inputs ============================
 
 .input,.textarea,.select
-	border 0px
 	padding 15px 20px
 	border 1px solid #dedede
 	resize: none
 	outline: 0 !important
-	border-radius 0px
+	border-radius 5px
 	font-family $v-font
 	display block!important
 	placeholder(#888888)
 	background: white
 	tr(all)
 	&:focus
+		border 1px solid $blue
 		outline none!important
 
 
@@ -338,6 +338,7 @@ button
 		border 1px solid #cfcfcf
 		cp()
 		tr(all)
+		border-radius 5px
 		&:hover
 			border 1px solid #8d8d8d
 	.icon-check
@@ -346,8 +347,8 @@ button
 		&:checked ~ .sytle-input-element
 			flex(mid)
 			color white
-			background: black
-			border 1px solid black
+			background: $blue
+			border 1px solid $blue
 			.icon-check
 				display block
 				fill white

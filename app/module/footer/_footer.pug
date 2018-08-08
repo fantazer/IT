@@ -1,3 +1,76 @@
 mixin footer()
 	//block footer
+	.footer
+		.footer__head
+			.main-cont
+				.footer__head-wrap
+					.footer__list
+						-
+							var items = [
+								'Курсы ITIL',
+								'Новости',
+								'О компании',
+								'Авторские курсы',
+								'Библиотека',
+								'Проекты',
+								'Интервью/Статьи',
+								'Отзывы',
+								'Симуляционные игры',
+								'Экзамены',
+								'Акции',
+								'Контакты'
+								];
+						each item in items
+							a(href="#").footer__list-el #{item}
+					.footer__info
+						a(href="tel:+7(495)981-57-10").footer__phone +7(495)981-57-10
+						a(href="mailto:info@itexpert.ru").footer__mail E-mail:info@itexpert.ru
+						.footer__adress Адрес:г. Москва, ул. Каланчевская 15 офис 402
+						.footer__soc
+							a(href="#").footer__soc-el
+								+icon("soc-facebook","icon")
+							a(href="#").footer__soc-el
+								+icon("soc-twitter","icon")
+							a(href="#").footer__soc-el
+								+icon("soc-vk","icon")
+							a(href="#").footer__soc-el
+								+icon("soc-youtube","icon")
+		.footer__bottom
+			.footer__bottom-text ITIL® и PRINCE2® — зарегистрированные торговые марки компании AXELOS Limited. <br> Swirl logo™ — торговая марка компании AXELOS Limited.	© 2002–2018 IT Expert
+
+		//modals
+		.modal-layer
+			.modal-cont
+				.modal-filter
+				.modal-wrap
+					.modal(data-modal="order")
+						.modal-content.modal-content--fogot
+							.modal-close
+								+icon("close","icon")
+							.modal-title Остался всего один шаг
+							.modal-text Обращаетесь к нам впервые? <br> Оформите обращение с помощью этой формы, мы перезвоним Вам и проконсультируем по любому Вашему вопросу совершенно бесплатно!
+							form.validate-form(action="javascript:void(null);")
+								.input-row
+									input(type="text" name="name" placeholder="Ваше имя").input
+								.input-row
+									input(type="text" name="phone" placeholder="Ваш телефон").input
+								.input-row
+									textarea(name="info", cols="30", rows="5" placeholder="Сообщение").input
+								.agree-row
+									.check-el
+										label.style-label.style-label--checkbox
+											input(type="checkbox" name="agree").sytle-input
+											.sytle-input-element
+												+icon("checked","icon-check")
+											.sytle-input-text=text
+									.agree-row__text Согласен с
+										a(href="#") условиями обработки персональных данных
+								input(type="submit" value="Отправить заявку").modal-send
+					//success message
+					.modal(data-modal="truemessage")
+						.modal-content.modal-content--true
+							+icon("interface","icon")
+							.modal-text-true Ваша заявка принята
+
+
 	//block footer end

@@ -61,6 +61,133 @@ $(document).ready(function(){
 	};
 	initTab(".tab-wrap");
 	
+	//modals
+	$('.modal-content').click(function(event){
+		event.stopPropagation();
+	});
+	var scrollPos = 0;
+
+	var openModal = function () {
+	if(!$('.modal-layer').hasClass('modal-layer-show')){
+		$('.modal-layer').addClass('modal-layer-show');
+	}
+	 scrollPos = $(window).scrollTop();
+		$('body').css({
+			overflow: 'hidden',
+			position: 'fixed',
+			overflowY: 'scroll',
+			top : -scrollPos,
+			width:'100%'
+		});
+		return scrollPos;
+	};
+
+	var closeModal = function () {
+		console.log("scrollPos",scrollPos);
+  	$('.modal-layer').removeClass('modal-layer-show');
+  	$("body").removeClass("modal-fix");
+  	$('body').css({
+			overflow: '',
+			position: '',
+			top: ''
+		})
+    $(window).scrollTop(scrollPos);
+    $('.modal').removeClass('modal__show');
+		$('.enter').removeClass('enter--open');
+		$('.basket').removeClass('basket--open');
+	};
+
+	var initModal = function(el){
+		openModal();
+		$('.modal').each(function () {
+			if ($(this).data('modal')===el){
+				$(this).addClass('modal__show')
+			} else {
+				$(this).removeClass('modal__show')
+			}
+		});
+		var modalHeightCont = $(window).height();
+		$('.modal-filter').height(modalHeightCont);
+		$('.modal-wrap').css('height',modalHeightCont );
+		$('.modal-wrap').css('minHeight',modalHeightCont );
+	}
+
+	$('.modal-get').click(function (){
+		var currentModal = $(this).data("modal");
+		initModal(currentModal);
+	});
+
+	$('.modal-layer , .modal-close').click(function (){
+		closeModal();
+	});
+	//modals === end
+
+	//validate
+	$('.validate-form').each(function() {
+		var curentForm = $(this);
+    $(this).validate({
+    			highlight: function(element) { //даем родителю класс если есть ошибка
+							$(element).parent().addClass("field-error");
+					},
+					unhighlight: function(element) {
+							$(element).parent().removeClass("field-error");
+					},
+		    	rules:{ //правила для полей
+						name:{
+							required:true,
+						},
+						phone:{
+							required:true,
+							minlength:5,
+							number:true
+						},
+						comment:{
+							required:true,
+							minlength:5,
+						},
+						agree: {
+							required: true
+						}
+					},
+					messages:{
+						name:{
+							required: 'Обязательное поле',
+						},
+						phone:{
+							required: 'Обязательное поле',
+							number:'Введите правильный номер',
+							minlength:'Номер должен быть длиннее',
+						},
+						comment:{
+							required: 'Обязательное поле',
+							minlength:'Сообщение должно быть длиннее',
+						},
+						agree:{
+							required: false,
+						}
+					},
+					submitHandler : function(form){
+						$.ajax({ //отправка ajax
+						            type: "POST",
+						            url: "sender.php",
+						            data: $(form).serialize(),
+						            timeout: 3000,
+						          });
+							closeModal();
+							initModal("truemessage");
+							setTimeout(function(){
+										closeModal();
+										$(':input','.validate-form') //очитска формы от данных
+										  .not(':button, :submit, :reset, :hidden')
+										  .val('')
+										  .removeAttr('checked')
+										  .removeAttr('selected')
+							},2500)
+
+				}
+		    });
+		});
+ 	//validate ===end
 
 	//slider staff
 		/*$('.command-list').slick({

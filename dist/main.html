@@ -54,7 +54,7 @@
 						</div>
 						<div class="header-top__nav-cource">
 							<svg class="icon">
-								<use xlink:href="#open-book"></use>
+								<use xlink:href="#clock"></use>
 							</svg>
 						</div>
 						<div class="header-top__nav-phone">8(800)981-57-10</div>
@@ -1293,7 +1293,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="section section--extend section--white">
+			<div class="section section--white">
 				<div class="main-cont">
 					<div class="section-title">Популярные курсы</div>
 					<div class="popular">
@@ -1675,7 +1675,7 @@
 						<img src="img/group-student.png" alt="" />
 					</div>
 					<div class="news-list">
-						<div class="section-title section-title--blue">Последние новости</div>
+						<div class="section-title">Последние новости</div>
 						<div class="news-list__el">
 							<div class="news-list__el-date">
 								<div class="news-list__el-date-val">25</div>
@@ -1719,10 +1719,122 @@
 					</div>
 				</div>
 			</div>
+			<!--block footer-->
+			<div class="footer">
+				<div class="footer__head">
+					<div class="main-cont">
+						<div class="footer__head-wrap">
+							<div class="footer__list">
+								<a class="footer__list-el" href="#">Курсы ITIL</a>
+								<a class="footer__list-el" href="#">Новости</a>
+								<a class="footer__list-el" href="#">О компании</a>
+								<a class="footer__list-el" href="#">Авторские курсы</a>
+								<a class="footer__list-el" href="#">Библиотека</a>
+								<a class="footer__list-el" href="#">Проекты</a>
+								<a class="footer__list-el" href="#">Интервью/Статьи</a>
+								<a class="footer__list-el" href="#">Отзывы</a>
+								<a class="footer__list-el" href="#">Симуляционные игры</a>
+								<a class="footer__list-el" href="#">Экзамены</a>
+								<a class="footer__list-el" href="#">Акции</a>
+								<a class="footer__list-el" href="#">Контакты</a>
+							</div>
+							<div class="footer__info">
+								<a class="footer__phone" href="tel:+7(495)981-57-10">+7(495)981-57-10</a>
+								<a class="footer__mail" href="mailto:info@itexpert.ru">E-mail:info@itexpert.ru</a>
+								<div class="footer__adress">Адрес:г. Москва, ул. Каланчевская 15 офис 402</div>
+								<div class="footer__soc">
+									<a class="footer__soc-el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-facebook"></use>
+										</svg>
+									</a>
+									<a class="footer__soc-el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-twitter"></use>
+										</svg>
+									</a>
+									<a class="footer__soc-el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-vk"></use>
+										</svg>
+									</a>
+									<a class="footer__soc-el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-youtube"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__bottom-text">ITIL® и PRINCE2® — зарегистрированные торговые марки компании AXELOS Limited.
+						<br> Swirl logo™ — торговая марка компании AXELOS Limited. © 2002–2018 IT Expert</div>
+				</div>
+				<!--modals-->
+				<div class="modal-layer">
+					<div class="modal-cont">
+						<div class="modal-filter"></div>
+						<div class="modal-wrap">
+							<div class="modal" data-modal="order">
+								<div class="modal-content modal-content--fogot">
+									<div class="modal-close">
+										<svg class="icon">
+											<use xlink:href="#close"></use>
+										</svg>
+									</div>
+									<div class="modal-title">Остался всего один шаг</div>
+									<div class="modal-text">Обращаетесь к нам впервые?
+										<br> Оформите обращение с помощью этой формы, мы перезвоним Вам и проконсультируем по любому Вашему вопросу совершенно бесплатно!</div>
+									<form class="validate-form" action="javascript:void(null);">
+										<div class="input-row">
+											<input class="input" type="text" name="name" placeholder="Ваше имя" />
+										</div>
+										<div class="input-row">
+											<input class="input" type="text" name="phone" placeholder="Ваш телефон" />
+										</div>
+										<div class="input-row">
+											<textarea class="input" name="info" cols="30" rows="5" placeholder="Сообщение"></textarea>
+										</div>
+										<div class="agree-row">
+											<div class="check-el">
+												<label class="style-label style-label--checkbox">
+													<input class="sytle-input" type="checkbox" name="agree" />
+													<div class="sytle-input-element">
+														<svg class="icon-check">
+															<use xlink:href="#checked"></use>
+														</svg>
+													</div>
+													<div class="sytle-input-text"></div>
+												</label>
+											</div>
+											<div class="agree-row__text">Согласен с
+												<a href="#">условиями обработки персональных данных</a>
+											</div>
+										</div>
+										<input class="modal-send" type="submit" value="Отправить заявку" />
+									</form>
+								</div>
+							</div>
+							<!--success message-->
+							<div class="modal" data-modal="truemessage">
+								<div class="modal-content modal-content--true">
+									<svg class="icon">
+										<use xlink:href="#interface"></use>
+									</svg>
+									<div class="modal-text-true">Ваша заявка принята</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--block footer end-->
 		</div>
 		<script src="js/combined.js"></script>
 		<script src="js/script.js"></script>
 		<script src="js/script-edit.js"></script>
 	</body>
 
-</html>
+</html>.check-el
