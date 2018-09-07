@@ -1,0 +1,102 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content.content--gray
+		.content-filter
+		.main-cont
+			.content__main
+				.content__info
+					.schedule-main-title
+						h1 Расписание курсов
+						.schedule-main-title__icon
+							+icon("filter","icon")
+					.schedule-filter__wrap
+						.schedule-filter
+							.schedule-filter__row
+								.schedule-filter__name Город
+								.schedule-filter__select
+									select.select-beauty
+										option Все
+										option Москва
+										option Санкт-Петербург
+							.schedule-filter__row
+								.schedule-filter__name Уровень курса
+								.schedule-filter__select
+									select.select-beauty
+										option Все
+										option Первая ступень
+										option Вторая ступень
+										option Автораские
+										option Тренинг
+										option Комбинированные
+							.schedule-filter__row
+								.schedule-filter__name Тип курса
+								.schedule-filter__select
+									select.select-beauty
+										option Все
+										option Очный
+										option Онлайн
+							.schedule-filter__row
+								.schedule-filter__name Наличие скидки
+								.schedule-filter__select
+									select.select-beauty
+										option Все
+										option Со скидкой
+										option Без скидки
+
+					.schedule
+						.shedule-step
+							.schedule-step__title Первая ступень
+							- for (var i=0;i<10;i++)
+								.schedule__row
+									.schedule__row-head
+										.schedule__el.schedule__el--name
+											//.schedule__title Название
+											.schedule__name OSA
+											.schedule__descr Курс «Service Desk и процессы оперативного управления ИТ-услугами в соответствии с ITIL®»
+										.schedule__el.schedule__el--decr
+											.schedule__title Даты курса
+											.schedule__val
+												select.select-beauty
+													option 12.10.18 - 14.12.18
+													option 13.10.18 - 11.12.18
+													option 23.09.18 - 17.04.18
+										.schedule__el.schedule__el--price
+											.schedule__title Цена курса
+											.schedule__price <span>от</span> 17 500 р
+										.schedule__el
+											.schedule__toggle
+												+icon("arrow-down","icon")
+									.schedule__row-content-wrap
+										.schedule__row-content
+											.schedule__more
+												.schedule__more-title Русское название:
+												.schedule__more-text «Service Desk и процессы оперативного управления ИТ-услугами в соответствии с ITIL®»
+											.schedule__more
+												.schedule__more-title Преподаватели курса:
+												.schedule__teacher
+													.schedule__teacher-el(style="background-image:url('img/teacher-1.jpg')")
+													.schedule__teacher-el(style="background-image:url('img/teacher-2.png')")
+													.schedule__teacher-el(style="background-image:url('img/staff.png')")
+											.schedule__more
+												.schedule__more-title Англ название:
+												.schedule__more-text Operational Support and Analysis
+											.schedule__more
+												.schedule__more-title Код курса:
+												.schedule__more-text OSA
+											.schedule-cost
+												.schedule-cost__el
+													.schedule-cost-text Цена по карте:
+													.schedule-cost-val 17 500р
+												.schedule-cost__el
+													.schedule-cost-text Цена по счету:
+													.schedule-cost-val 21 500р
+												.schedule-cost__el.schedule-cost__el--get
+													.schedule-cost__get Записаться
+
+				+toolbar()
+
+	+footer()
+include ./block_html/_script.pug

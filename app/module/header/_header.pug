@@ -17,18 +17,23 @@ mixin header()
 	.header
 		.main-cont
 			.header-top
-				.header-top__logo ITExpert
+				a(href="#").header-top__logo ITExpert
 				.header-top__search
 					input(type="text" placeholder="Название курса или экзамена" class="input")
 				.header-top__nav
 					.header-top__nav-lk
 						+icon("user","icon")
 					.header-top__nav-cource
-						+icon("clock","icon")
+						+icon("calendar","icon")
 					.header-top__nav-phone 8(800)981-57-10
+					.head-toggle
+						+icon("menu","icon icon-open")
+						+icon("close","icon icon-close")
+
 		.header-nav-wrap
 			.main-cont
 				.header-nav
+
 					.header-nav__el.header-nav__el--menu
 						a(href="#").header-nav__el-text
 							+icon("menu","icon icon-nav-menu")
@@ -89,5 +94,29 @@ mixin header()
 						a(href="#").header-nav__el
 							.header-nav__el-text #{item}
 
+					.header-nav--mobile
 
+						-
+							var items = [
+							'Библиотека',
+							'Статьи',
+							'Комманда',
+							'Отзывы',
+							'Блог',
+							'Аренда'
+							];
+						each item in items
+							a(href="#").header-nav__el
+								.header-nav__el-text #{item}
+					.header-nav__el.header-nav__el--order.modal-get(data-modal="order")
+							+icon("checked","icon icon-nav-menu")
+							span Записаться
+					.header-nav--mobile__toggle
+						+icon("arrow-down","icon")
+					.header-nav__auth
+						.header-nav__auth-btn
+							+icon("user","icon")
+							span Войти в кабинет
+						a(href="tell:8(800)981-57-10").header-nav__phone +7(495)981-57-10
+						a(href="#").header-nav__adress 107078, Москва,Каланчевская ул. 15, офис 402
 	//block header end

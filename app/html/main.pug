@@ -1,91 +1,47 @@
 include block_html/_style.pug
 include block_html/_include.pug
 
-+header()
-.content
-	.content-filter
-	.main-cont
-		.banner
-			//.banner-nav
-				.header-nav-sub-wrap
-					-
-						var items = [
-						'Цифровой бизнес',
-						'Управление развитием',
-						'Бизнес-анализ',
-						'Архитектура',
-						'Разработка',
-						'Тестирование',
-						'Управление сервисами',
-						'Технологии',
-						'Данные и интелект',
-						'Кибер безопасность',
-						'Упарвление рисками',
-						'Упарвление компетенциями',
-						'Прорывные технологии',
-						'Soft-skills'
-						];
-					each item in items
-						.header-nav-sub__el
-							span #{item}
-							+icon("arrow-right","icon")
-			.banner__el(style="background-image:url('img/baner-13.jpg')")
-			.banner-item
-				.banner-item__sub-title курс
-				.banner-item__code MALK
-				.banner-item__title Управление жизненным циклом услуг
-				.banner-item__info Цель курса Управление жизненным циклом услуг на основе ITIL® – дать слушателям навыки поддержки предоставления
-				//	.banner-item__date 24.07
-				.banner-item-footer
-					.banner-item__price 24500 р
-					.banner-item__get записаться
-	.section.section--category
+.page
+	.header-main--page
+		+header()
+	.content
+		.content-filter
+		.intro-info
+			.intro__img(style="background-image:url('img/baner-18.jpg')")
+			.intro-filter
+			.main-cont
+				.intro
+					.intro__wrap
+						.intro__content
+							.intro__title Все виды обучения ITIL
+							.intro__text Компания IT Expert основана в 2002 году и до настоящего времени является лидером на рынке консалтинговых и тренинговых услуг.
+							.intro__get
+								.intro__get-el.intro__get-el--more Подробнее
+								.intro__get-el.intro__get-el--schedule Расписание
 		.main-cont
-			.section-title Категории курсов
-			.cat
-				.cat__el.cat__el--first.cat__el--active
-					.cat__el-icon
-						+icon("arrow-right","icon")
-					.cat__el-title Категория
-					.cat__el__code Цифровой бизнес
-					.cat__el__title Управление жизненным циклом услуг
-					.cat__el-sub
-						-
-							var els = [
-							'Основы ITIL®',
-							'Service Desk и процессы оперативного управления ИТ-услугами..',
-							'Проведение изменений в ИТ в соответствии с ITIL®',
-							'Оптимальное проектирование ИТ-услуг в соответствии с ITIL®: инф...',
-							'Управленческие инструменты организации отношений ИТ с бизнесом ...',
-							'Управление жизненным циклом услуг',
-							'Управление ИТ-активами. Основы и практики',
-							'Практические подходы для успешной работы'
-							];
-						each el in els
-							.cat__el-sub-item #{el}
-				-
-					var items = [
-					'Управление развитием',
-					'Бизнес-анализ',
-					'Архитектура',
-					'Разработка',
-					'Тестирование',
-					'Управление сервисами',
-					'Технологии',
-					'Данные и интелект',
-					'Кибер безопасность',
-					'Упарвление рисками',
-					'Упарвление компетенциями',
-					'Прорывные технологии',
-					'Soft-skills'
-					];
-				each item in items
-					.cat__el
-						.cat__el-icon
-							+icon("arrow-right","icon")
-						.cat__el-title категория
-						.cat__el__code #{item}
-						.cat__el__title Управление жизненным циклом услуг
+			//.banner
+
+				.banner__el(style="background-image:url('img/baner-13.jpg')")
+				.banner-item
+					.banner-item__sub-title курс
+					.banner-item__code MALK
+					.banner-item__title Управление жизненным циклом услуг
+					.banner-item__info Цель курса Управление жизненным циклом услуг на основе ITIL® – дать слушателям навыки поддержки предоставления
+					//	.banner-item__date 24.07
+					.banner-item-footer
+						.banner-item__price 24500 р
+						.banner-item__get записаться
+		.section.section--category
+			.main-cont
+				.section-title Категории курсов
+				.cat
+					.cat__el.cat__el--first.cat__el--active
+						.cat__el-content
+							.cat__el-icon
+								+icon("arrow-right","icon")
+							.cat__el-title Категория
+							.cat__el__code Цифровой бизнес
+							.cat__el__title Управление жизненным циклом услуг
 						.cat__el-sub
 							-
 								var els = [
@@ -100,98 +56,206 @@ include block_html/_include.pug
 								];
 							each el in els
 								.cat__el-sub-item #{el}
-	.section
-		.main-cont
-			.about
-				.about-info
-					.about-info__title О нашей компании
-					.about-info__text
-						p Компания IT Expert основана в 2002 году и до настоящего времени является лидером на рынке консалтинговых и тренинговых услуг в области ИТ-управления. За 15 лет мы выполнили более 350 консалтинговых и аудиторских ИТ-проектов, а также провели обучение более 30 000 специалистов и руководителей в рамках сертификационных и авторских курсов по методологии ITIL, COBIT, ISO 20000, PRINCE2.
-						p IT Expert – первая российская компания, получившая статус EXIN’s Authorized Examination Centre (AEC) и официального партнера института EXIN (Examination Institute for Information Science, Нидерланды), первый в России партнер GamingWorks.
-						p С марта 2017 года IT Expert – первая в России организация, аккредитованная институтом PEOPLECERT, проводящая обучение по ITIL, и единственный в России провайдер обучения, аккредитованный PEOPLECERT по всем курсам сертификационной схемы ITIL.
+					-
+						var items = [
+							{
+								'name':'Управление развитием',
+								'icon':'news',
+							},
+							{
+							'name':'Бизнес-анализ',
+							'icon':'book',
+							},
+							{
+							'name':'Архитектура',
+							'icon':'classroom',
+							},
+							{
+							'name':'Разработка',
+							'icon':'copyright',
+							},
+							{
+							'name':'Тестирование',
+							'icon':'newspaper',
+							},
+							{
+							'name':'Технологии',
+							'icon':'sketch',
+							},
+							{
+							'name':'Данные и интелект',
+							'icon':'projector-screen',
+							},
+							{
+							'name':'Кибер безопасность',
+							'icon':'report',
+							},
+							{
+							'name':'Упарвление рисками',
+							'icon':'notebook-pen',
+							},
+							{
+							'name':'Упарвление компетенциями',
+							'icon':'teamwork',
+							},
+							{
+							'name':'Прорывные технологии',
+							'icon':'share',
+							},
 
-				.about-company
-					.about-company-round
-					//img(src="img/main-cert--small.jpg", alt="")
-					img(src="img/group.png", alt="")
-	
-	.section
-		.advant
-			.advant-img
-				img(src="img/girl.png", alt="").girl
-			.advant-list
-				- for (var i=0;i<4;i++)
-					.advant-list__el
-						.advant-list__el-icon
-							+icon("books-stack","icon")
-						.advant-list__el-content
-							.advant-list__el-title +18200
-							.advant-list__el-text Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-
-	.section.section--white
-		.main-cont
-			.section-title Популярные курсы
-			.popular
-				-
-					var items = [
-						'SOA',
-						'OSA',
-						'PPO',
-						'MALK',
-						'AGILE',
-						'ITILF',
-						'ITAM',
-						'RSV'
 						];
-				each item in items
-					.popular__el
-						.popular__el-title курс
-						.popular__el__code #{item}
-						.popular__el__title Управление жизненным циклом услуг
-						.star-row
-							+icon("star","icon")
-							+icon("star","icon")
-							+icon("star","icon")
-							+icon("star","icon")
-							+icon("star","icon")
-						.popular__el__info Цель курса Управление жизненным циклом услуг на основе ITIL® – дать слушателям навыки поддержки предоставления
-						//	.popular__el__date 24.07
-						.popular__el-footer
-							.popular__el__price 24500 р
-							//.popular__el__get
-								span +
-								+icon("books-group","icon")
-						.popular__el-val
-							.popular__el-val-el
-								.popular__el-val-icon
+					each item in items
+						.cat__el
+							//.cat__el--bg
+								svg(class='icon')
+									use(xlink:href="#" + item.icon)
+							//.cat__el--filter
+							.cat__el-content
+								.cat__el-icon
+									+icon("arrow-right","icon")
+								.cat__el-title категория
+								.cat__el__code #{item.name}
+								.cat__el__title Управление жизненным циклом услуг
+							.cat__el-sub
+								-
+									var els = [
+									'Основы ITIL®',
+									'Service Desk и процессы оперативного управления ИТ-услугами..',
+									'Проведение изменений в ИТ в соответствии с ITIL®',
+									'Оптимальное проектирование ИТ-услуг в соответствии с ITIL®: инф...',
+									'Управленческие инструменты организации отношений ИТ с бизнесом ...',
+									'Управление жизненным циклом услуг',
+									'Управление ИТ-активами. Основы и практики',
+									'Практические подходы для успешной работы'
+									];
+								each el in els
+									.cat__el-sub-item #{el}
+		.section
+			.main-cont
+				.about
+					.about-info
+						.about-info__title О нашей компании
+						.about-info__text
+							p Компания IT Expert основана в 2002 году и до настоящего времени является лидером на рынке консалтинговых и тренинговых услуг в области ИТ-управления. За 15 лет мы выполнили более 350 консалтинговых и аудиторских ИТ-проектов, а также провели обучение более 30 000 специалистов и руководителей в рамках сертификационных и авторских курсов по методологии ITIL, COBIT, ISO 20000, PRINCE2.
+							p IT Expert – первая российская компания, получившая статус EXIN’s Authorized Examination Centre (AEC) и официального партнера института EXIN (Examination Institute for Information Science, Нидерланды), первый в России партнер GamingWorks.
+							p С марта 2017 года IT Expert – первая в России организация, аккредитованная институтом PEOPLECERT, проводящая обучение по ITIL, и единственный в России провайдер обучения, аккредитованный PEOPLECERT по всем курсам сертификационной схемы ITIL.
 
-								.popular__el-val-text
+					.about-company
+						.about-company-round
+						//img(src="img/main-cert--small.jpg", alt="")
+						img(src="img/group.png", alt="")
 
-	.section
-		.main-cont
-			.section-title Наша комманда
-			.command
-				.command-list
-					- for (var i=0;i<8;i++)
-						.command-el
-							.command-el__img(style="background-image:url('img/staff.png')")
-							.command-el__content
-								.command-el__title Михаил Грибов
-								.command-el__staff Управляющий партнер
-								.command-el__text Внес вклад в развитие управления ИТ услугами в банковской, энергетической и нефтегазовой отрасли успешно внедряя лучшие мировые практики и стандарты (ITIL v3 2011, USMBOK, Lean, ...
-	.section
-		.news
-			.news-img
-				img(src="img/group-student.png", alt="")
-			.news-list
-				.section-title Последние новости
-				- for (var i=0;i<4;i++)
-					.news-list__el
-						.news-list__el-date
-							.news-list__el-date-val 25
-							.news-list__el-date-day сент
-						.news-list__el-content
-							.news-list__el-title Наблюдательный совет itSMF России
-							.news-list__el-text Компании IT Expert и Terrasoft заключили партнерское соглашение для реализации совместных проектов в области консалтинговых услуг и автоматизации бизнес-процессов.
-	+footer()
+		//.section
+			.advant
+				.advant-img(style="background-image:url('img/girl.png')")
+					//img(src="img/girl.png", alt="").girl
+				.advant-list
+					- for (var i=0;i<4;i++)
+						.advant-list__el
+							.advant-list__el-icon
+								+icon("books-stack","icon")
+							.advant-list__el-content
+								.advant-list__el-title +18200
+								.advant-list__el-text Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+		//customer
+		.section
+			.main-cont
+				.section-title Наши заказчики
+				.slider-wrap
+					.slider-control.slider-control--left
+						+icon("arrow-left","icon")
+					.slider-control.slider-control--right
+						+icon("arrow-right","icon")
+					.customer.slider-item
+						- for (var i=1;i<8;i++)
+							.customer__el
+								img(src="img/partner-0"+i+".png", alt="")
+
+
+		//popular
+		.section.section--white
+			.main-cont
+				.section-title Популярные курсы
+				.popular
+					-
+						var items = [
+							'SOA',
+							'OSA',
+							'PPO',
+							'MALK',
+							'AGILE',
+							'ITILF',
+							'ITAM',
+							'RSV'
+							];
+					each item in items
+						a(href="#").popular__el
+							.popular__el-content
+								.popular__el-title курс
+								.popular__el__code #{item}
+								.popular__el__title Управление жизненным циклом услуг
+								.star-row
+									+icon("star","icon")
+									+icon("star","icon")
+									+icon("star","icon")
+									+icon("star","icon")
+									+icon("star","icon")
+								.popular__el__info Цель курса Управление жизненным циклом услуг на основе ITIL® – дать слушателям навыки поддержки предоставления
+								//	.popular__el__date 24.07
+							.popular__el-footer
+								.popular__el__price 24500 р
+								.popular__el__get
+									//+icon("books-group","icon")
+									span Подробнее
+							.popular__el-val
+								.popular__el-val-el
+									.popular__el-val-icon
+
+									.popular__el-val-text
+
+
+
+
+		//certificate
+		.section
+			.main-cont
+				.section-title Наша сертификаты
+				.sert
+					- for (var i=0;i<3;i++)
+						a(href="img/cert-1.jpg" data-fancybox="images").sert__el.fancybox
+							img(src="img/cert-1.jpg", alt="")
+		//command
+		.section
+			.main-cont
+				.section-title Наша комманда
+				.command
+					.command-list
+						- for (var i=0;i<8;i++)
+							.command-el
+								.command-el__img(style="background-image:url('img/staff.png')")
+								.command-el__content
+									.command-el__title Михаил Грибов
+									.command-el__staff Управляющий партнер
+									.command-el__text Внес вклад в развитие управления ИТ услугами в банковской, энергетической и нефтегазовой отрасли успешно внедряя лучшие мировые практики и стандарты (ITIL v3 2011, USMBOK, Lean, ...
+
+
+
+		//news
+		.section.section--news
+			.news
+				.news-img
+					img(src="img/group-student.png", alt="")
+				.news-list
+					.section-title Последние новости
+					- for (var i=0;i<4;i++)
+						.news-list__el
+							.news-list__el-date
+								.news-list__el-date-val 25
+								.news-list__el-date-day сент
+							.news-list__el-content
+								.news-list__el-title Наблюдательный совет itSMF России
+								.news-list__el-text Компании IT Expert и Terrasoft заключили партнерское соглашение для реализации совместных проектов в области консалтинговых услуг и автоматизации бизнес-процессов.
+
+		+footer()
 include ./block_html/_script.pug

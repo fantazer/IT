@@ -23,6 +23,7 @@
   "devDependencies": {
     "slick-carousel": "^1.8.1",
     "jquery-nice-select": "^1.1.0",
-    "jquery-validation": "^1.17.0"
+    "jquery-validation": "^1.17.0",
+    "fancybox": "^3.4.1"
   }
 }

@@ -1,149 +1,170 @@
 include block_html/_style.pug
 include block_html/_include.pug
 
-+header()
-.content.content--gray
-	.content-filter
-	.main-cont
-		.content__main
-			.toolbar
-				.toolbar__el
-					.toolbar__title 
-						+icon("open-book","icon")
-						span Курсы
-					.toolbar__list
-						-
-							var items = [
-								'SCHEDULE Расписание курсов',
-								'ITSS Курс «Управление стратегией ИТ-услуг на основе ITIL®»',
-								'BM Курс «Бизнес-моделирование»',
-								'BPMN Курс «Моделирование бизнес-процессов»',
-								'ITILF Курс «Основы ITIL®»',
-								'PRINCE2F Курс «Основы управления проектами в соответствии с PRINCE2®»',
-								'MLP Курс «Практика машинного обучения»',
-								'COBIT5F «Основы COBIT 5»',
-								'OSA Курс «Service Desk и процессы '
-								];
-						each item in items
-							.toolbar__list-el #{item}
-					.toolbar__list-more
-						span Все курсы
-						+icon("arrow-down","icon")
-				.toolbar__el
-					.toolbar__title
-						+icon("books-group","icon")
-						span Экзамены
-					.toolbar__list
-						-
-							var items = [
-							'SCHEDULE Расписание курсов',
-							'ITSS Курс «Управление стратегией ИТ-услуг на основе ITIL®»',
-							'BM Курс «Бизнес-моделирование»',
-							'BPMN Курс «Моделирование бизнес-процессов»',
-							'ITILF Курс «Основы ITIL®»',
-							'PRINCE2F Курс «Основы управления проектами в соответствии с PRINCE2®»',
-							'MLP Курс «Практика машинного обучения»',
-							'COBIT5F «Основы COBIT 5»',
-							'OSA Курс «Service Desk и процессы '
-							];
-						each item in items
-							.toolbar__list-el #{item}
-					.toolbar__list-more
-						span Все Экзамены
-						+icon("arrow-down","icon")
-			.content__info
-				.panel
-					.panel__day
-						.panel__info Время:
-						.panel__day-val 3 дня
-					.panel__price
-						.panel__info Цена:
-						.panel__price-val 18 500 р
-					.panel__date
-						.panel__info Дата:
-						.panel__date-val
-							select.select-beauty
-								option 12.10 - 14.12
-								option 13.10 - 11.12
-								option 23.09 - 17.04
-					.panel__get.modal-get(data-modal="order") Записаться
+.page
+	+header()
+	.content.content--gray
+		.content-filter
+		.main-cont
+			.content__main
+				.content__info
+					//.panel
+						.panel__day
+							.panel__info Время:
+							.panel__day-val 3 дня
+						.panel__price
+							.panel__info Цена:
+							.panel__price-val 18 500 р
+						.panel__date
+							.panel__info Дата:
+							.panel__date-val
+								select.select-beauty
+									option 12.10 - 14.12
+									option 13.10 - 11.12
+									option 23.09 - 17.04
+						.panel__get.modal-get(data-modal="order") Записаться
 
-				.content__info-wrap
-					.content__info-title OSA Курс «Service Desk и процессы оперативного управления ИТ-услугами в соответствии с ITIL®»
+					.content__info-wrap
+						h1.content__info-main-title OSA Курс «Service Desk и процессы оперативного управления ИТ-услугами в соответствии с ITIL®»
 
-					.content__info-about
-						p Организация эксплуатации качественных ИТ-услуг, своевременное выполнение запросов пользователей к ИТ и стабильная работа ИТ-инфраструктуры – критичны для большинства организаций, часто по организации управления в данных областях бизнесом оценивается работа ИТ в целом. Курс «Service Desk и процессы эксплуатации ИТ услуг в соответствии ITIL® - Operational Support and Analysis» помогает найти ответы на следующие вопросы:
-						ul
-							li От чего зависит качество эксплуатации ИТ-услуг в целом?
-							li Как организовать службу поддержки пользователей?
-							li Как организовать взаимодействие между службой поддержки и ИТ-специалистами?
-							li Как выявлять события, влияющие на предоставление ИТ-услуг?
-							li Как правильно расставить приоритеты устранения сбоев в ИТ-инфраструктуре и решения обращений пользователей?
-							li Как организовать предоставление прав доступа к ресурсам и услугам?
-							li Как проводить анализ проблем в инфраструктуре?
-						p Курс OSA ориентирован на ИТ-менеджеров, участвующих в организации поддержки ИТ-услуг и эксплуатации ИТ-инфраструктуры. Пристальное внимание в ходе изучения тем курса уделяется проблемам, типичным для российской практики.
-						p Курс базируется на положениях библиотеки лучших практик управления ITIL® 2011 Edition, и охватывает все темы, знание которых необходимо для сдачи сертификационного экзамена и получения сертификата ITIL® CERTIFICATE IN OPERATIONAL SUPPORT AND ANALYSIS 
+						.content__info-about
+							p Организация эксплуатации качественных ИТ-услуг, своевременное выполнение запросов пользователей к ИТ и стабильная работа ИТ-инфраструктуры – критичны для большинства организаций, часто по организации управления в данных областях бизнесом оценивается работа ИТ в целом. Курс «Service Desk и процессы эксплуатации ИТ услуг в соответствии ITIL® - Operational Support and Analysis» помогает найти ответы на следующие вопросы:
+							ul
+								li От чего зависит качество эксплуатации ИТ-услуг в целом?
+								li Как организовать службу поддержки пользователей?
+								li Как организовать взаимодействие между службой поддержки и ИТ-специалистами?
+								li Как выявлять события, влияющие на предоставление ИТ-услуг?
+								li Как правильно расставить приоритеты устранения сбоев в ИТ-инфраструктуре и решения обращений пользователей?
+								li Как организовать предоставление прав доступа к ресурсам и услугам?
+								li Как проводить анализ проблем в инфраструктуре?
+							p Курс OSA ориентирован на ИТ-менеджеров, участвующих в организации поддержки ИТ-услуг и эксплуатации ИТ-инфраструктуры. Пристальное внимание в ходе изучения тем курса уделяется проблемам, типичным для российской практики.
+							p Курс базируется на положениях библиотеки лучших практик управления ITIL® 2011 Edition, и охватывает все темы, знание которых необходимо для сдачи сертификационного экзамена и получения сертификата ITIL® CERTIFICATE IN OPERATIONAL SUPPORT AND ANALYSIS 
 
-				.content__info-wrap
-					.tab-wrap
-						.tab
-							.tab__el.tab__el--active Целевая Аудитория
-							.tab__el План курса
-							.tab__el Цели курса
-							.tab__el Приобретаемые знания
-						.tab-content.tab-content--active
-							p Организация эксплуатации качественных ИТ-услуг, своевременное выполнение запросов пользователей к ИТ и стабильная работа ИТ-инфраструктуры – критичны для большинства организаций, часто по
-							p организации управления в данных областях бизнесом оценивается работа ИТ в целом. Курс «Service Desk и процессы эксплуатации ИТ услуг в соответствии ITIL® - Operational Support and Analysis» помогает найти ответы на следующие вопросы:
-						.tab-content
-							p Организация эксплуатации качественных ИТ-услуг, своевременное выполнение запросов пользователей к ИТ и стабильная работа ИТ-инфраструктуры – критичны для большинства
-							p организаций, часто по организации управления в данных областях бизнесом оценивается работа ИТ в целом. Курс «Service Desk и процессы эксплуатации ИТ услуг в соответствии ITIL® - Operational Support and Analysis» помогает найти ответы на следующие вопросы:
+					.content__info-wrap
+						.tab-wrap
+							.tab
+								.tab__el.tab__el--active Целевая Аудитория
+								.tab__el План курса
+								.tab__el Цели курса
+								.tab__el Приобретаемые знания
+							.tab-content.tab-content--active
+								p Организация эксплуатации качественных ИТ-услуг, своевременное выполнение запросов пользователей к ИТ и стабильная работа ИТ-инфраструктуры – критичны для большинства организаций, часто по
+								p организации управления в данных областях бизнесом оценивается работа ИТ в целом. Курс «Service Desk и процессы эксплуатации ИТ услуг в соответствии ITIL® - Operational Support and Analysis» помогает найти ответы на следующие вопросы:
+							.tab-content
+								p Организация эксплуатации качественных ИТ-услуг, своевременное выполнение запросов пользователей к ИТ и стабильная работа ИТ-инфраструктуры – критичны для большинства
+								p организаций, часто по организации управления в данных областях бизнесом оценивается работа ИТ в целом. Курс «Service Desk и процессы эксплуатации ИТ услуг в соответствии ITIL® - Operational Support and Analysis» помогает найти ответы на следующие вопросы:
 
-				.content__info-wrap.content__info-wrap--empty
-					.content__info-title Преподаватели курса
-					.course-treners
-						- for (var i=0;i<4;i++)
-							.course-treners__el
-								.course-treners__img(style="background-image:url('img/staff.png')")
-								.course-treners__content
-									.course-treners__name Степан Сапегин
-									.course-treners__staf ITIL Foundation
-									.course-treners__info
-										.course-treners__info-text Оценка слушателей
-										.course-treners__info-val  9.5/10
-									.course-treners__info
-										.course-treners__info-text Проектный опыт
-										.course-treners__info-val  15 лет
-				.content__info-wrap.content__info-wrap--empty
-					.content__info-title Преимущества курса
-					.advant
-						.advant_el
-							.advant_el-icon
-								+icon("clock","icon")
-							.advant_el-text 3 дня (24 академических часа)
-						.advant_el
-							.advant_el-icon
-								+icon("exam-list","icon")
-							.advant_el-text Подготовка к сдаче экзамена
-								a(href="#") «ITIL® Foundation»
-						.advant_el
-							.advant_el-icon
-								+icon("ipad","icon")
-							.advant_el-text Обучение с выдачей iPad для заметок
-						.advant_el
-							.advant_el-icon
-								+icon("translation","icon")
-							.advant_el-text Доступ к online библиотеке
-						.advant_el
-							.advant_el-icon
-								+icon("certificate","icon")
-							.advant_el-text Аккредитован PEOPLECERT
-						.advant_el
-							.advant_el-icon
-								+icon("meeting","icon")
-							.advant_el-text Обучение на русском
-						.advant_el
-							.advant_el-icon
-								+icon("big-license","icon")
-							.advant_el-text Выпускники получают удостоверение о повышении квалификации
-	+footer()
+
+					//Teacher
+					.content__info-wrap.content__info-wrap--empty.content__info-wrap--teachers
+						.content__info-title Преподаватели курса
+						.course-treners
+							- for (var i=0;i<4;i++)
+								.course-treners__el
+									.course-treners__img(style="background-image:url('img/staff.png')")
+									.course-treners__content
+										.course-treners__name Михаил Грибов
+										.course-treners__staf ITIL Foundation
+										.course-treners__info
+											.course-treners__info-text Оценка слушателей
+											.course-treners__info-val  9.5/10
+										.course-treners__info
+											.course-treners__info-text Проектный опыт
+											.course-treners__info-val  15 лет
+
+					//Advant
+					.content__info-wrap.content__info-wrap--empty
+						.content__info-title Преимущества курса
+						.advant
+							.advant_el
+								.advant_el-icon
+									+icon("clock","icon")
+								.advant_el-text 3 дня (24 академических часа)
+							.advant_el
+								.advant_el-icon
+									+icon("exam-list","icon")
+								.advant_el-text Подготовка к сдаче экзамена
+									a(href="#") «ITIL® Foundation»
+							.advant_el
+								.advant_el-icon
+									+icon("ipad","icon")
+								.advant_el-text Обучение с выдачей iPad для заметок
+							.advant_el
+								.advant_el-icon
+									+icon("translation","icon")
+								.advant_el-text Доступ к online библиотеке
+							.advant_el
+								.advant_el-icon
+									+icon("certificate","icon")
+								.advant_el-text Аккредитован PEOPLECERT
+							.advant_el
+								.advant_el-icon
+									+icon("meeting","icon")
+								.advant_el-text Обучение на русском
+							.advant_el
+								.advant_el-icon
+									+icon("big-license","icon")
+								.advant_el-text Выпускники получают удостоверение о повышении квалификации
+
+				+toolbar('toolbar')
+
+		//review
+		.review
+			.main-cont
+				.content__info-title Отзывы курса
+				.review__wrap
+					- for (var i=0;i<6;i++)
+						.review__el
+							.review__el-title Студенников Алексей
+							.review__el-staff Главный специалист
+							.review__el-row
+								- for (var j=0;j<5;j++)
+									.review__el-star
+										+icon("star","icon")
+
+							.review__el-text Несмотря на большой объем теоретической информации, курс считаю очень интересным и важным. Преподаватель прекрасно донёс до аудитории курс "Основы ITIL".
+							.review__el-firm ООО "Газпром"
+		//review===end
+
+		//good adds
+		.add-cource
+			.main-cont
+				.content__info-title Хорошее дополнение для данного курса:
+				.b-wrap
+					- for (var i=0;i<6;i++)
+						a(href="#").b-el
+							.b-el-title__top
+								.b-el-name Курс
+								.b-el-price-val 22500 р
+							.b-el-title OSA
+							.b-el-cont
+								.b-el-text Курс «Service Desk и процессы оперативного управления ИТ-услугами в с...
+								.b-el-bottom
+									.b-el-attr
+										.b-el-attr__icon
+											+icon("open-book","icon")
+										.b-el-attr__val 4230
+									.b-el-attr
+										.b-el-attr__icon
+											+icon("like","icon")
+										.b-el-attr__val 9.6/10
+									.b-el-attr
+										.b-el-attr__icon
+											+icon("certificate","icon")
+										.b-el-attr__val 92%
+		//good adds===edn
+
+		//news-slider
+
+		.news-slider__wrap
+			.main-cont
+				.content__info-title Последние новости
+				.news-slider
+					- for (var i=0;i<4;i++)
+						a(href="#").news-slider__el
+							.news-slider__el-date 31.08.2018
+							.news-slider__el-title Повышение удовлетворенности клиентов обновленной серией стандартов ISO
+							.news-slider__el-text Мы все знаем, что сохранение лояльных, счастливых клиентов является ключом к любому успешному бизнесу, но непостоянному потребительскому миру не всегда легко угодить.
+
+		+footer()
 include ./block_html/_script.pug
