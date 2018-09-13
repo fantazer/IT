@@ -1,0 +1,28 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content.content--gray
+		.content-filter
+		.main-cont
+			.content__main
+				.content__info
+
+
+					.content__info-wrap--empty
+						.content-title  Наша комманда
+						.command
+							.command-list--full
+								- for (var i=0;i<8;i++)
+									.command-el
+										.command-el__img(style="background-image:url('img/staff.png')")
+										.command-el__content
+											.command-el__title Михаил Грибов
+											.command-el__staff Управляющий партнер
+											.command-el__text Внес вклад в развитие управления ИТ услугами в банковской, энергетической и нефтегазовой отрасли успешно внедряя лучшие мировые практики и стандарты (ITIL v3 2011, USMBOK, Lean, ...
+				+toolbar()
+
+
+	+footer()
+include ./block_html/_script.pug

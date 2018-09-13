@@ -1,0 +1,82 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content.content--gray
+		.content-filter
+		.main-cont
+			.content__main
+				.content__info
+					h1 Контакты компании ITEXPERT
+					.adress-wrap
+						.map
+							script(type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=ApWIkNaC_C7ifOdvW4gAjglDdwfIo5IW&width=100%&height=450")
+						.adress-content
+							.adress-title Контактная информация
+							.adress-row-wrap
+								.adress-row
+									.adress-row__icon
+										+icon("phone-call","icon")
+									.adress-row__cont
+										.adress-row__title Телефон:
+										.adress-row__text +7 (495) 981-57-10
+								.adress-row
+									.adress-row__icon
+										+icon("placeholder","icon")
+									.adress-row__cont
+										.adress-row__title Адресс:
+										.adress-row__text 107078, Москва, Каланчевская ул. 15, офис 402
+								.adress-row
+									.adress-row__icon
+										+icon("mail","icon")
+									.adress-row__cont
+										.adress-row__title Почта:
+										.adress-row__text
+											a(href="mailto:info@itexpert.ru") info@itexpert.ru
+
+							.adress-title Наши менеджеры ответят на ваши вопросы
+							.manager
+								- for (var i=0;i<5;i++)
+									.manager__el
+										.manager__el-img-wrap
+											.manager__el-img(style="background-image:url('img/rybkin.jpg')")
+										.manager__el-content
+											.manager__el-name Александр
+											a(href="#").manager__el-phone 8(916)041-55-25
+											a(href="#").manager__el-mail a.rybalkin@itexpert.ru
+
+							.adress-title Оставьте ваше сообщение
+							.adress-form
+								form.validate-form(action="javascript:void(null);")
+									.input-row
+										input(type="text" name="name" placeholder="Ваше имя").input
+									.input-row
+										input(type="text" name="phone" placeholder="Ваш телефон").input
+									.input-row
+										textarea(name="info", cols="30", rows="5" placeholder="Сообщение").input
+									.agree-row
+										.check-el
+											label.style-label.style-label--checkbox
+												input(type="checkbox" name="agree").sytle-input
+												.sytle-input-element
+													+icon("checked","icon-check")
+												.sytle-input-text=text
+										.agree-row__text Согласен с
+											a(href="#") условиями обработки персональных данных
+									input(type="submit" value="Отправить").modal-send
+							//.adress-text Автономная некоммерческая организация Учебный центр дополнительного профессионального образования «ИТ Эксперт»
+
+					//news-slider
+					.content__info-title Последние новости
+					.news-slider
+						- for (var i=0;i<4;i++)
+							a(href="#").news-slider__el
+								.news-slider__el-date 31.08.2018
+								.news-slider__el-title Повышение удовлетворенности клиентов обновленной серией стандартов ISO
+								.news-slider__el-text Мы все знаем, что сохранение лояльных, счастливых клиентов является ключом к любому успешному бизнесу, но непостоянному потребительскому миру не всегда легко угодить.
+				+toolbar()
+
+	+footer()
+
+include ./block_html/_script.pug

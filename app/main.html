@@ -919,7 +919,7 @@
 										<div class="header-nav__el-text">Аренда</div>
 									</a>
 								</div>
-								<div class="header-nav__el header-nav__el--order modal-get" data-modal="order">
+								<div class="header-nav__el header-nav__el--order modal-get" data-modal="choose">
 									<svg class="icon icon-nav-menu">
 										<use xlink:href="#checked"></use>
 									</svg>
@@ -1909,15 +1909,19 @@
 							<div class="modal-filter"></div>
 							<div class="modal-wrap">
 								<div class="modal" data-modal="order">
-									<div class="modal-content modal-content--fogot">
+									<div class="modal-content modal-content--order">
 										<div class="modal-close">
 											<svg class="icon">
 												<use xlink:href="#close"></use>
 											</svg>
 										</div>
+										<div class="modal-back modal-get" data-modal="choose">
+											<svg class="icon">
+												<use xlink:href="#arrow-left"></use>
+											</svg>
+											<span>Назад</span>
+										</div>
 										<div class="modal-title">Остался всего один шаг</div>
-										<div class="modal-text">Обращаетесь к нам впервые?
-											<br> Оформите обращение с помощью этой формы, мы перезвоним Вам и проконсультируем по любому Вашему вопросу совершенно бесплатно!</div>
 										<form class="validate-form" action="javascript:void(null);">
 											<div class="input-row">
 												<input class="input" type="text" name="name" placeholder="Ваше имя" />
@@ -1945,6 +1949,11 @@
 												</div>
 											</div>
 											<input class="modal-send" type="submit" value="Отправить заявку" />
+											<div class="modal-cost">
+												<div class="modal-cost__text">цена заказа:</div>
+												<div class="modal-cost__val">
+													<span></span>р</div>
+											</div>
 										</form>
 									</div>
 								</div>
@@ -1955,6 +1964,44 @@
 											<use xlink:href="#interface"></use>
 										</svg>
 										<div class="modal-text-true">Ваша заявка принята</div>
+									</div>
+								</div>
+								<div class="modal" data-modal="choose">
+									<div class="modal-content modal-content--choose">
+										<div class="modal-close">
+											<svg class="icon">
+												<use xlink:href="#close"></use>
+											</svg>
+										</div>
+										<div class="modal-title">Выберите способ оплаты</div>
+										<div class="choose-row modal-get" data-modal="order">
+											<div class="choose-row__icon">
+												<svg class="icon">
+													<use xlink:href="#credit-card--color"></use>
+												</svg>
+											</div>
+											<div class="choose-row__info">
+												<div class="choose-row__cost">
+													<div class="choose-row__cost-val">
+														<span>17500</span>р</div>
+												</div>
+												<div class="choose-row__title">При оплате картой</div>
+											</div>
+										</div>
+										<div class="choose-row modal-get" data-modal="order">
+											<div class="choose-row__icon">
+												<svg class="icon">
+													<use xlink:href="#debt--color"></use>
+												</svg>
+											</div>
+											<div class="choose-row__info">
+												<div class="choose-row__cost">
+													<div class="choose-row__cost-val">
+														<span>19500</span>р</div>
+												</div>
+												<div class="choose-row__title">При оплате по счету</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>

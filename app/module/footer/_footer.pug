@@ -50,11 +50,14 @@ mixin footer()
 				.modal-filter
 				.modal-wrap
 					.modal(data-modal="order")
-						.modal-content.modal-content--fogot
+						.modal-content.modal-content--order
 							.modal-close
 								+icon("close","icon")
+							.modal-back.modal-get(data-modal="choose")
+								+icon("arrow-left","icon")
+								span Назад
 							.modal-title Остался всего один шаг
-							.modal-text Обращаетесь к нам впервые? <br> Оформите обращение с помощью этой формы, мы перезвоним Вам и проконсультируем по любому Вашему вопросу совершенно бесплатно!
+
 							form.validate-form(action="javascript:void(null);")
 								.input-row
 									input(type="text" name="name" placeholder="Ваше имя").input
@@ -72,11 +75,40 @@ mixin footer()
 									.agree-row__text Согласен с
 										a(href="#") условиями обработки персональных данных
 								input(type="submit" value="Отправить заявку").modal-send
+								.modal-cost
+									.modal-cost__text цена заказа:
+									.modal-cost__val
+										span
+										| р
 					//success message
 					.modal(data-modal="truemessage")
 						.modal-content.modal-content--true
 							+icon("interface","icon")
 							.modal-text-true Ваша заявка принята
+					.modal(data-modal="choose")
+						.modal-content.modal-content--choose
+							.modal-close
+								+icon("close","icon")
+							.modal-title Выберите способ оплаты
+							.choose-row.modal-get(data-modal="order")
+								.choose-row__icon
+									+icon("credit-card--color","icon")
+								.choose-row__info
+									.choose-row__cost
+										.choose-row__cost-val
+											span 17500
+											| р
+									.choose-row__title При оплате картой
+							.choose-row.modal-get(data-modal="order")
+								.choose-row__icon
+									+icon("debt--color","icon")
+								.choose-row__info
+									.choose-row__cost
+										.choose-row__cost-val
+											span 19500
+											| р
+									.choose-row__title При оплате по счету
+
 
 
 	//block footer end

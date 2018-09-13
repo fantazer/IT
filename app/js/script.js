@@ -228,7 +228,7 @@ $(document).ready(function(){
 
 	$('.news-slider').slick({
 		slidesToShow: 2,
-		autoplay: true,
+		autoplay: false,
 		speed: 5500,
 		vertical:false,
 		arrows:false,
@@ -254,6 +254,33 @@ $(document).ready(function(){
 				breakpoint: 768,
 				settings: {
 					slidesToShow: 4
+				}
+			}
+	  ]
+	});
+
+	$('.staff-cert__slider').slick({
+		slidesToShow: 6,
+		speed: 1500,
+		vertical:false,
+		arrows:false,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 4
+				}
+			},
+			{
+			breakpoint: 640,
+			settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					infinite: true,
+					prevArrow: false,
+					nextArrow: false,
+					centerMode: true,
+					centerPadding: '10px'
 				}
 			}
 	  ]
@@ -345,7 +372,7 @@ $(document).ready(function(){
 	return false;
 }
 
-	console.log(detectIE());
+
 	if (detectIE() <= 14 && detectIE()) {
 		$('body').empty();
 		$('body').prepend('' +
@@ -413,11 +440,19 @@ $(document).ready(function(){
 					scrollTop: $(to).offset().top - 60
 			}, 1000);
 	});
-	}
+	};
 
 	scrollToID('.intro__get-el--more','.section--category')
 	//smooth scroll to id===end
 
+	//choose payment type
+	$('.choose-row').click(function(){
+		var cost = $(this).find('.choose-row__cost-val span').text();
+		$('.choose-row').removeClass('choose-row--active');
+		$(this).addClass('choose-row--active');
+		$('.modal-cost__val span').text(cost);
+	});
+	//choose payment type===end
 	/* ###### For SlideToggle Elements  ######*/
 	/*var hideToggle = function(targetClick,toggleEl) {
 		$(targetClick).click(function(event){

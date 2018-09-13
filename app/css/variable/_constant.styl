@@ -69,11 +69,14 @@ typeSize(fontSm,font)
 .type--md
 	typeSize(18,15)
 	font-family:Museo
-
+.type--mmd
+	typeSize(22,16)
+	font-family:Museo
+	font-weight:bold
+	color #111111d1
 .type--lxg
 	typeSize(24,16)
 	font-weight:bold
-	font-family:Museo
 
 .type--lg
 	typeSize(28,18)
@@ -91,15 +94,19 @@ typeSize(fontSm,font)
 h1
 	@extend .type--xl
 	color black
+	margin-top: 0
 h2
 	@extend .type--lg
 	color black
+	margin-top: 0
 h3
 	@extend .type--main
 	color black
+	margin-top: 0
 h4
 	@extend .type--sm
 	color black
+	margin-top: 0
 h5
 	@extend .type--xs
 	color black
@@ -113,7 +120,7 @@ a
 		color black
 
 p
-	@extend .type--mxd
+	@extend .type--main
 	line-height: 1.6
 	padding-top: 0
 	margin-top: 0

@@ -1,0 +1,32 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content.content--gray
+		.content-filter
+		.main-cont
+			.content__main
+				.content__info
+					.content__info-wrap--empty
+						h1 Акции и спецпредложения
+						.sale__wrap
+							a(href="#").sale__el
+								.sale__el--head Акция
+								.sale__el--name Две ступени ITIL по низкой цене
+								.sale__el--text Cлушателям, заказывающим обучение сразу на двух курсах по ITIL®, скидка до 50% на базовый курс
+							a(href="#").sale__el
+								.sale__el--head Акция
+								.sale__el--name Повторная сдача экзамена
+								.sale__el--text Если Вы планируете пройти сертификационный курс и экзамен ITIL® Foundation или ITIL® Intermediate  в нашей компании, Вы можете приобрести "Страховой сертификат повторной сдачи экзаменов", который позволит сдать выбранный экзамен еще раз бесплатно..
+						//news-slider
+						.content__info-title Последние новости
+						.news-slider
+							- for (var i=0;i<4;i++)
+								a(href="#").news-slider__el
+									.news-slider__el-date 31.08.2018
+									.news-slider__el-title Повышение удовлетворенности клиентов обновленной серией стандартов ISO
+									.news-slider__el-text Мы все знаем, что сохранение лояльных, счастливых клиентов является ключом к любому успешному бизнесу, но непостоянному потребительскому миру не всегда легко угодить.
+				+toolbar()
+	+footer()
+include ./block_html/_script.pug

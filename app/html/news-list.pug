@@ -1,0 +1,21 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content.content--gray
+		.content-filter
+		.main-cont
+			.content__main
+				.content__info
+					.content__info-wrap--empty
+						.content-title  Новости
+						.news-grid
+							- for (var i=0;i<10;i++)
+								a(href="#").news-grid__el
+									.news-grid__el-date 31.08.2018
+									.news-grid__el-title Повышение удовлетворенности клиентов обновленной серией стандартов ISO
+									.news-grid__el-text Мы все знаем, что сохранение лояльных, счастливых клиентов является ключом к любому успешному бизнесу, но непостоянному потребительскому миру не всегда легко угодить.
+				+toolbar()
+	+footer()
+include ./block_html/_script.pug
