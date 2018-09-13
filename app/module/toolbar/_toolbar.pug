@@ -1,0 +1,75 @@
+mixin toolbar(a)
+	//block toolbar
+	.toolbar
+		if(a)
+			.toolbar__el.order
+				.toolbar__title
+					span Оформить заявку
+				.order__row
+					.order__row__name Время курса:
+					.order__row__val 3 дня
+				.order__row
+					.order__row__name Цена курса:
+					.order__row__val 18 500р
+				.order__row
+					.order__row__name Дата
+					.order__row__val
+						select.select-beauty
+							option 12.10.18 - 14.12.18
+							option 13.10.18 - 11.12.18
+							option 23.09.18 - 17.04.18
+				.order-get.modal-get(data-modal="choose") Записаться
+		.toolbar__el.toolbar__el--cource
+			.toolbar__title
+				+icon("open-book","icon")
+				span Курсы
+			.toolbar__list
+				-
+					var items = [
+					'SCHEDULE Расписание курсов',
+					'ITSS Курс «Управление стратегией ИТ-услуг на основе ITIL®»',
+					'BM Курс «Бизнес-моделирование»',
+					'BPMN Курс «Моделирование бизнес-процессов»',
+					'ITILF Курс «Основы ITIL®»',
+					'PRINCE2F Курс «Основы управления проектами в соответствии с PRINCE2®»',
+					'MLP Курс «Практика машинного обучения»',
+					'COBIT5F «Основы COBIT 5»',
+					'OSA Курс «Service Desk и процессы '
+					];
+				each item in items
+					a(href="#").toolbar__list-el #{item}
+			.toolbar__list-more
+				span Все курсы
+				+icon("arrow-down","icon")
+		.toolbar__el.toolbar__el--exam
+			.toolbar__title
+				+icon("books-group","icon")
+				span Экзамены
+			.toolbar__list
+				-
+					var items = [
+					'SCHEDULE Расписание курсов',
+					'ITSS Курс «Управление стратегией ИТ-услуг на основе ITIL®»',
+					'BM Курс «Бизнес-моделирование»',
+					'BPMN Курс «Моделирование бизнес-процессов»',
+					'ITILF Курс «Основы ITIL®»',
+					'PRINCE2F Курс «Основы управления проектами в соответствии с PRINCE2®»',
+					'MLP Курс «Практика машинного обучения»',
+					'COBIT5F «Основы COBIT 5»',
+					'OSA Курс «Service Desk и процессы '
+					];
+				each item in items
+					.toolbar__list-el #{item}
+			.toolbar__list-more
+				span Все Экзамены
+				+icon("arrow-down","icon")
+		.toolbar__el.toolbar__el--article
+			.toolbar-article__head Статьи
+			.toolbar-article__slider
+				- for (var i=0;i<4;i++)
+					a(href="#").toolbar-article__slider-el
+						.toolbar-article__date 09.12.2017
+						.toolbar-article__title ITIL и быстрое изменение приложений #{i}
+						.toolbar-article__text Согласно лучшим практикам, нашедшим отражение в библиотеке ITIL®, основным интерфейсом взаимодействия между бизнесом и ИТ является услуга. ИТ-подразделение - провайдер, предоставляющий некий набор услуг, а бизнес - его потребитель.
+						.toolbar-article__more Подробнее
+	//block toolbar end

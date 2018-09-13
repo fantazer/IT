@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<!--create by ANATOLY KUZNETSOV-->
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="format-detection" content="telephone=no" />
+		<!--colors-tabs-->
+		<meta name="theme-color" content="#000" />
+		<meta name="msapplication-navbutton-color" content="#000" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+		<!--SEO-->
+		<title>Document</title>
+		<meta name="description" itemprop="description" content="" />
+		<!--build:css css/vendor.css-->
+		<link rel="stylesheet" href="bower/normalize.css/normalize.css" />
+		<link rel="stylesheet" href="bower/slick-carousel/slick/slick.css" />
+		<link rel="stylesheet" href="bower/slick-carousel/slick/slick-theme.css" />
+		<link rel="stylesheet" href="bower/jquery-nice-select/css/nice-select.css" />
+		<link rel="stylesheet" href="bower/fancybox/dist/jquery.fancybox.css" />
+		<!--endbuild-->
+		<link rel="stylesheet" href="css/style.css" />
+		<!--link(rel="stylesheet", href="css/style-edit.css")-->
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|Roboto:400,700,900" rel="stylesheet" />
+	</head>
+	<!-- mixin nameMixin()-->
+	<!-- - var args = Array.prototype.slice.call(arguments)-->
+	<!-- - for item in args-->
+
+	<body>
+		<div class="page">
+			<!--block header-->
+			<div class="header-small">
+				<div class="main-cont">
+					<div class="header-small-wrap">
+						<div class="header-small-el">Библиотека</div>
+						<div class="header-small-el">Статьи</div>
+						<div class="header-small-el">Комманда</div>
+						<div class="header-small-el">Отзывы</div>
+						<div class="header-small-el">Блог</div>
+						<div class="header-small-el">Аренда</div>
+					</div>
+				</div>
+			</div>
+			<div class="header">
+				<div class="main-cont">
+					<div class="header-top">
+						<a class="header-top__logo" href="#">ITExpert</a>
+						<div class="header-top__search">
+							<input class="input" type="text" placeholder="Название курса или экзамена" />
+						</div>
+						<div class="header-top__nav">
+							<div class="header-top__nav-lk">
+								<svg class="icon">
+									<use xlink:href="#user"></use>
+								</svg>
+							</div>
+							<div class="header-top__nav-cource">
+								<svg class="icon">
+									<use xlink:href="#calendar"></use>
+								</svg>
+							</div>
+							<div class="header-top__nav-phone">8(800)981-57-10</div>
+							<div class="head-toggle">
+								<svg class="icon icon-open">
+									<use xlink:href="#menu"></use>
+								</svg>
+								<svg class="icon icon-close">
+									<use xlink:href="#close"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header-nav-wrap">
+					<div class="main-cont">
+						<div class="header-nav">
+							<div class="header-nav__el header-nav__el--menu">
+								<a class="header-nav__el-text" href="#">
+									<svg class="icon icon-nav-menu">
+										<use xlink:href="#menu"></use>
+									</svg>
+									<span>Каталог курсов</span>
+								</a>
+								<div class="header-nav-sub">
+									<div class="header-nav-sub-wrap">
+										<div class="header-nav-sub__el">
+											<span>Цифровой бизнес</span>
+											<svg class="icon">
+												<use xlink:href="#arrow-right"></use>
+											</svg>
+											<div class="header-nav-sub-two">
+												<div class="header-nav-sub__el-two">
+													<span>Основы ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Service Desk и процессы оперативного управления ИТ-услугами..</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Проведение изменений в ИТ в соответствии с ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Оптимальное проектирование ИТ-услуг в соответствии с ITIL®: инф...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управленческие инструменты организации отношений ИТ с бизнесом ...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление жизненным циклом услуг</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление ИТ-активами. Основы и практики</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Практические подходы для успешной работы</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="header-nav-sub__el">
+											<span>Управление развитием</span>
+											<svg class="icon">
+												<use xlink:href="#arrow-right"></use>
+											</svg>
+											<div class="header-nav-sub-two">
+												<div class="header-nav-sub__el-two">
+													<span>Основы ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Service Desk и процессы оперативного управления ИТ-услугами..</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Проведение изменений в ИТ в соответствии с ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Оптимальное проектирование ИТ-услуг в соответствии с ITIL®: инф...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управленческие инструменты организации отношений ИТ с бизнесом ...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление жизненным циклом услуг</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление ИТ-активами. Основы и практики</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Практические подходы для успешной работы</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="header-nav-sub__el">
+											<span>Бизнес-анализ</span>
+											<svg class="icon">
+												<use xlink:href="#arrow-right"></use>
+											</svg>
+											<div class="header-nav-sub-two">
+												<div class="header-nav-sub__el-two">
+													<span>Основы ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Service Desk и процессы оперативного управления ИТ-услугами..</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Проведение изменений в ИТ в соответствии с ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Оптимальное проектирование ИТ-услуг в соответствии с ITIL®: инф...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управленческие инструменты организации отношений ИТ с бизнесом ...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление жизненным циклом услуг</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление ИТ-активами. Основы и практики</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Практические подходы для успешной работы</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="header-nav-sub__el">
+											<span>Архитектура</span>
+											<svg class="icon">
+												<use xlink:href="#arrow-right"></use>
+											</svg>
+											<div class="header-nav-sub-two">
+												<div class="header-nav-sub__el-two">
+													<span>Основы ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Service Desk и процессы оперативного управления ИТ-услугами..</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Проведение изменений в ИТ в соответствии с ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Оптимальное проектирование ИТ-услуг в соответствии с ITIL®: инф...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управленческие инструменты организации отношений ИТ с бизнесом ...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление жизненным циклом услуг</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление ИТ-активами. Основы и практики</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Практические подходы для успешной работы</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="header-nav-sub__el">
+											<span>Разработка</span>
+											<svg class="icon">
+												<use xlink:href="#arrow-right"></use>
+											</svg>
+											<div class="header-nav-sub-two">
+												<div class="header-nav-sub__el-two">
+													<span>Основы ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Service Desk и процессы оперативного управления ИТ-услугами..</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Проведение изменений в ИТ в соответствии с ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Оптимальное проектирование ИТ-услуг в соответствии с ITIL®: инф...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управленческие инструменты организации отношений ИТ с бизнесом ...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление жизненным циклом услуг</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление ИТ-активами. Основы и практики</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Практические подходы для успешной работы</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="header-nav-sub__el">
+											<span>Тестирование</span>
+											<svg class="icon">
+												<use xlink:href="#arrow-right"></use>
+											</svg>
+											<div class="header-nav-sub-two">
+												<div class="header-nav-sub__el-two">
+													<span>Основы ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Service Desk и процессы оперативного управления ИТ-услугами..</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Проведение изменений в ИТ в соответствии с ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Оптимальное проектирование ИТ-услуг в соответствии с ITIL®: инф...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управленческие инструменты организации отношений ИТ с бизнесом ...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление жизненным циклом услуг</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление ИТ-активами. Основы и практики</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Практические подходы для успешной работы</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="header-nav-sub__el">
+											<span>Управление сервисами</span>
+											<svg class="icon">
+												<use xlink:href="#arrow-right"></use>
+											</svg>
+											<div class="header-nav-sub-two">
+												<div class="header-nav-sub__el-two">
+													<span>Основы ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Service Desk и процессы оперативного управления ИТ-услугами..</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Проведение изменений в ИТ в соответствии с ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Оптимальное проектирование ИТ-услуг в соответствии с ITIL®: инф...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управленческие инструменты организации отношений ИТ с бизнесом ...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление жизненным циклом услуг</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление ИТ-активами. Основы и практики</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Практические подходы для успешной работы</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="header-nav-sub__el">
+											<span>Технологии</span>
+											<svg class="icon">
+												<use xlink:href="#arrow-right"></use>
+											</svg>
+											<div class="header-nav-sub-two">
+												<div class="header-nav-sub__el-two">
+													<span>Основы ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Service Desk и процессы оперативного управления ИТ-услугами..</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Проведение изменений в ИТ в соответствии с ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Оптимальное проектирование ИТ-услуг в соответствии с ITIL®: инф...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управленческие инструменты организации отношений ИТ с бизнесом ...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление жизненным циклом услуг</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление ИТ-активами. Основы и практики</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Практические подходы для успешной работы</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="header-nav-sub__el">
+											<span>Данные и интелект</span>
+											<svg class="icon">
+												<use xlink:href="#arrow-right"></use>
+											</svg>
+											<div class="header-nav-sub-two">
+												<div class="header-nav-sub__el-two">
+													<span>Основы ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Service Desk и процессы оперативного управления ИТ-услугами..</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Проведение изменений в ИТ в соответствии с ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Оптимальное проектирование ИТ-услуг в соответствии с ITIL®: инф...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управленческие инструменты организации отношений ИТ с бизнесом ...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление жизненным циклом услуг</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление ИТ-активами. Основы и практики</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Практические подходы для успешной работы</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="header-nav-sub__el">
+											<span>Кибер безопасность</span>
+											<svg class="icon">
+												<use xlink:href="#arrow-right"></use>
+											</svg>
+											<div class="header-nav-sub-two">
+												<div class="header-nav-sub__el-two">
+													<span>Основы ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Service Desk и процессы оперативного управления ИТ-услугами..</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Проведение изменений в ИТ в соответствии с ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Оптимальное проектирование ИТ-услуг в соответствии с ITIL®: инф...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управленческие инструменты организации отношений ИТ с бизнесом ...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление жизненным циклом услуг</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление ИТ-активами. Основы и практики</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Практические подходы для успешной работы</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="header-nav-sub__el">
+											<span>Упарвление рисками</span>
+											<svg class="icon">
+												<use xlink:href="#arrow-right"></use>
+											</svg>
+											<div class="header-nav-sub-two">
+												<div class="header-nav-sub__el-two">
+													<span>Основы ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Service Desk и процессы оперативного управления ИТ-услугами..</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Проведение изменений в ИТ в соответствии с ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Оптимальное проектирование ИТ-услуг в соответствии с ITIL®: инф...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управленческие инструменты организации отношений ИТ с бизнесом ...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление жизненным циклом услуг</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление ИТ-активами. Основы и практики</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Практические подходы для успешной работы</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="header-nav-sub__el">
+											<span>Упарвление компетенциями</span>
+											<svg class="icon">
+												<use xlink:href="#arrow-right"></use>
+											</svg>
+											<div class="header-nav-sub-two">
+												<div class="header-nav-sub__el-two">
+													<span>Основы ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Service Desk и процессы оперативного управления ИТ-услугами..</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Проведение изменений в ИТ в соответствии с ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Оптимальное проектирование ИТ-услуг в соответствии с ITIL®: инф...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управленческие инструменты организации отношений ИТ с бизнесом ...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление жизненным циклом услуг</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление ИТ-активами. Основы и практики</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Практические подходы для успешной работы</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="header-nav-sub__el">
+											<span>Прорывные технологии</span>
+											<svg class="icon">
+												<use xlink:href="#arrow-right"></use>
+											</svg>
+											<div class="header-nav-sub-two">
+												<div class="header-nav-sub__el-two">
+													<span>Основы ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Service Desk и процессы оперативного управления ИТ-услугами..</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Проведение изменений в ИТ в соответствии с ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Оптимальное проектирование ИТ-услуг в соответствии с ITIL®: инф...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управленческие инструменты организации отношений ИТ с бизнесом ...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление жизненным циклом услуг</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление ИТ-активами. Основы и практики</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Практические подходы для успешной работы</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="header-nav-sub__el">
+											<span>Soft-skills</span>
+											<svg class="icon">
+												<use xlink:href="#arrow-right"></use>
+											</svg>
+											<div class="header-nav-sub-two">
+												<div class="header-nav-sub__el-two">
+													<span>Основы ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Service Desk и процессы оперативного управления ИТ-услугами..</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Проведение изменений в ИТ в соответствии с ITIL®</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Оптимальное проектирование ИТ-услуг в соответствии с ITIL®: инф...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управленческие инструменты организации отношений ИТ с бизнесом ...</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление жизненным циклом услуг</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Управление ИТ-активами. Основы и практики</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="header-nav-sub__el-two">
+													<span>Практические подходы для успешной работы</span>
+													<svg class="icon">
+														<use xlink:href="#arrow-right"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="header-nav__el">
+								<a class="header-nav__el-text" href="#">Экзамены</a>
+								<div class="header-nav-sub">
+									<div class="header-nav-sub__el">Lorem ipsum dolor sit amet.</div>
+									<div class="header-nav-sub__el">Lorem ipsum dolor sit amet.</div>
+									<div class="header-nav-sub__el">Lorem ipsum dolor sit amet.</div>
+									<div class="header-nav-sub__el">Lorem ipsum dolor sit amet.</div>
+									<div class="header-nav-sub__el">Lorem ipsum dolor sit amet.</div>
+									<div class="header-nav-sub__el">Lorem ipsum dolor sit amet.</div>
+								</div>
+							</div>
+							<a class="header-nav__el" href="#">
+								<div class="header-nav__el-text">Акции</div>
+							</a>
+							<a class="header-nav__el" href="#">
+								<div class="header-nav__el-text">Новости</div>
+							</a>
+							<a class="header-nav__el" href="#">
+								<div class="header-nav__el-text">Команда</div>
+							</a>
+							<a class="header-nav__el" href="#">
+								<div class="header-nav__el-text">О компании</div>
+							</a>
+							<a class="header-nav__el" href="#">
+								<div class="header-nav__el-text">Проекты</div>
+							</a>
+							<div class="header-nav--mobile">
+								<a class="header-nav__el" href="#">
+									<div class="header-nav__el-text">Библиотека</div>
+								</a>
+								<a class="header-nav__el" href="#">
+									<div class="header-nav__el-text">Статьи</div>
+								</a>
+								<a class="header-nav__el" href="#">
+									<div class="header-nav__el-text">Комманда</div>
+								</a>
+								<a class="header-nav__el" href="#">
+									<div class="header-nav__el-text">Отзывы</div>
+								</a>
+								<a class="header-nav__el" href="#">
+									<div class="header-nav__el-text">Блог</div>
+								</a>
+								<a class="header-nav__el" href="#">
+									<div class="header-nav__el-text">Аренда</div>
+								</a>
+							</div>
+							<div class="header-nav__el header-nav__el--order modal-get" data-modal="choose">
+								<svg class="icon icon-nav-menu">
+									<use xlink:href="#checked"></use>
+								</svg>
+								<span>Записаться</span>
+							</div>
+							<div class="header-nav--mobile__toggle">
+								<svg class="icon">
+									<use xlink:href="#arrow-down"></use>
+								</svg>
+							</div>
+							<div class="header-nav__auth">
+								<div class="header-nav__auth-btn">
+									<svg class="icon">
+										<use xlink:href="#user"></use>
+									</svg>
+									<span>Войти в кабинет</span>
+								</div>
+								<a class="header-nav__phone" href="tell:8(800)981-57-10">+7(495)981-57-10</a>
+								<a class="header-nav__adress" href="#">107078, Москва,Каланчевская ул. 15, офис 402</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--block header end-->
+			<div class="content content--gray">
+				<div class="content-filter"></div>
+				<div class="main-cont">
+					<div class="content__main">
+						<div class="content__info">
+							<h1>Контакты компании ITEXPERT</h1>
+							<div class="adress-wrap">
+								<div class="map">
+									<script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=ApWIkNaC_C7ifOdvW4gAjglDdwfIo5IW&amp;width=100%&amp;height=450"></script>
+								</div>
+								<div class="adress-content">
+									<div class="adress-title">Контактная информация</div>
+									<div class="adress-row-wrap">
+										<div class="adress-row">
+											<div class="adress-row__icon">
+												<svg class="icon">
+													<use xlink:href="#phone-call"></use>
+												</svg>
+											</div>
+											<div class="adress-row__cont">
+												<div class="adress-row__title">Телефон:</div>
+												<div class="adress-row__text">+7 (495) 981-57-10</div>
+											</div>
+										</div>
+										<div class="adress-row">
+											<div class="adress-row__icon">
+												<svg class="icon">
+													<use xlink:href="#placeholder"></use>
+												</svg>
+											</div>
+											<div class="adress-row__cont">
+												<div class="adress-row__title">Адресс:</div>
+												<div class="adress-row__text">107078, Москва, Каланчевская ул. 15, офис 402</div>
+											</div>
+										</div>
+										<div class="adress-row">
+											<div class="adress-row__icon">
+												<svg class="icon">
+													<use xlink:href="#mail"></use>
+												</svg>
+											</div>
+											<div class="adress-row__cont">
+												<div class="adress-row__title">Почта:</div>
+												<div class="adress-row__text">
+													<a href="mailto:info@itexpert.ru">info@itexpert.ru</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="adress-title">Наши менеджеры ответят на ваши вопросы</div>
+									<div class="manager">
+										<div class="manager__el">
+											<div class="manager__el-img-wrap">
+												<div class="manager__el-img" style="background-image:url('img/rybkin.jpg')"></div>
+											</div>
+											<div class="manager__el-content">
+												<div class="manager__el-name">Александр</div>
+												<a class="manager__el-phone" href="#">8(916)041-55-25</a>
+												<a class="manager__el-mail" href="#">a.rybalkin@itexpert.ru</a>
+											</div>
+										</div>
+										<div class="manager__el">
+											<div class="manager__el-img-wrap">
+												<div class="manager__el-img" style="background-image:url('img/rybkin.jpg')"></div>
+											</div>
+											<div class="manager__el-content">
+												<div class="manager__el-name">Александр</div>
+												<a class="manager__el-phone" href="#">8(916)041-55-25</a>
+												<a class="manager__el-mail" href="#">a.rybalkin@itexpert.ru</a>
+											</div>
+										</div>
+										<div class="manager__el">
+											<div class="manager__el-img-wrap">
+												<div class="manager__el-img" style="background-image:url('img/rybkin.jpg')"></div>
+											</div>
+											<div class="manager__el-content">
+												<div class="manager__el-name">Александр</div>
+												<a class="manager__el-phone" href="#">8(916)041-55-25</a>
+												<a class="manager__el-mail" href="#">a.rybalkin@itexpert.ru</a>
+											</div>
+										</div>
+										<div class="manager__el">
+											<div class="manager__el-img-wrap">
+												<div class="manager__el-img" style="background-image:url('img/rybkin.jpg')"></div>
+											</div>
+											<div class="manager__el-content">
+												<div class="manager__el-name">Александр</div>
+												<a class="manager__el-phone" href="#">8(916)041-55-25</a>
+												<a class="manager__el-mail" href="#">a.rybalkin@itexpert.ru</a>
+											</div>
+										</div>
+										<div class="manager__el">
+											<div class="manager__el-img-wrap">
+												<div class="manager__el-img" style="background-image:url('img/rybkin.jpg')"></div>
+											</div>
+											<div class="manager__el-content">
+												<div class="manager__el-name">Александр</div>
+												<a class="manager__el-phone" href="#">8(916)041-55-25</a>
+												<a class="manager__el-mail" href="#">a.rybalkin@itexpert.ru</a>
+											</div>
+										</div>
+									</div>
+									<div class="adress-title">Оставьте ваше сообщение</div>
+									<div class="adress-form">
+										<form class="validate-form" action="javascript:void(null);">
+											<div class="input-row">
+												<input class="input" type="text" name="name" placeholder="Ваше имя" />
+											</div>
+											<div class="input-row">
+												<input class="input" type="text" name="phone" placeholder="Ваш телефон" />
+											</div>
+											<div class="input-row">
+												<textarea class="input" name="info" cols="30" rows="5" placeholder="Сообщение"></textarea>
+											</div>
+											<div class="agree-row">
+												<div class="check-el">
+													<label class="style-label style-label--checkbox">
+														<input class="sytle-input" type="checkbox" name="agree" />
+														<div class="sytle-input-element">
+															<svg class="icon-check">
+																<use xlink:href="#checked"></use>
+															</svg>
+														</div>
+														<div class="sytle-input-text"></div>
+													</label>
+												</div>
+												<div class="agree-row__text">Согласен с
+													<a href="#">условиями обработки персональных данных</a>
+												</div>
+											</div>
+											<input class="modal-send" type="submit" value="Отправить" />
+										</form>
+									</div>
+									<!--.adress-text Автономная некоммерческая организация Учебный центр дополнительного профессионального образования «ИТ Эксперт»-->
+								</div>
+							</div>
+							<!--news-slider-->
+							<div class="content__info-title">Последние новости</div>
+							<div class="news-slider">
+								<a class="news-slider__el" href="#">
+									<div class="news-slider__el-date">31.08.2018</div>
+									<div class="news-slider__el-title">Повышение удовлетворенности клиентов обновленной серией стандартов ISO</div>
+									<div class="news-slider__el-text">Мы все знаем, что сохранение лояльных, счастливых клиентов является ключом к любому успешному бизнесу, но непостоянному потребительскому миру не всегда легко угодить.</div>
+								</a>
+								<a class="news-slider__el" href="#">
+									<div class="news-slider__el-date">31.08.2018</div>
+									<div class="news-slider__el-title">Повышение удовлетворенности клиентов обновленной серией стандартов ISO</div>
+									<div class="news-slider__el-text">Мы все знаем, что сохранение лояльных, счастливых клиентов является ключом к любому успешному бизнесу, но непостоянному потребительскому миру не всегда легко угодить.</div>
+								</a>
+								<a class="news-slider__el" href="#">
+									<div class="news-slider__el-date">31.08.2018</div>
+									<div class="news-slider__el-title">Повышение удовлетворенности клиентов обновленной серией стандартов ISO</div>
+									<div class="news-slider__el-text">Мы все знаем, что сохранение лояльных, счастливых клиентов является ключом к любому успешному бизнесу, но непостоянному потребительскому миру не всегда легко угодить.</div>
+								</a>
+								<a class="news-slider__el" href="#">
+									<div class="news-slider__el-date">31.08.2018</div>
+									<div class="news-slider__el-title">Повышение удовлетворенности клиентов обновленной серией стандартов ISO</div>
+									<div class="news-slider__el-text">Мы все знаем, что сохранение лояльных, счастливых клиентов является ключом к любому успешному бизнесу, но непостоянному потребительскому миру не всегда легко угодить.</div>
+								</a>
+							</div>
+						</div>
+						<!--block toolbar-->
+						<div class="toolbar">
+							<div class="toolbar__el toolbar__el--cource">
+								<div class="toolbar__title">
+									<svg class="icon">
+										<use xlink:href="#open-book"></use>
+									</svg>
+									<span>Курсы</span>
+								</div>
+								<div class="toolbar__list">
+									<a class="toolbar__list-el" href="#">SCHEDULE Расписание курсов</a>
+									<a class="toolbar__list-el" href="#">ITSS Курс «Управление стратегией ИТ-услуг на основе ITIL®»</a>
+									<a class="toolbar__list-el" href="#">BM Курс «Бизнес-моделирование»</a>
+									<a class="toolbar__list-el" href="#">BPMN Курс «Моделирование бизнес-процессов»</a>
+									<a class="toolbar__list-el" href="#">ITILF Курс «Основы ITIL®»</a>
+									<a class="toolbar__list-el" href="#">PRINCE2F Курс «Основы управления проектами в соответствии с PRINCE2®»</a>
+									<a class="toolbar__list-el" href="#">MLP Курс «Практика машинного обучения»</a>
+									<a class="toolbar__list-el" href="#">COBIT5F «Основы COBIT 5»</a>
+									<a class="toolbar__list-el" href="#">OSA Курс «Service Desk и процессы </a>
+								</div>
+								<div class="toolbar__list-more">
+									<span>Все курсы</span>
+									<svg class="icon">
+										<use xlink:href="#arrow-down"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="toolbar__el toolbar__el--exam">
+								<div class="toolbar__title">
+									<svg class="icon">
+										<use xlink:href="#books-group"></use>
+									</svg>
+									<span>Экзамены</span>
+								</div>
+								<div class="toolbar__list">
+									<div class="toolbar__list-el">SCHEDULE Расписание курсов</div>
+									<div class="toolbar__list-el">ITSS Курс «Управление стратегией ИТ-услуг на основе ITIL®»</div>
+									<div class="toolbar__list-el">BM Курс «Бизнес-моделирование»</div>
+									<div class="toolbar__list-el">BPMN Курс «Моделирование бизнес-процессов»</div>
+									<div class="toolbar__list-el">ITILF Курс «Основы ITIL®»</div>
+									<div class="toolbar__list-el">PRINCE2F Курс «Основы управления проектами в соответствии с PRINCE2®»</div>
+									<div class="toolbar__list-el">MLP Курс «Практика машинного обучения»</div>
+									<div class="toolbar__list-el">COBIT5F «Основы COBIT 5»</div>
+									<div class="toolbar__list-el">OSA Курс «Service Desk и процессы </div>
+								</div>
+								<div class="toolbar__list-more">
+									<span>Все Экзамены</span>
+									<svg class="icon">
+										<use xlink:href="#arrow-down"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="toolbar__el toolbar__el--article">
+								<div class="toolbar-article__head">Статьи</div>
+								<div class="toolbar-article__slider">
+									<a class="toolbar-article__slider-el" href="#">
+										<div class="toolbar-article__date">09.12.2017</div>
+										<div class="toolbar-article__title">ITIL и быстрое изменение приложений 0</div>
+										<div class="toolbar-article__text">Согласно лучшим практикам, нашедшим отражение в библиотеке ITIL®, основным интерфейсом взаимодействия между бизнесом и ИТ является услуга. ИТ-подразделение - провайдер, предоставляющий некий набор услуг, а бизнес - его потребитель.</div>
+										<div class="toolbar-article__more">Подробнее</div>
+									</a>
+									<a class="toolbar-article__slider-el" href="#">
+										<div class="toolbar-article__date">09.12.2017</div>
+										<div class="toolbar-article__title">ITIL и быстрое изменение приложений 1</div>
+										<div class="toolbar-article__text">Согласно лучшим практикам, нашедшим отражение в библиотеке ITIL®, основным интерфейсом взаимодействия между бизнесом и ИТ является услуга. ИТ-подразделение - провайдер, предоставляющий некий набор услуг, а бизнес - его потребитель.</div>
+										<div class="toolbar-article__more">Подробнее</div>
+									</a>
+									<a class="toolbar-article__slider-el" href="#">
+										<div class="toolbar-article__date">09.12.2017</div>
+										<div class="toolbar-article__title">ITIL и быстрое изменение приложений 2</div>
+										<div class="toolbar-article__text">Согласно лучшим практикам, нашедшим отражение в библиотеке ITIL®, основным интерфейсом взаимодействия между бизнесом и ИТ является услуга. ИТ-подразделение - провайдер, предоставляющий некий набор услуг, а бизнес - его потребитель.</div>
+										<div class="toolbar-article__more">Подробнее</div>
+									</a>
+									<a class="toolbar-article__slider-el" href="#">
+										<div class="toolbar-article__date">09.12.2017</div>
+										<div class="toolbar-article__title">ITIL и быстрое изменение приложений 3</div>
+										<div class="toolbar-article__text">Согласно лучшим практикам, нашедшим отражение в библиотеке ITIL®, основным интерфейсом взаимодействия между бизнесом и ИТ является услуга. ИТ-подразделение - провайдер, предоставляющий некий набор услуг, а бизнес - его потребитель.</div>
+										<div class="toolbar-article__more">Подробнее</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<!--block toolbar end-->
+					</div>
+				</div>
+			</div>
+			<!--block footer-->
+			<!--.footer-slider__wrap
+	.main-cont
+		.footer-slider
+			- for (var i=0;i<4;i++)
+				.footer-slider__el
+					img(src="img/class-photo-4.jpg", alt="")
+	-->
+			<div class="footer">
+				<div class="footer__head">
+					<div class="main-cont">
+						<div class="footer__head-wrap">
+							<div class="footer__list">
+								<a class="footer__list-el" href="#">Курсы ITIL</a>
+								<a class="footer__list-el" href="#">Новости</a>
+								<a class="footer__list-el" href="#">О компании</a>
+								<a class="footer__list-el" href="#">Авторские курсы</a>
+								<a class="footer__list-el" href="#">Библиотека</a>
+								<a class="footer__list-el" href="#">Проекты</a>
+								<a class="footer__list-el" href="#">Интервью/Статьи</a>
+								<a class="footer__list-el" href="#">Отзывы</a>
+								<a class="footer__list-el" href="#">Симуляционные игры</a>
+								<a class="footer__list-el" href="#">Экзамены</a>
+								<a class="footer__list-el" href="#">Акции</a>
+								<a class="footer__list-el" href="#">Контакты</a>
+							</div>
+							<div class="footer__info">
+								<a class="footer__phone" href="tel:+7(495)981-57-10">+7(495)981-57-10</a>
+								<a class="footer__mail" href="mailto:info@itexpert.ru">E-mail:info@itexpert.ru</a>
+								<div class="footer__adress">Адрес:г. Москва, ул. Каланчевская 15 офис 402</div>
+								<div class="footer__soc">
+									<a class="footer__soc-el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-facebook"></use>
+										</svg>
+									</a>
+									<a class="footer__soc-el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-twitter"></use>
+										</svg>
+									</a>
+									<a class="footer__soc-el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-vk"></use>
+										</svg>
+									</a>
+									<a class="footer__soc-el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-youtube"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__bottom-text">ITIL® и PRINCE2® — зарегистрированные торговые марки компании AXELOS Limited.
+						<br> Swirl logo™ — торговая марка компании AXELOS Limited. © 2002–2018 IT Expert</div>
+				</div>
+				<!--modals-->
+				<div class="modal-layer">
+					<div class="modal-cont">
+						<div class="modal-filter"></div>
+						<div class="modal-wrap">
+							<div class="modal" data-modal="order">
+								<div class="modal-content modal-content--order">
+									<div class="modal-close">
+										<svg class="icon">
+											<use xlink:href="#close"></use>
+										</svg>
+									</div>
+									<div class="modal-back modal-get" data-modal="choose">
+										<svg class="icon">
+											<use xlink:href="#arrow-left"></use>
+										</svg>
+										<span>Назад</span>
+									</div>
+									<div class="modal-title">Остался всего один шаг</div>
+									<form class="validate-form" action="javascript:void(null);">
+										<div class="input-row">
+											<input class="input" type="text" name="name" placeholder="Ваше имя" />
+										</div>
+										<div class="input-row">
+											<input class="input" type="text" name="phone" placeholder="Ваш телефон" />
+										</div>
+										<div class="input-row">
+											<textarea class="input" name="info" cols="30" rows="5" placeholder="Сообщение"></textarea>
+										</div>
+										<div class="agree-row">
+											<div class="check-el">
+												<label class="style-label style-label--checkbox">
+													<input class="sytle-input" type="checkbox" name="agree" />
+													<div class="sytle-input-element">
+														<svg class="icon-check">
+															<use xlink:href="#checked"></use>
+														</svg>
+													</div>
+													<div class="sytle-input-text"></div>
+												</label>
+											</div>
+											<div class="agree-row__text">Согласен с
+												<a href="#">условиями обработки персональных данных</a>
+											</div>
+										</div>
+										<input class="modal-send" type="submit" value="Отправить заявку" />
+										<div class="modal-cost">
+											<div class="modal-cost__text">цена заказа:</div>
+											<div class="modal-cost__val">
+												<span></span>р</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<!--success message-->
+							<div class="modal" data-modal="truemessage">
+								<div class="modal-content modal-content--true">
+									<svg class="icon">
+										<use xlink:href="#interface"></use>
+									</svg>
+									<div class="modal-text-true">Ваша заявка принята</div>
+								</div>
+							</div>
+							<div class="modal" data-modal="choose">
+								<div class="modal-content modal-content--choose">
+									<div class="modal-close">
+										<svg class="icon">
+											<use xlink:href="#close"></use>
+										</svg>
+									</div>
+									<div class="modal-title">Выберите способ оплаты</div>
+									<div class="choose-row modal-get" data-modal="order">
+										<div class="choose-row__icon">
+											<svg class="icon">
+												<use xlink:href="#credit-card--color"></use>
+											</svg>
+										</div>
+										<div class="choose-row__info">
+											<div class="choose-row__cost">
+												<div class="choose-row__cost-val">
+													<span>17500</span>р</div>
+											</div>
+											<div class="choose-row__title">При оплате картой</div>
+										</div>
+									</div>
+									<div class="choose-row modal-get" data-modal="order">
+										<div class="choose-row__icon">
+											<svg class="icon">
+												<use xlink:href="#debt--color"></use>
+											</svg>
+										</div>
+										<div class="choose-row__info">
+											<div class="choose-row__cost">
+												<div class="choose-row__cost-val">
+													<span>19500</span>р</div>
+											</div>
+											<div class="choose-row__title">При оплате по счету</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--block footer end-->
+		</div>
+		<!--build:js js/combined.js-->
+		<script src="bower/jquery/dist/jquery.js"></script>
+		<script src="bower/svg4everybody/dist/svg4everybody.js"></script>
+		<script src="bower/slick-carousel/slick/slick.js"></script>
+		<script src="bower/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+		<!--script(src='bower/owl.carousel/dist/owl.carousel.min.js')-->
+		<!--script(src="js/jquery.smoothscroll.js")-->
+		<script src="bower/jquery-validation/dist/jquery.validate.min.js"></script>
+		<script src="bower/fancybox/dist/jquery.fancybox.js"></script>
+		<!-- endbuild-->
+		<script src="js/script.js"></script>
+		<!--script(src="js/script-edit.js")-->
+	</body>
+
+</html>
