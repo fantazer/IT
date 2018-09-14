@@ -73,7 +73,7 @@ body
 		+below(1024px)
 			size 20px
 		tr(all)
-		size 25px
+		size 30px
 		fill $blue
 //.icon
 .header-top__nav-cource
@@ -764,12 +764,17 @@ body
 		max-width 768px
 		margin-left: auto
 		margin-right: auto
-	flex(between)
+	f()
+	justify-content: space-between
+	align-items: flex-end
 
 .news-list
 	+below(1024px)
 		width: 100%
 		margin-left: 0
+	+below(768px)
+		margin-left: auto
+		width: 100%
 	width: 48%
 	max-width 600px
 	margin-right: auto
@@ -778,12 +783,13 @@ body
 	fl()
 	justify-content: center
 .news-list__el
+	+below(768px)
+		padding: 0 10px
 	margin-bottom: 30px
-	f()
+	display: block
 .news-list__el-title
 	@extend .type--md
 	font-weight: 700
-	margin-bottom: 10px
 	color black
 
 .news-list__el-content
@@ -793,21 +799,17 @@ body
 	line-height: 1.6
 	color #979797
 	border-radius 10px
-	margin-left: 20px
 	background: white
+
 .news-list__el-date
-	fl()
-	background: $blue
-	size 60px
-	flex(mid)
 	z-index 2
 	br(5px)
+	display: inline-block
+	margin-bottom: 10px
 
 .news-list__el-date-val
-	@extend .type--md
 	font-weight:bold
-	margin-bottom: -5px
-	color white
+	color $blue
 
 .news-list__el-date-day
 	text-align: center
@@ -840,7 +842,8 @@ body
 	animation:  slideInDown  1s 1 ease-in-out;
 	z-index 1200
 	background: white!important
-
+	.header-small
+		display: none
 	+above(1025px)
 		.header-top
 			display: none
@@ -1731,7 +1734,7 @@ select.select-beauty
 .sert
 	flex(between)
 .sert__el
-	width: 30%
+	width: 22%
 	bsh()
 	tr(all)
 	outline none!important

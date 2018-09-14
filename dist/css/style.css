@@ -417,7 +417,6 @@ ul li,
 .cat__el__code,
 .command-el__title,
 .news-list__el-title,
-.news-list__el-date-val,
 .course-treners__name,
 .review__el-title,
 .news-slider__el-title,
@@ -435,7 +434,6 @@ ul li,
   .cat__el__code,
   .command-el__title,
   .news-list__el-title,
-  .news-list__el-date-val,
   .course-treners__name,
   .review__el-title,
   .news-slider__el-title,
@@ -1154,8 +1152,8 @@ body {
 .header-top__nav-lk .icon {
   -webkit-transition: all 0.4s;
           transition: all 0.4s;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   fill: #3e51ab;
 }
 @media only screen and (max-width: 1024px) {
@@ -2306,10 +2304,10 @@ body {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 @media only screen and (max-width: 1024px) {
   .news {
@@ -2344,16 +2342,23 @@ body {
     margin-left: 0;
   }
 }
+@media only screen and (max-width: 768px) {
+  .news-list {
+    margin-left: auto;
+    width: 100%;
+  }
+}
 .news-list__el {
   margin-bottom: 30px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
+}
+@media only screen and (max-width: 768px) {
+  .news-list__el {
+    padding: 0 10px;
+  }
 }
 .news-list__el-title {
   font-weight: 700;
-  margin-bottom: 10px;
   color: #111;
 }
 .news-list__el-content {
@@ -2363,7 +2368,6 @@ body {
   color: #979797;
   -webkit-border-radius: 10px;
           border-radius: 10px;
-  margin-left: 20px;
   background: #fff;
 }
 @media only screen and (max-width: 1440px) {
@@ -2372,32 +2376,15 @@ body {
   }
 }
 .news-list__el-date {
-  -webkit-flex-flow: column;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  background: #3e51ab;
-  width: 60px;
-  height: 60px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
   z-index: 2;
   -webkit-border-radius: 5px;
           border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 .news-list__el-date-val {
   font-weight: bold;
-  margin-bottom: -5px;
-  color: #fff;
+  color: #3e51ab;
 }
 .news-list__el-date-day {
   text-align: center;
@@ -2424,6 +2411,9 @@ body {
           animation: slideInDown 1s 1 ease-in-out;
   z-index: 1200;
   background: #fff !important;
+}
+.shrink .header-small {
+  display: none;
 }
 @media only screen and (min-width: 1025px) {
   .shrink .header-top {
@@ -3864,7 +3854,7 @@ select.select-beauty {
           align-items: center;
 }
 .sert__el {
-  width: 30%;
+  width: 22%;
   -webkit-box-shadow: 0px 3px 8px #e3e3e3;
           box-shadow: 0px 3px 8px #e3e3e3;
   -webkit-transition: all 0.4s;
