@@ -782,6 +782,11 @@ body
 	f()
 	fl()
 	justify-content: center
+
+.news-list--full
+	.content-title
+		display: none
+
 .news-list__el
 	+below(768px)
 		padding: 0 10px
@@ -1598,6 +1603,14 @@ select.select-beauty
 	grid-gap 20px
 	grid-template-columns repeat(4,1fr);
 
+.b-wrap--three
+	+below(768px)
+		grid-template-columns repeat(2,1fr);
+		margin-bottom: 30px
+	+below(640px)
+		display: block
+	grid-template-columns repeat(3,1fr);
+	margin-bottom: 50px
 .b-el
 	+below(640px)
 		margin-bottom: 30px
@@ -1607,6 +1620,8 @@ select.select-beauty
 	background: white
 	tr(all)
 	bsh()
+	f()
+	fl()
 	&:hover
 		box-shadow 0px 10px 10px #c5c2c2
 
@@ -1624,7 +1639,10 @@ select.select-beauty
 	@extend .type--lxg
 	color black
 	margin-bottom: 10px
-//.b-el-cont
+.b-el-cont
+	f()
+	fl()
+	flex-grow 1
 .b-el-text
 	line-height: 1.6
 	margin-bottom: 20px
@@ -1633,6 +1651,7 @@ select.select-beauty
 	flex(between)
 	padding-top: 10px
 	border-top 1px solid $blue
+	margin-top: auto
 .b-el-attr
 	f()
 .b-el-attr__icon
@@ -2191,7 +2210,7 @@ select.select-beauty
 		margin-bottom: 30px
 	+below(640px)
 		text-align: center
-	@extend .type--lg
+	@extend .type--lxg
 	color black
 	margin-bottom: 30px
 
@@ -2375,8 +2394,11 @@ select.select-beauty
 .sale__el--text
 	line-height: 1.6
 
-.more
+.more--mid
 	flex(mid)
+	fw()
+.more
+	f()
 	fw()
 	margin-bottom: 20px
 .more__el
@@ -2384,10 +2406,10 @@ select.select-beauty
 	border 1px solid darken($gray,10)
 	br(20px)
 	margin 0px 5px 5px 0
-.more-text
+.more-text--mid
 	text-align: center
 
-.more__wrap
+.more__wrap--mid
 	max-width 768px
 	margin-left: auto
 	margin-right: auto
@@ -2482,3 +2504,24 @@ select.select-beauty
 		+below(640px)
 			width: 100%
 		width: 50%
+
+.header-nav-sub__el-descr
+	opacity: .8
+	font-weight: 400
+	font-family: "PT Sans"
+	font-size: 12px
+	color #5f5f5f
+.header-nav-sub__el--line
+	display: block
+
+.news-intro
+	background: white
+	overflow: hidden
+	br(10px)
+	margin-bottom: 30px
+.news-intro__img
+	img
+		width: 100%
+.news-intro__text
+	line-height: 1.6
+	padding: 30px
