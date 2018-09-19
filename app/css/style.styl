@@ -723,6 +723,18 @@ body
 
 .slick-slide
 	margin: 0 10px
+	&:hover
+		outline none!important
+	&:active
+		outline none!important
+	&:focus
+		outline none!important
+
+.slick-dots li button:before
+	content ''
+	round()
+	size 8px
+	background: $blue
 
 .command-list
 	+below(1024px)
@@ -921,6 +933,21 @@ body
 			width: 800px;
 			overflow: auto;
 			display: block;
+	strong,b
+		color black
+	a
+		color $blue
+		text-decoration: none!imoprtant
+		position: relative
+		&:before
+			content ''
+			position: absolute
+			bottom -2px
+			height: 1px
+			width: 100%
+			background: $blue
+			opacity: .4
+
 .toolbar__title
 	padding: 15px
 	//@extend .type--md
@@ -1662,6 +1689,8 @@ select.select-beauty
 		size 20px
 		fill $blue
 .b-el-attr__val
+	+below(640px)
+		font-size: 10px
 	color $blue
 	font-weight: 700
 	flex(mid)
@@ -1902,16 +1931,17 @@ select.select-beauty
 .schedule__row-content
 	+below(640px)
 		padding: 15px
-	background: #f9f9f9
-	padding: 15px 30px
 	f()
 	fw()
+	justify-content: space-between
+	background: #f9f9f9
+	padding: 15px 30px
 	border-radius 0 0 10px 10px
 .schedule__more
 	+below(768px)
 		width: 100%
 	margin-bottom: 20px
-	width: 50%
+	width: 48%
 .schedule__more-title
 	opacity .6
 	margin-bottom: 10px
@@ -2143,15 +2173,25 @@ select.select-beauty
 	+below(640px)
 		margin-top: 20px
 		width: 100%
+		margin-left: 0
 		.nice-select
 			width: 100%
+	margin-left: 20px
+	width: 35%
 .schedule__el--price
+	margin-left: auto
+	margin-right: 50px
 	+below(640px)
 		flex(between)
 		width: 100%
 		margin-top: 30px
+		margin-right: 0
 		.schedule__title
 			margin-bottom: 0
+
+.schedule__val--single
+	font-weight: bold
+	color black
 
 .staff
 	+below(640px)
@@ -2209,10 +2249,10 @@ select.select-beauty
 	+below(768px)
 		margin-bottom: 30px
 	+below(640px)
-		text-align: center
+		text-align: left
 	@extend .type--lxg
 	color black
-	margin-bottom: 30px
+	margin-bottom: 20px
 
 .staff-cert
 	+below(768px)
@@ -2525,3 +2565,125 @@ select.select-beauty
 .news-intro__text
 	line-height: 1.6
 	padding: 30px
+
+.article-share
+	margin: 20px 0
+
+.toolbar-code
+	color $blue
+	font-weight: 700
+	font-family: Museo
+
+.toolbar-code-text
+	font-family: Museo
+
+.cert-label-img
+	+below(640px)
+		display: block
+		margin: 20px auto
+	margin-bottom: 20px
+
+.old_h3,.section-title
+	+below(768px)
+		font-size: 16px
+	color black
+	margin-bottom: 20px
+	display: block
+	font-size: 22px
+	font-weight: bold
+
+.client-list__banner
+	line-height: 1.6
+
+.clients-list__wrap
+	+below(640px)
+		grid-template-columns repeat(2,1fr);
+	display: grid
+	grid-gap 20px
+	grid-template-columns repeat(3,1fr);
+
+.clients-list__img
+	flex(mid)
+	margin-bottom: 20px
+	img
+		max-width 200px
+		max-height 115px
+
+.clients-list__text
+	line-height: 1.6
+
+.clients-list__el
+	padding: 20px 20px
+	br(10px)
+	background: white
+
+.biblio-item
+	padding: 20px
+	margin-bottom: 20px
+	br(10px)
+	background: white
+	a
+		color $blue
+		text-decoration: none!imoprtant
+		position: relative
+		&:before
+			content ''
+			position: absolute
+			bottom -2px
+			height: 1px
+			width: 100%
+			background: $blue
+			opacity: .4
+
+.mark-box
+	+below(768px)
+		margin: 20px -20px
+	padding: 10px
+	background: #f1f4ff
+	margin: 30px -30px
+
+.review-wrapper
+	+below(768px)
+		grid-template-columns 1fr 1fr
+	display: grid
+	grid-gap 20px
+	grid-template-columns 1fr 1fr 1fr
+
+.review-wrapper-item
+	box-shadow  0 5px 10px #f1f1f1
+	tr(all)
+	br(10px)
+	overflow hidden
+	&:hover
+		box-shadow  0px 10px 10px #c5c2c2
+
+.class-room
+	+below(640px)
+		grid-template-columns 1fr 1fr
+	display: grid
+	grid-gap 20px
+	grid-template-columns 1fr 1fr 1fr
+	margin-bottom: 30px
+.fancybox
+	text-decoration: none
+	&:before
+		content ''
+		display: none
+
+.shedule-step
+	+below(768px)
+		margin: 30px 0
+	margin: 50px 0
+
+.schedule-cost__el--check
+	+below(1200px)
+		margin-left: 0
+	margin-left: 27%
+
+.schedule__more-text
+	max-width 350px
+
+.schedule__more-text--save
+	color black
+	font-weight: 700
+	font-family: Museo
