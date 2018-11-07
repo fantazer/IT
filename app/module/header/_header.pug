@@ -33,7 +33,9 @@ mixin header()
 		.header-nav-wrap
 			.main-cont
 				.header-nav
-
+					
+					a(href="/").header-nav__el.header-nav__el--home
+						+icon("home-fill","icon")
 					.header-nav__el.header-nav__el--menu
 						a(href="#").header-nav__el-text
 							+icon("menu","icon icon-nav-menu")

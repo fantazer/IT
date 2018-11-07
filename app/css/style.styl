@@ -340,6 +340,8 @@ body
 
 
 .popular__el__title
+	+below(768px)
+		font-size: 14px
 	font-size: 16px
 	font-weight:bold
 	color black
@@ -446,6 +448,9 @@ body
 	@extend .no-mark
 	//overflow: hidden
 	&:hover
+		+below(640px)
+			box-shadow 0 0 0
+
 		box-shadow 0px 8px 10px #c7c3c3
 		background: $blue
 		border-radius 5px 5px 0 0
@@ -486,6 +491,8 @@ body
 	padding: 40px 30px
 	position: relative
 .cat__el--active
+	+below(640px)
+		box-shadow 0 0 0
 	box-shadow 0px 8px 10px #c7c3c3
 	background: $blue
 	.cat__el__code
@@ -624,6 +631,8 @@ body
 	width: 50%
 	position: relative
 	img
+		+below(768px)
+			margin-bottom: 20px
 		z-index 2
 		position: relative
 .about-company-round
@@ -880,6 +889,8 @@ body
 	.head-toggle
 		.icon
 			fill black!important
+	.header-nav__el--home
+		display: block
 .content__main
 	+below(768px)
 		fw()
@@ -910,10 +921,18 @@ body
 	+below(768px)
 		padding: 15px
 		margin-bottom: 30px
+		font-size: 12px
+	br(10px)
 	padding: 30px
 	background: white
-	br(10px)
-	margin-bottom: 50px
+	margin-bottom: 30px
+	font-size: 15px
+
+.content__info-about
+	+below(768px)
+		font-size: 12px
+	font-size: 15px
+
 .content__info-wrap--near
 	+below(640px)
 		padding: 0
@@ -952,7 +971,7 @@ body
 	padding: 15px
 	//@extend .type--md
 	font-weight: bold
-	color black
+	color darken($blue,10)
 	//background: #ededed
 	up()
 	border-radius 10px 10px 0 0
@@ -980,9 +999,11 @@ body
 .content__info-title
 	+below(768px)
 		text-align: center
-	@extend .type--lg
-	color black
+	@extend .type--lxg
+	color $blue
 	margin-bottom: 30px
+	padding-bottom: 25px
+	border-bottom 1px solid #3e51ab0f
 
 .content__info-main-title
 	@extend .type--lg
@@ -1101,7 +1122,6 @@ select.select-beauty
 	margin-bottom: 20px
 .tab__el
 	padding: 0 20px 20px 20px
-	up()
 	cp()
 	text-align: center
 	font-weight:bold
@@ -1115,7 +1135,17 @@ select.select-beauty
 
 
 .tab-content
+	+below(768px)
+		font-size: 12px
 	display: none
+	line-height: 1.6
+	font-size: 15px
+	p
+		font-size: 15px
+		line-height: 1.6
+	h3
+		font-size: 15px
+		margin: 15px 0
 .tab-content--active
 	display: block!important
 
@@ -1130,9 +1160,10 @@ select.select-beauty
 		fl()
 		flex(mid)
 		margin-bottom: 20px!important
+		box-shadow 0 0 0
 	flex(between)
 	border-bottom 1px solid #f9f9f9
-	padding: 10px 20px
+	padding: 10px 30px
 	transition transform .6s
 	background: white
 	cp()
@@ -1140,6 +1171,9 @@ select.select-beauty
 	&:last-child
 		margin-bottom: 0
 	&:hover
+		+below(640px)
+			box-shadow 0 0 0
+			transform scale(1)
 		transform scale(1.025)
 		bsh()
 
@@ -1183,7 +1217,6 @@ select.select-beauty
 	+below(640px)
 		text-align: center
 		width: 100%
-	@extend .type--md
 	font-weight:bold
 	font-family: Museo
 	margin-bottom: 5px
@@ -1196,6 +1229,8 @@ select.select-beauty
 		fl()
 	f()
 	margin-bottom: 5px
+	width: 33%
+
 .course-treners__info-text
 	+below(640px)
 		text-align: center
@@ -1215,14 +1250,15 @@ select.select-beauty
 		width: 100%
 		text-align: center
 		margin-bottom: 10px
-	margin-bottom: 10px
+	margin-bottom: 0px
+	width: 25%
 	color $text-gray
 
 .content__info-wrap--empty
 	+below(768px)
 		margin-bottom: 30px
 	background: none
-	margin-bottom: 50px
+	margin-bottom: 30px
 	padding 0
 
 .footer
@@ -1376,7 +1412,7 @@ select.select-beauty
 	+below(640px)
 		max-height calc(100vh - 60px)
 		overflow-y scroll
-		padding: 20px 5px
+		padding: 20px 10px
 		width: 100%!important
 	//background: #2b8850
 	background: white
@@ -1519,7 +1555,7 @@ select.select-beauty
 	+below(640px)
 		margin-bottom: 30px
 		padding: 15px
-	padding: 20px 30px
+	padding: 45px 30px
 	border 1px solid #f9f9f9
 	br(5px)
 	//bsh()
@@ -1556,10 +1592,12 @@ select.select-beauty
 	align-items: center
 	padding: 15px 0
 	border-bottom 1px solid #eeeeee
+	line-height: 1
 .order__row__name
 	margin-right: 10px
 .order__row__val
-	@extend .type--lxg
+	@extend .type--md
+	font-weight:bold
 	color black
 
 .order-get
@@ -1602,7 +1640,7 @@ select.select-beauty
 	margin-bottom: 10px
 .toolbar-article__title
 	@extend .type--lxg
-	color black
+	color $blue
 	margin-bottom: 20px
 .toolbar-article__text
 	line-height: 1.6
@@ -1628,7 +1666,7 @@ select.select-beauty
 		display: block
 	display: grid
 	grid-gap 20px
-	grid-template-columns repeat(4,1fr);
+	grid-template-columns repeat(3,1fr);
 
 .b-wrap--three
 	+below(768px)
@@ -1641,6 +1679,8 @@ select.select-beauty
 .b-el
 	+below(640px)
 		margin-bottom: 30px
+		box-shadow 0 0 0
+		border 1px solid #f3f1f1
 	padding: 15px 20px 15px 20px
 	br(10px)
 	//border 1px solid $border-color
@@ -1650,6 +1690,8 @@ select.select-beauty
 	f()
 	fl()
 	&:hover
+		+below(640px)
+			box-shadow 0 0 0
 		box-shadow 0px 10px 10px #c5c2c2
 
 .b-el-title__top
@@ -1702,13 +1744,19 @@ select.select-beauty
 	padding: 50px 0
 
 .news-slider__el
+	+below(768px)
+		box-shadow 0 0 0
 	padding: 40px 20px
 	background: white
 	br(10px)
 	bsh()
 	tr(all)
 	margin-bottom: 20px
+	border 1px solid #f3f1f1
 	&:hover
+		+below(768px)
+			box-shadow 0 0 0
+			border 1px solid #f3f1f1
 		bsh-hover()
 
 .news-slider__el-date
@@ -1775,9 +1823,9 @@ select.select-beauty
 		size 18px
 
 .slider-control--left
-	left -3px
+	left -9px
 .slider-control--right
-	right -3px
+	right -9px
 
 .sert
 	flex(between)
@@ -1845,6 +1893,9 @@ select.select-beauty
 .schedule__row
 	+below(640px)
 		@extend .no-mark
+		box-shadow 0 0 0
+		border 1px solid #f3f1f1
+		transition none!important
 	br(10px)
 	bsh()
 	transition box-shadow .4s
@@ -1854,6 +1905,10 @@ select.select-beauty
 	border-bottom 1px solid $gray
 	cp()
 	&:hover
+		+below(640px)
+			box-shadow 0 0 0
+			border 1px solid #f3f1f1
+
 		bsh-hover()
 		outline none
 .schedule__row-head
@@ -1861,7 +1916,7 @@ select.select-beauty
 		fw()
 		position: relative
 	+below(640px)
-		padding: 35px 15px 25px 15px
+		padding: 25px 15px 25px 15px
 	f()
 	align-items: center
 	justify-content: space-between
@@ -1912,8 +1967,10 @@ select.select-beauty
 		top 20px
 		right: 20px
 	+below(640px)
-		top 15px
-		right: 15px
+		top 25px
+		right: 25px
+		border 1px solid $blue
+		opacity:.8
 	size 30px
 	border 1px solid $border-color
 	round()
@@ -1921,6 +1978,9 @@ select.select-beauty
 	cp()
 	tr(all)
 	.icon
+		+below(640px)
+			fill $blue
+			opacity:1
 		size 14px
 		opacity: .4
 
@@ -2021,13 +2081,14 @@ select.select-beauty
 	font-weight:bold
 	font-family:Museo
 	margin-bottom: 15px
-	opacity:.6
 
 //border-bottom 1px solid $border-color
 
 .schedule-main-title
 	f()
 	align-items: center
+	h1
+		margin-bottom: 0
 .schedule-main-title__icon
 	size 40px
 	round()
@@ -2179,6 +2240,9 @@ select.select-beauty
 	margin-left: 20px
 	width: 35%
 .schedule__el--price
+	+below(1200px)
+		margin: 0 10px
+		width: 25%
 	margin-left: auto
 	margin-right: 50px
 	+below(640px)
@@ -2375,7 +2439,7 @@ select.select-beauty
 
 .modal-cost
 	+below(640px)
-		margin: 0px -5px -20px -5px
+		margin: 0px -10px -20px -10px
 	flex(mid)
 	fl()
 	margin: 0px -40px -40px -40px
@@ -2589,7 +2653,7 @@ select.select-beauty
 	color black
 	margin-bottom: 20px
 	display: block
-	font-size: 22px
+	font-size: 28px
 	font-weight: bold
 
 .client-list__banner
@@ -2672,6 +2736,8 @@ select.select-beauty
 
 .shedule-step
 	+below(768px)
+		&:first-child
+			margin-top: 20px
 		margin: 30px 0
 	margin: 50px 0
 
@@ -2687,3 +2753,184 @@ select.select-beauty
 	color black
 	font-weight: 700
 	font-family: Museo
+
+.header-nav__el--home
+	margin-left: -60px
+	display: none
+	+below(1280px)
+		display: none!important
+
+//scheme
+.scheme
+	+below(1200px)
+		display: none
+	display flex
+	justify-content center
+	align-items center
+	flex-flow column
+	padding 40px 40px 0px 40px
+	background #f7f7f7
+	margin 40px 0
+	border-radius 10px
+
+.scheme__el-row
+	display flex
+	justify-content center
+	align-items center
+	margin-bottom 30px
+	position relative
+
+.scheme__el
+	border-radius 10px
+	width 100%
+	text-align center
+	transition all 0.4s
+	&:hover
+			box-shadow 0 9px 18px #92ab97
+
+.scheme__el-expert
+	border 2px solid #620d7c
+
+.scheme__el-row--expert
+	width 20%
+	.scheme__el-arrow
+			height 30px
+			bottom -30px
+			left 50%
+
+.scheme__el-malc
+	border 2px solid #744fd3
+
+.scheme__el-row--malc
+	width 30%
+	.scheme__el-arrow
+			height 30px
+			bottom -30px
+			left 50%
+
+.scheme__el-link
+	color black!important
+	display block
+	padding 30px 15px
+	text-transform uppercase
+	border-bottom 0!important
+
+.scheme__el-row--two
+	display flex
+	justify-content space-between
+	align-items center
+	background white
+	padding 10px
+	border-radius 10px
+	width 100%
+
+.scheme__el-row--part
+	width 48%
+	display flex
+	border 1px dotted #fff
+	padding 5px
+	border-radius 10px
+
+.scheme__el-item
+	margin 0 5px
+	width 100%
+	border 2px solid #28b16a
+
+.scheme__el-pr
+	border 2px solid #5330ae
+
+.scheme__el-foundation
+	border 2px solid #b53b88
+
+.scheme__el-row--pr
+	width 25%
+	.scheme__el-arrow
+			height 30px
+			bottom -30px
+			left 50%
+	.scheme__el-arrow-left
+			position absolute
+			height 120px
+			width 1px
+			border-left 2px dotted #ccc7c7
+			left -1px
+			bottom 30px
+			transform rotate(-45deg)
+			transform-origin bottom right
+	.scheme__el-arrow-right
+			position absolute
+			height 120px
+			width 1px
+			border-left 2px dotted #ccc7c7
+			right -1px
+			bottom 30px
+			transform rotate(45deg)
+			transform-origin bottom right
+
+.scheme__el-row--foundation
+	width 30%
+	.scheme__el-arrow-left
+			position absolute
+			height 280px
+			width 1px
+			border-left 2px dotted #ccc7c7
+			left -1px
+			bottom 30px
+			transform rotate(-45deg)
+			transform-origin bottom right
+	.scheme__el-arrow-right
+			position absolute
+			height 280px
+			width 1px
+			border-left 2px dotted #ccc7c7
+			right -1px
+			bottom 30px
+			transform rotate(45deg)
+			transform-origin bottom right
+
+.scheme__el-arrow
+	position absolute
+	width 1px
+	border-left 2px dotted #ccc7c7
+//scheme
+
+.step
+	&:last-child
+		margin-bottom: 0
+	margin-bottom: 30px
+
+.order__row__val-text
+	font-size: 11px
+	display: inline-block
+	margin-right: 10px
+	opacity: .6
+
+.bread
+	f()
+	margin-bottom: 20px
+	fw()
+.bread__el
+	margin-right: 20px
+	position: relative
+	margin-bottom: 5px
+	&:after
+		content '>'
+		position: absolute
+		right -15px
+	&:last-child
+		opacity:.4
+		&:after
+			content ''
+			display: none
+
+.order-day-empty
+	font-size: 14px
+
+.advant_el-text-val
+	display: block
+	font-size: 12px
+	opacity: .8
+	font-weight:bold
+	color black
+	a
+		text-decoration: underline

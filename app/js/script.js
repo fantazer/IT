@@ -225,7 +225,7 @@ $(document).ready(function () {
 		speed: 1500,
 		vertical: false,
 		arrows: false,
-		adaptiveHeight: true,
+		//adaptiveHeight: true,
 		autoplaySpeed: 8000
 	});
 
@@ -297,19 +297,7 @@ $(document).ready(function () {
 		$(this).closest(".slider-wrap").find(".slider-item").slick('slickPrev');
 	});
 
-	//slick item height
 
-	var handleEqualHeightSlides = function () {
-		var slickTrackHeight = $('.slick-track').height();
-		$('.news-slider__el').css('height', slickTrackHeight + 'px');
-	};
-	handleEqualHeightSlides();
-	var reInitSlickOnResize = function () {
-		$slick.slick('resize');
-		handleEqualHeightSlides();
-	};
-	$(window).on('resize orientationchange', reInitSlickOnResize);
-	//slick item height===end
 
 	//mobile init
 	//init only in mobile
@@ -363,6 +351,15 @@ $(document).ready(function () {
 	//	//code
 	//}
 
+	//slick item height
+	var stHeight = $(' .news-slider .slick-track').height();
+	$('.news-slider__el').css('height',stHeight + 'px' )
+
+	var stHeightEl = $('.b-wrap').find('.slick-slide').height();
+	console.log(stHeightEl);
+	$('.b-el').css('height',stHeightEl + 'px' );
+	//slick item height===end
+
 	function detectIE() {
 		var ua = window.navigator.userAgent;
 
@@ -399,7 +396,7 @@ $(document).ready(function () {
 			'</div>');
 	}
 
-	//for init SVG 
+	//for init SVG
 	//svg4everybody();
 	// ==== clear storage =====
 	localStorage.clear();
@@ -470,20 +467,14 @@ $(document).ready(function () {
 		$('.modal-cost__val span').text(cost);
 	});
 	//choose payment type===end
-	/* ###### For SlideToggle Elements  ######*/
-	/*var hideToggle = function(targetClick,toggleEl) {
-		$(targetClick).click(function(event){
-				event.stopPropagation();
-				$(toggleEl).slideToggle("fast");
-		});
-		$(toggleEl).on("click", function (event) {
-			event.stopPropagation();
-		});
-		$(document).on("click", function () {
-				$(toggleEl).hide();
-		});
-	}
-	hideToggle('.icon-bars','.top-menu_link');*/
+
+	//cert isset
+	$('.step').each(function () {
+		if ($(this).find('.staff-cert__el').length < 1){
+			$(this).find('.cert-label-img').hide();
+		}
+	})
+	//cert isset===end
 
 })
 
