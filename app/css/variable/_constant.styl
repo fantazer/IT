@@ -19,6 +19,7 @@ black = #111111
 
 $blue = #3E51AB
 $blue-light = #1F6ED4
+$blue-bright = #002cff
 $sky = #39BAE8
 $sky-light = #B9EDF8
 $red = #f20022
@@ -103,13 +104,15 @@ h2
 	color black
 	margin-top: 0
 h3
+	@extend .type--lg
+	color black
+	margin-top: 0
+	line-height: 1.4
+h4
 	@extend .type--main
 	color black
 	margin-top: 0
-h4
-	@extend .type--sm
-	color black
-	margin-top: 0
+	line-height: 1.4
 h5
 	@extend .type--xs
 	color black
@@ -212,14 +215,16 @@ btnStyleLight(br-btn,color-btn)
 	@extend .btn
 	color white
 	background $blue
+	font-weight: 700
+	letter-spacing:.8px
 	.nav-icon
 		fill white
 	&:hover
-		background-color $red
+		background-color $green
 		color white
-		box-shadow 0 9px 18px rgba(242, 0, 34, 0.6)
+		//box-shadow 0 9px 18px $blue-bright
 	&:active
-		background-color $red
+		background-color $green
 		outline 0!important
 	input[type="submit"]
 		border 0

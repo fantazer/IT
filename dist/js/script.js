@@ -1,5 +1,19 @@
 $(document).ready(function () {
 
+	$('.mobile').click(function(){
+		$(this).toggleClass('mobile--open');
+		$('.mobile-order').slideToggle();
+		$('.mobile-order').empty();
+		$('.order').clone(true, true).appendTo('.mobile-order');
+		$('.content').toggleClass('content--filter');
+	});
+	
+	$('.order-get').click(function(){
+		$('.mobile').removeClass('mobile--open');
+		$('.content').removeClass('content--filter');
+		$('.mobile-order').hide();
+	});
+
 	var widthWindow = $('window').width();
 
 	//fancybox
@@ -83,39 +97,39 @@ $(document).ready(function () {
 	initTab(".tab-wrap");
 
 	//modals
+	var modalState = {
+		"isModalShow": false, //state show modal
+		"scrollPos": 0
+	};
 	$('.modal-content').click(function (event) {
 		event.stopPropagation();
 	});
-	var scrollPos = 0;
 
 	var openModal = function () {
 		if (!$('.modal-layer').hasClass('modal-layer-show')) {
 			$('.modal-layer').addClass('modal-layer-show');
+			modalState.scrollPos = $(window).scrollTop();
+			$('body').css({
+				overflow: 'hidden',
+				position: 'fixed',
+				overflowY: 'hidden',
+				top: -modalState.scrollPos,
+				width: '100%'
+			});
 		}
-		scrollPos = $(window).scrollTop();
-		$('body').css({
-			overflow: 'hidden',
-			position: 'fixed',
-			overflowY: 'scroll',
-			top: -scrollPos,
-			width: '100%'
-		});
-		return scrollPos;
+		modalState.isModalShow = true;
 	};
 
 	var closeModal = function () {
-		console.log("scrollPos", scrollPos);
 		$('.modal-layer').removeClass('modal-layer-show');
-		$("body").removeClass("modal-fix");
 		$('body').css({
 			overflow: '',
 			position: '',
-			top: ''
-		})
-		$(window).scrollTop(scrollPos);
+			top: modalState.scrollPos
+		});
+		$(window).scrollTop(modalState.scrollPos);
 		$('.modal').removeClass('modal__show');
-		$('.enter').removeClass('enter--open');
-		$('.basket').removeClass('basket--open');
+		modalState.isModalShow = false;
 	};
 
 	var initModal = function (el) {
@@ -129,9 +143,8 @@ $(document).ready(function () {
 		});
 		var modalHeightCont = $(window).height();
 		$('.modal-filter').height(modalHeightCont);
-		$('.modal-wrap').css('height', modalHeightCont);
-		$('.modal-wrap').css('minHeight', modalHeightCont);
-	}
+
+	};
 
 	$('.modal-get').click(function () {
 		var currentModal = $(this).data("modal");
@@ -141,7 +154,7 @@ $(document).ready(function () {
 	$('.modal-layer , .modal-close').click(function () {
 		closeModal();
 	});
-	//modals === end
+	//modals===end
 
 	//validate
 	$('.validate-form').each(function () {
