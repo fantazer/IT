@@ -76,19 +76,19 @@ typeSize(fontSm,font)
 	font-weight:bold
 	color #111111d1
 .type--lxg
-	typeSize(22,16)
+	typeSize(22,18)
 	font-weight:bold
 	font-family:Museo
 	font-weight:bold
 	color #111111d1
 
 .type--lg
-	typeSize(28,18)
+	typeSize(28,20)
 	font-weight:bold
 	font-family:Museo
 
 .type--xl
-	typeSize(32,22)
+	typeSize(32,24)
 	font-weight bold
 	font-family:Museo
 
@@ -267,13 +267,30 @@ btnStyleLight(br-btn,color-btn)
 	.nav-icon
 		fill rgba(255, 255, 255, 0.9)
 
+.btn--light-blue
+	@extend .btn
+	border 1px solid $blue
+	color $blue
+	tr(all)
+	.nav-icon
+		fill $blue
+	&:hover
+		background: $blue
+		color white
+		.nav-icon
+			fill white
+
+
 .btn--icon
 	flex(mid)
 
 .nav-icon
 	display inline-block
-	size 20px
-	margin 0 10px
+	size 14px
+.nav-icon--right
+	margin-left 10px!important
+.nav-icon--left
+	margin-right 10px!important
 
 .btn--hover
 	transform: perspective(100px) translateZ(0)

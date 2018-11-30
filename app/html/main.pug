@@ -130,6 +130,12 @@ include block_html/_include.pug
 									];
 								each el in els
 									.cat__el-sub-item #{el}
+				.row-btn-mid
+					a(href="#").row-btn-mid__get
+						.btn--icon
+							span Все курсы
+							+icon("arrow-right-fat","nav-icon nav-icon--right")
+
 		.section
 			.main-cont
 				.about
@@ -238,7 +244,11 @@ include block_html/_include.pug
 									.command-el__title Михаил Грибов
 									.command-el__staff Управляющий партнер
 									.command-el__text Внес вклад в развитие управления ИТ услугами в банковской, энергетической и нефтегазовой отрасли успешно внедряя лучшие мировые практики и стандарты (ITIL v3 2011, USMBOK, Lean, ...
-
+				.row-btn-mid
+					a(href="#").row-btn-mid__get
+						.btn--icon
+							span Вся комманда
+							+icon("arrow-right-fat","nav-icon nav-icon--right")
 
 
 		//news

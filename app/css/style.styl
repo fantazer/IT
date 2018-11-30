@@ -12,7 +12,8 @@
 body
 	@extend .type--main
 	font-family $v-font
-	color #717171
+	//color #717171
+	color #3e3e3e
 	line-height 1.2
 	letter-spacing 0.01em
 
@@ -131,14 +132,12 @@ body
 		border-bottom 1px solid #ffffff0f
 		fl()
 		text-align: left
-		padding: 15px 30px
 		.icon
 			display: none
 	+below(640px)
 		min-height 45px
 	flex(mid)
 	tr(all)
-	padding: 15px 20px
 	border-left 1px solid #ffffff0f
 	border-right 1px solid #ffffff0f
 	margin-left: -1px
@@ -160,7 +159,8 @@ body
 	align-items: center
 	color white!important
 	font-family:Museo
-
+	padding: 15px 30px
+	display: block
 
 .header-nav__el-wrap
 	display: block
@@ -339,7 +339,7 @@ body
 
 .popular__el-content
 	+below(640px)
-		padding: 10px
+		padding: 20px
 	padding: 30px
 
 
@@ -902,10 +902,12 @@ body
 	+above(1025px)
 		.header-top
 			display: none
-	.header-nav__el
+	.header-nav__el--home
 		padding: 10px 20px
+		flex(mid)
 	.header-nav__el--order
 		f()
+		padding: 10px 20px
 	.header-top
 		padding: 0
 	.header-top__search
@@ -918,8 +920,6 @@ body
 	.head-toggle
 		.icon
 			fill black!important
-	.header-nav__el--home
-		display: block
 .content__main
 	+below(768px)
 		fw()
@@ -1177,6 +1177,8 @@ select.select-beauty
 .tab-content
 	+below(768px)
 		font-size: 12px
+		li
+			font-size: 12px
 	display: none
 	line-height: 1.6
 	font-size: 15px
@@ -1444,7 +1446,9 @@ select.select-beauty
 	opacity .1
 	transition transform .8s, opacity 1s
 	max-width 470px
-
+	.order__row
+		margin-bottom: 20px
+		border-bottom 0
 .modal-content
 	+below(768px)
 		padding: 20px
@@ -1477,17 +1481,16 @@ select.select-beauty
 
 .modal-close
 	+below(768px)
-		top 15px
-		right 15px
+		top 12px
+		right 12px
 	position: absolute
-	top: 20px
+	top: 12px
 	right: 20px
 	cp()
 	.icon
-		+below(768px)
-			size 15px
-		size 20px
+		size 12px
 		fill black
+		opacity:.3
 
 .modal-open
 	overflow: hidden
@@ -1989,7 +1992,8 @@ select.select-beauty
 .schedule__name
 	+below(640px)
 		font-size: 26px
-		margin-bottom: 20px
+		margin-bottom: 10px
+		display: block
 	@extend .type--lxg
 	color $blue
 	margin-bottom: 5px
@@ -2016,7 +2020,6 @@ select.select-beauty
 	+below(640px)
 		top 25px
 		right: 25px
-		border 1px solid $blue
 		opacity:.8
 	size 30px
 	border 1px solid $border-color
@@ -2038,6 +2041,8 @@ select.select-beauty
 .schedule__row-content
 	+below(640px)
 		padding: 15px
+		background: white
+		border-top 1px solid #ebebeb
 	f()
 	fw()
 	justify-content: space-between
@@ -2047,6 +2052,8 @@ select.select-beauty
 .schedule__more
 	+below(768px)
 		width: 100%
+	+below(640px)
+		text-align: center
 	margin-bottom: 20px
 	width: 48%
 .schedule__more-title
@@ -2054,8 +2061,13 @@ select.select-beauty
 	margin-bottom: 10px
 
 .schedule__teacher
+	+below(640px)
+		flex(mid)
+		fw()
 	f()
 .schedule__teacher-el
+	+below(640px)
+		margin-bottom: 5px
 	size 40px
 	bg-full()
 	round()
@@ -2077,11 +2089,19 @@ select.select-beauty
 .schedule-cost__el
 	+below(640px)
 		width: 100%
-		margin-bottom: 10px
+		margin-bottom: 20px
+		fl()
 	width: 30%
+	f()
+	align-items: center
 .schedule-cost-text
+	+below(640px)
+		margin-right: 0
+		margin-bottom: 5px
 	margin-right: 10px
 .schedule-cost-val
+	+below(640px)
+		font-size: 24px
 	font-size: 20px
 	font-weight:bold
 	font-family:Museo
@@ -2090,7 +2110,6 @@ select.select-beauty
 .schedule-cost__get
 	+below(640px)
 		width: 100%
-		margin-top: 20px
 	@extend .btn--md
 	@extend .btn--mark
 	padding: 10px 30px
@@ -2098,9 +2117,6 @@ select.select-beauty
 	margin-left: auto
 	display: inline-block
 
-.schedule-cost__el
-	f()
-	align-items: center
 
 .schedule-filter
 	+below(640px)
@@ -2137,6 +2153,9 @@ select.select-beauty
 	h1
 		margin-bottom: 0
 .schedule-main-title__icon
+	+below(640px)
+		margin-left: auto
+		margin-bottom: 22px
 	size 40px
 	round()
 	flex(mid)
@@ -2279,7 +2298,7 @@ select.select-beauty
 
 .schedule__el--decr
 	+below(640px)
-		margin-top: 20px
+		margin-top: 10px
 		width: 100%
 		margin-left: 0
 		.nice-select
@@ -2499,12 +2518,14 @@ select.select-beauty
 	font-weight:bold
 	color black
 	span
-		@extend .type--lg
+		font-size: 28px
 		color black
 		display: inline-block
 		margin-right: 5px
 
 .modal-back
+	+below(480px)
+		left 5px
 	f()
 	align-items: center
 	position: absolute
@@ -2519,6 +2540,8 @@ select.select-beauty
 
 .modal-content--order
 	.modal-title
+		+below(640px)
+			margin-top: 40px
 		margin-top: 30px
 
 .card
@@ -2795,6 +2818,10 @@ select.select-beauty
 	margin-left: 27%
 
 .schedule__more-text
+	+below(640px)
+		font-size: 16px
+		font-weight:700
+		color $blue
 	max-width 350px
 
 .schedule__more-text--save
@@ -3036,3 +3063,20 @@ select.select-beauty
 		opacity: 1
 	10%
 		opacity: 1
+
+.row-btn-mid
+	+below(768px)
+		margin: 30px 0
+	flex(mid)
+	margin: 50px 0
+.row-btn-mid__get
+	+below(480px)
+		width: 100%
+	@extend .btn--md
+	@extend .btn--light-blue
+	font-weight: 700
+	width: 250px
+
+.header-nav__el--menu
+	.header-nav__el-text
+		display: flex
