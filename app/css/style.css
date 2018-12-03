@@ -753,6 +753,12 @@ ol li {
 .intro__get-el--schedule .nav-icon {
   fill: rgba(255,255,255,0.9);
 }
+.btn--white:hover,
+.header-nav__auth-btn:hover,
+.intro__get-el--schedule:hover {
+  background: #fff;
+  color: #3e51ab !important;
+}
 .btn--light-blue,
 .row-btn-mid__get {
   border: 1px solid #3e51ab;
@@ -2242,7 +2248,7 @@ body {
 @media only screen and (max-width: 768px) {
   .content__info-wrap {
     padding: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     font-size: 12px;
   }
 }
