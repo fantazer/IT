@@ -2660,7 +2660,7 @@ body {
 @media only screen and (max-width: 768px) {
   .content__info-wrap {
     padding: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     font-size: 12px;
   }
 }
@@ -2712,15 +2712,6 @@ body {
   color: #3e51ab;
   text-decoration: none false;
   position: relative;
-}
-.content__info-wrap--read a:before {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  height: 1px;
-  width: 100%;
-  background: #3e51ab;
-  opacity: 0.4;
 }
 .toolbar__title {
   display: -webkit-box;

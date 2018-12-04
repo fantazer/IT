@@ -2301,15 +2301,6 @@ body {
   text-decoration: none false;
   position: relative;
 }
-.content__info-wrap--read a:before {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  height: 1px;
-  width: 100%;
-  background: #3e51ab;
-  opacity: 0.4;
-}
 .toolbar__title {
   display: flex;
   padding: 20px 10px 10px 40px;
