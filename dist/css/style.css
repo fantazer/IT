@@ -2981,8 +2981,9 @@ select.select-beauty {
     font-size: 12px;
   }
 }
-.tab-content p {
-  font-size: 15px;
+.tab-content p,
+.tab-content li {
+  font-size: 14px;
   line-height: 1.6;
 }
 .tab-content h3 {
