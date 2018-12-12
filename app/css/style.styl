@@ -132,8 +132,10 @@ body
 		border-bottom 1px solid #ffffff0f
 		fl()
 		text-align: left
+		font-size: 16px
 		.icon
 			display: none
+
 	+below(640px)
 		min-height 45px
 	flex(mid)
@@ -230,9 +232,12 @@ body
 	color black
 	border-bottom 1px solid $border-color
 	cp()
-	text-overflow: ellipsis
-	overflow: hidden
-	white-space: nowrap
+	//text-overflow: ellipsis
+	//overflow: hidden
+	//white-space: nowrap
+	span
+		font-weight:700
+
 	.icon
 		display: none
 		size 10px
@@ -317,16 +322,25 @@ body
 	line-height: 1
 	display: block
 
+.popular
+	f()
+	fw()
+	margin-left: -5px
+	margin-right: -5px
+
 .popular__el
+	+below(1024px)
+		width calc(100% / 3 - 10px)
+	+below(768px)
+		width calc(100% / 2 - 10px)
 	+below(640px)
-		margin-bottom: 30px
-	//border 1px solid $border-color
+		width 100%
+	width calc(100% / 4 - 10px)
+	margin 5px
 	f()
 	fl()
-	margin-left: -1px
 	background: white
 	box-shadow 0 0 2px #e6e6e6
-	margin-top: -1px
 	br(5px)
 	tr(all)
 	&:hover
@@ -336,6 +350,7 @@ body
 	@extend .type--lg
 	color $blue
 	margin-bottom: 10px
+
 
 .popular__el-content
 	+below(640px)
@@ -386,16 +401,7 @@ body
 	.icon
 		size 18px
 		fill $blue
-.popular
-	+below(1024px)
-		grid-template-columns repeat(3,1fr);
-	+below(768px)
-		grid-template-columns repeat(2,1fr);
-	+below(640px)
-		grid-template-columns repeat(1,1fr);
-	display: grid
-	grid-gap 10px
-	grid-template-columns repeat(4,1fr);
+
 
 .popular__el-title
 	margin-bottom: 10px
@@ -411,8 +417,7 @@ body
 	+below(1024px)
 		background: white
 		position: relative
-		//border-bottom 1px solid $border-color
-		bsh()
+		border-bottom 1px solid #f4f2f2
 		height: 50px
 		.main-cont
 			height: 100%
@@ -421,7 +426,7 @@ body
 	box-shadow 0 0 0
 .header-small
 	+below(1024px)
-		display: none
+		display: none!important
 	background: $gray
 
 .header-small-wrap
@@ -441,36 +446,27 @@ body
 		transition none
 		box-shadow 0 0 0
 		border 1px solid #f4f4f4
+		width calc(100% / 3 - 10px)
+	+below(768px)
+		width calc(100% / 2 - 10px)
+	+below(640px)
+		width 100%
 	f()
 	fl()
 	br(5px)
 	cp()
 	tr(all)
-	margin-left: -1px
 	background: white
 	box-shadow 0 0 2px #e6e6e6
-	margin-top: -1px
 	position: relative
 	@extend .no-mark
+	width calc(100% / 4 - 10px)
+	margin 5px
 	//overflow: hidden
 	&:hover
 		+below(640px)
 			box-shadow 0 0 0
-
 		box-shadow 0px 8px 10px #c7c3c3
-		background: $blue
-		.cat__el__code
-			color white
-		.cat__el__title
-			color white
-			opacity .5
-		.icon
-			fill white
-		.cat__el-title
-			color white
-			opacity .5
-		/*.cat__el-sub
-			display: block*/
 
 .cat__el--bg
 	position: absolute
@@ -500,24 +496,7 @@ body
 		box-shadow 0 0 0
 		border-radius 5px
 	box-shadow 0px 8px 10px #c7c3c3
-	background: $blue
 	border-radius 5px 5px 0 0
-	.cat__el-icon
-		transform rotate(90deg)
-	.cat__el__code
-		color white
-	.cat__el__title
-		color white
-		opacity:.5
-	.icon
-		fill white
-	.cat__el-title
-		color white
-		opacity:.5
-		&:before
-			content ''
-			background: white!important
-
 .cat__el__code
 	@extend .type--md
 	color $blue
@@ -559,10 +538,10 @@ body
 		grid-template-columns repeat(2,1fr);
 	+below(768px)
 		grid-template-columns repeat(1,1fr);
-	display: grid
-	grid-gap 10px
-	grid-template-columns repeat(4,1fr);
-
+	f()
+	fw()
+	margin-left: -5px
+	margin-right: -5px
 .cat__el-title
 	+below(640px)
 		margin-left: 10px
@@ -622,9 +601,9 @@ body
 	left 0px
 	padding: 30px
 	display: none
-	border 1px solid $blue
 	border-radius 0 0 5px 5px
-
+	box-shadow 0px 8px 10px #c7c3c3
+	border-top 1px solid $border-color
 .section--extend
 	padding: 60px 0
 .section--white
@@ -711,16 +690,22 @@ body
 	color #979797
 
 .command-el
+	+below(1024px)
+		width calc(100% / 2 - 20px)
 	+below(640px)
 		fl()
 		flex(mid)
 		margin-bottom: 30px
 		border 1px solid $gray
+		padding: 30px 10px
+		width: 100%
+	width calc(100% / 3 - 20px)
+	margin 10px
 	f()
 	justify-content: center
 	tr(all)
 	cp()
-	padding: 20px 10px
+	padding: 30px 30px
 	border-radius 10px
 	//background: $gray
 	&:hover
@@ -739,7 +724,7 @@ body
 		width: 100%
 		padding: 10px
 	//box-shadow 0 1px 10px #d5d4d4
-	padding: 0 20px
+	padding-left 20px
 	width:calc(100% - 120px)
 
 .command-el__title
@@ -754,11 +739,14 @@ body
 	+below(640px)
 		text-align: center
 	margin-bottom: 10px
+	opacity: .9
+	line-height: 1.4
 .command-el__text
 	line-height: 1.6
 	font-size: 12px
 	opacity:.6
-
+	p
+		font-size: 12px
 .slick-slide
 	margin: 0 10px
 	&:hover
@@ -775,28 +763,31 @@ body
 	background: $blue
 
 .command-list
-	+below(1024px)
-		grid-template-columns repeat(2,1fr);
-	+below(768px)
-		grid-template-columns repeat(1,1fr);
-	display: grid
-	grid-gap 10px
-	grid-template-columns repeat(3,1fr);
-
+	f()
+	fw()
+	margin-left: -10px
+	margin-right: -10px
+	.slick-dots
+		display: none !important
 .command-list--simple
 	+below(1024px)
 		grid-template-columns repeat(1,1fr);
-	grid-template-columns 1fr 1fr
 	.command-el
+		width calc(100% / 2 - 10px)
+		+below(1024px)
+			width 100%
 		background: white
 .command-list--full
-	+below(1024px)
-		grid-template-columns repeat(1,1fr);
-	grid-template-columns 1fr 1fr
-	display: grid
-	grid-gap 10px
+	f()
+	fw()
+	margin-left: -5px
+	margin-right: -5px
 	.command-el
+		+below(1024px)
+			width: 100%
 		background: white
+		width calc(100% / 2 - 10px)
+		margin: 5px
 		+below(640px)
 			margin-bottom: 0
 
@@ -952,19 +943,21 @@ body
 .content__info-wrap
 	+below(768px)
 		padding: 15px
-		margin-bottom: 0px
 		font-size: 12px
 	br(10px)
 	padding: 30px
 	background: white
 	margin-bottom: 30px
 	font-size: 15px
+	li
+		font-size: 14px
 
 .content__info-about
 	+below(768px)
 		font-size: 12px
 	font-size: 15px
-
+	li
+		font-size: 14px
 .content__info-wrap--near
 	+below(640px)
 		padding: 0
@@ -990,7 +983,6 @@ body
 		color $blue
 		text-decoration: none!imoprtant
 		position: relative
-
 
 .toolbar__title
 	f()
@@ -1154,6 +1146,8 @@ select.select-beauty
 	border-bottom 1px solid $border-color
 	margin-bottom: 20px
 .tab__el
+	+below(1024px)
+		font-size: 12px
 	padding: 0 20px 20px 20px
 	cp()
 	text-align: center
@@ -1258,6 +1252,8 @@ select.select-beauty
 	width: 100%
 	color black
 .course-treners__info
+	+below(1024px)
+		font-size: 12px
 	+below(640px)
 		text-align: center
 		width: 100%
@@ -1267,6 +1263,8 @@ select.select-beauty
 	width: 33%
 
 .course-treners__info-text
+	+below(1024px)
+		font-size: 12px
 	+below(640px)
 		text-align: center
 		width: 100%
@@ -1350,6 +1348,8 @@ select.select-beauty
 	margin-bottom: 10px
 	display: block
 .footer__adress
+	+below(1024px)
+		font-size: 12px
 	margin-bottom: 20px
 .footer__soc
 	f()
@@ -1376,17 +1376,20 @@ select.select-beauty
 	+below(640px)
 		grid-template-columns repeat(1,1fr)
 		grid-gap 10px
-	display: grid
-	grid-gap 20px
-	grid-template-columns repeat(2,1fr)
+	f()
+	align-items: stretch
+	fw()
 .advant_el
+	+below(640px)
+		width: 100%
+	width: calc(100% / 2 - 10px)
+	margin-bottom: 20px
 	f()
 	align-items: center
 	padding: 20px
 	border 1px solid darken($gray,2)
 	border-radius 10px
 	background: white
-	height: 100%
 .advant_el-icon
 	.icon
 		size 40px
@@ -1443,8 +1446,6 @@ select.select-beauty
 		margin-bottom: 20px
 		border-bottom 0
 .modal-content
-	+below(768px)
-		padding: 20px
 	+below(640px)
 		height: 100%
 		padding: 20px 10px
@@ -1456,8 +1457,6 @@ select.select-beauty
 	position: relative
 	padding: 40px
 	br(10px)
-	+below(768px)
-		width: 80%
 
 .modal-content--register
 	width: 500px
@@ -1466,18 +1465,16 @@ select.select-beauty
 		margin-bottom: 20px
 
 .modal__show
-	+below(1024px)
-		overflow-Y:scroll
 	max-height 100%
 	opacity 1
 	transform translateY(0)
-
+	position: relative
 .modal-close
 	+below(768px)
 		top 12px
 		right 12px
 	position: absolute
-	top: 12px
+	top: 20px
 	right: 20px
 	cp()
 	.icon
@@ -1499,8 +1496,8 @@ select.select-beauty
 	position: fixed
 	width: 100%
 	height: 100%
-	flex(mid)
 	overflow-y auto
+	flex(mid)
 .modal-title
 	+below(768px)
 		font-size: 20px
@@ -1586,17 +1583,21 @@ select.select-beauty
 		grid-template-columns repeat(2,1fr);
 	+below(640px)
 		display: block
-	display: grid
-	grid-column-gap 20px
-	grid-row-gap 20px
-	grid-template-columns repeat(3,1fr);
+	f()
+	fw()
+	margin-left: -10px
+	margin-right: -10px
 .review__el
+	+below(768px)
+		width calc(100% / 2 - 20px)
 	+below(640px)
 		margin-bottom: 30px
 		padding: 15px
 	padding: 45px 30px
 	border 1px solid #f9f9f9
 	br(5px)
+	width calc(100% / 3 - 20px)
+	margin 10px
 	//bsh()
 .review__el-title
 	@extend .type--md
@@ -1703,10 +1704,10 @@ select.select-beauty
 		grid-template-columns repeat(2,1fr);
 	+below(640px)
 		display: block
-	display: grid
-	grid-gap 20px
-	grid-template-columns repeat(3,1fr);
-
+	f()
+	fw()
+	margin-left: -10px
+	margin-right: -10px
 .b-wrap--three
 	+below(768px)
 		grid-template-columns repeat(2,1fr);
@@ -1715,19 +1716,23 @@ select.select-beauty
 		display: block
 	grid-template-columns repeat(3,1fr);
 	margin-bottom: 50px
+
 .b-el
+	+below(768px)
+		width: calc(100%/ 2 - 20px)
 	+below(640px)
 		margin-bottom: 30px
 		box-shadow 0 0 0
 		border 1px solid #f3f1f1
 	padding: 15px 20px 15px 20px
 	br(10px)
-	//border 1px solid $border-color
-	background: white
 	tr(all)
 	bsh()
 	f()
 	fl()
+	background: white
+	width: calc(100%/ 3 - 20px)
+	margin: 10px
 	&:hover
 		+below(640px)
 			box-shadow 0 0 0
@@ -1949,11 +1954,9 @@ select.select-beauty
 	cp()
 	&:hover
 		+below(640px)
-			box-shadow 0 0 0
 			border 1px solid #f3f1f1
-
-		bsh-hover()
 		outline none
+
 .schedule__row-head
 	+below(768px)
 		fw()
@@ -2011,8 +2014,6 @@ select.select-beauty
 		top 20px
 		right: 20px
 	+below(640px)
-		top 25px
-		right: 25px
 		opacity:.8
 	size 30px
 	border 1px solid $border-color
@@ -2344,7 +2345,7 @@ select.select-beauty
 	margin-bottom: 20px
 	padding-bottom:20px
 	border-bottom 1px solid darken($gray,2)
-
+	opacity: .5
 .staff__row
 	margin-bottom: 20px
 	width: 48%
@@ -2381,7 +2382,7 @@ select.select-beauty
 	+below(768px)
 		padding-left: 15px
 	+below(640px)
-		padding-left: 0
+		padding 10px
 	padding-left: 30px
 
 .staff-cert__wrap
@@ -2422,20 +2423,24 @@ select.select-beauty
 	color black
 
 .news-grid
-	+below(768px)
-		grid-template-columns repeat(2,1fr);
-	+below(640px)
-		grid-template-columns 1fr;
-	display: grid
-	grid-gap 10px
-	grid-template-columns repeat(3,1fr);
+	f()
+	fw()
+	margin-left: -5px
+	margin-right: -5px
 .news-grid__el
+	+below(1024px)
+		width calc(100% / 2 - 10px)
+	+below(640px)
+		width: 100%
+	width calc(100% / 3 - 10px)
+	margin 5px
 	br(10px)
 	tr(all)
 	padding: 30px 20px
 	background: white
 	&:hover
 		bsh-hover()
+
 .news-grid__el-date
 	font-weight:bold
 	margin-bottom: 30px
@@ -2726,9 +2731,10 @@ select.select-beauty
 .clients-list__wrap
 	+below(640px)
 		grid-template-columns repeat(2,1fr);
-	display: grid
-	grid-gap 20px
-	grid-template-columns repeat(3,1fr);
+	f()
+	fw()
+	margin-left: -5px
+	margin-right: -5px
 
 .clients-list__img
 	flex(mid)
@@ -2741,10 +2747,15 @@ select.select-beauty
 	line-height: 1.6
 
 .clients-list__el
+	+below(768px)
+		width calc(100% / 2 - 10px)
+	+below(640px)
+		width: 100%
+	width calc(100% / 3 - 10px)
 	padding: 20px 20px
 	br(10px)
 	background: white
-
+	margin: 5px
 .biblio-item
 	padding: 20px
 	margin-bottom: 20px
@@ -2771,11 +2782,10 @@ select.select-beauty
 	margin: 30px -30px
 
 .review-wrapper
-	+below(768px)
-		grid-template-columns 1fr 1fr
-	display: grid
-	grid-gap 20px
-	grid-template-columns 1fr 1fr 1fr
+	f()
+	fw()
+	margin-left: -5px
+	margin-right: -5px
 
 .review-wrapper-item
 	box-shadow  0 5px 10px #f1f1f1
@@ -2784,7 +2794,12 @@ select.select-beauty
 	overflow hidden
 	&:hover
 		box-shadow  0px 10px 10px #c5c2c2
-
+	+below(768px)
+		width calc(100% / 2 - 10px)
+	+below(640px)
+		width: 100%
+	width calc(100% / 3 - 10px)
+	margin: 5px
 .class-room
 	+below(640px)
 		grid-template-columns 1fr 1fr
