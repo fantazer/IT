@@ -2201,7 +2201,7 @@ select.select-beauty
 	margin-bottom: 20px
 	up()
 	color white
-	font-size: 72px
+	font-size: 44px
 .intro__text
 	color white
 	opacity: .8
@@ -2283,6 +2283,7 @@ select.select-beauty
 	.header-top__nav-phone
 		color white
 	.header
+		border-bottom 0px
 		+below(1024px)
 			background: none
 			box-shadow 0 0 0
@@ -2716,7 +2717,7 @@ select.select-beauty
 		margin: 20px auto
 	margin-bottom: 20px
 
-.old_h3,.section-title
+.old_h3,.section-title,.article-title
 	+below(768px)
 		font-size: 16px
 	color black
@@ -3032,9 +3033,9 @@ select.select-beauty
 	cp()
 	z-index 10
 	border-radius 0 50% 50% 0
-	animation:  slideInLeft  15s infinite
-	animation-delay: 3s
+	animation:  slideInLeft  3s infinite
 	transform translateX(-10px)
+	animation-duration: 6s
 	.icon
 		margin-left: 10px
 		size 24px
@@ -3062,15 +3063,18 @@ select.select-beauty
 		display: none
 
 @keyframes slideInLeft
-	3%, 6%
+	20%, 40%
 		opacity: 1;
 		transform: translate(0px, 0);
-	9%, 12%
+	60%, 80%
 		transform: translate(-10px, 0);
 	0%
 		opacity: 1
-	10%
+	25%
+		opacity: .6
+	50%
 		opacity: 1
+
 
 .row-btn-mid
 	+below(768px)
