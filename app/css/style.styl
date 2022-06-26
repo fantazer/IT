@@ -2,12 +2,23 @@
 @import "variable/_function.styl"
 @import "variable/_fonts.styl"
 @import "variable/_ie.styl"
-@import "icon/sprite.css"
+
+@import "grid/grid.css"
+@import "grid/extends.css"
+
+@import "variable/config/_config.styl"
+@import "variable/config/_grid.styl"
+
+@import "variable/config/_color.styl"
+@import "variable/config/_typography.styl"
+@import "variable/config/_input.styl"
+
 @import "variable/_helper.styl"
 @import "variable/_default.styl"
 @import "variable/_elements.styl"
 @import "variable/_constant.styl"
 @import "../module/**/*"
+
 
 body
 	@extend .type--main
@@ -135,9 +146,6 @@ body
 		font-size: 16px
 		.icon
 			display: none
-
-	+below(640px)
-		min-height 45px
 	flex(mid)
 	tr(all)
 	border-left 1px solid #ffffff0f
@@ -151,11 +159,12 @@ body
 		size 20px
 		fill white
 	&:hover
-		.header-nav-sub
-			display: block
-		.content-filter
-			opacity 1
-			left 0
+		+above(1025px)
+			.header-nav-sub
+				display: block
+			.content-filter
+				opacity 1
+				left 0
 .header-nav__el-text
 	f()
 	align-items: center
@@ -169,9 +178,6 @@ body
 .icon-nav-menu
 	margin-right: 20px
 .header-nav-sub
-	+below(1024px)
-		display: none!important
-
 	display: none
 	position: absolute
 	top 100%
@@ -460,7 +466,7 @@ body
 	box-shadow 0 0 2px #e6e6e6
 	position: relative
 	@extend .no-mark
-	width calc(100% / 4 - 10px)
+	width calc(100% / 3 - 10px)
 	margin 5px
 	//overflow: hidden
 	&:hover
@@ -545,7 +551,6 @@ body
 .cat__el-title
 	+below(640px)
 		margin-left: 10px
-		margin-bottom: 10px
 
 	font-size: 12px
 	//font-weight:bold
@@ -867,7 +872,7 @@ body
 	border-bottom 1px solid #3e51ab12
 
 .section--category
-	margin-top: 30px
+	margin-top: 80px
 	.section-title
 		text-align: center
 
@@ -964,6 +969,7 @@ body
 	padding-left: 0
 	padding-top: 0
 	overflow hidden
+
 
 .content__info-wrap--read
 	p,li,a
@@ -1277,7 +1283,7 @@ select.select-beauty
 		font-size: 14px
 		margin-bottom: 5px
 	font-weight:700
-
+	color black
 .course-treners__staf
 	+below(640px)
 		width: 100%
@@ -1286,6 +1292,8 @@ select.select-beauty
 	margin-bottom: 0px
 	width: 25%
 	color $text-gray
+	font-size: 12px
+	line-height: 1.6
 
 .content__info-wrap--empty
 	+below(768px)
@@ -1450,8 +1458,8 @@ select.select-beauty
 		height: 100%
 		padding: 20px 10px
 		overflow-y scroll
-		width: 100%!important
-		br(0)
+		width: 95%!important
+		margin 20px auto
 	//background: #2b8850
 	background: white
 	position: relative
@@ -1494,7 +1502,7 @@ select.select-beauty
 
 .modal-wrap
 	position: fixed
-	width: 100%
+	width: 100vw
 	height: 100%
 	overflow-y auto
 	flex(mid)
@@ -1545,8 +1553,7 @@ select.select-beauty
 	color black
 	font-size: 12px
 	a
-		color #9c9a9a
-		text-decoration: none
+		color $blue
 .field-error
 	.error
 		display: none!important
@@ -3023,7 +3030,7 @@ select.select-beauty
 	+above(480px)
 		display: none
 	position: fixed
-	bottom 20px
+	bottom 30px
 	left 0
 	background: $blue
 	padding: 10px
@@ -3033,9 +3040,9 @@ select.select-beauty
 	cp()
 	z-index 10
 	border-radius 0 50% 50% 0
-	animation:  slideInLeft  3s infinite
+	animation:  slideInLeft  6s infinite
 	transform translateX(-10px)
-	animation-duration: 6s
+	animation-duration: 12s
 	.icon
 		margin-left: 10px
 		size 24px
@@ -3092,3 +3099,178 @@ select.select-beauty
 .header-nav__el--menu
 	.header-nav__el-text
 		display: flex
+
+.diagram
+	+below(640px)
+		font-size: 18px
+	font-weight: 700
+	font-size: 24px
+	width: 100%
+	color white
+	max-width 600px
+	margin: 20px auto
+	a
+		color white!important
+		text-decoration: none !important
+		display block
+//.diagram-el
+.diagram-head
+	padding: 20px
+	text-align center
+	border 1px solid $border-color
+	margin-bottom: 15px
+.diagram-mid
+	+below(640px)
+		display block
+	display: grid
+	grid-gap 20px
+	grid-template-columns: repeat(3, 1fr)
+.diagram-col
+	padding: 10px
+	f()
+	fl()
+	background: #C2A6BD
+	&:first-child
+		+below(640px)
+			margin-bottom: 15px
+		grid-column 1/3
+.diagram-col-head
+	+below(640px)
+		padding: 15px 10px
+	padding: 20px
+	text-align center
+	margin-bottom: 10px
+	background: #385BA6
+	tr(all)
+	&:hover
+		background:lighten(#385BA6,10)
+.diagram-row
+	+below(640px)
+		fw()
+	flex(between)
+	align-items: stretch
+	flex-grow 1
+.diagram-row__el
+	+below(640px)
+		margin-bottom: 10px
+		padding: 15px 10px
+	padding: 15% 1%
+	text-align center
+	display: flex !important
+	align-items center
+	justify-content center
+	background: #AF1870
+	tr(all)
+	&:hover
+		background:lighten(#AF1870,10)
+
+.diagram-row__el--dark
+	background: #262A5E
+	tr(all)
+	&:hover
+		background:lighten(#262A5E,10)
+.diagram-col--lg
+	.diagram-row__el
+		+below(640px)
+			width: 22%
+		width: 24%
+
+.diagram-col--sm
+	.diagram-row__el
+		width: 48%
+.diagram-footer
+	+below(640px)
+		border 0
+		margin-top: 15px
+	padding: 20px
+	text-align center
+	border 10px solid #C2A6BD
+	border-top 0
+.diagram--purp
+	background:#66215B
+	tr(all)
+	&:hover
+		background:lighten(#66215B,10)
+
+
+// add cource type
+.cat-type
+	display: grid
+	grid-gap 20px
+	grid-template-columns: repeat(1, 1fr)
+	//max-width 960px
+	margin: 0 auto
+.cat-type__el
+	padding: 50px 100px 0 100px
+	//border 1px solid $border-color
+	br(10px)
+	//bsh()
+	overflow hidden
+	background: $gray
+	position relative
+	f()
+	align-items center
+	justify-content: space-between
+	cp()
+	tr(all)
+	&:hover
+		box-shadow 0px 5px 20px #d9d9d9
+.cat-type__title
+	font-size: 48px
+	font-weight: 700
+	color black
+	margin-bottom: 20px
+	font-family:Museo
+
+.cat-type__text
+	margin-bottom: 30px
+	line-height: 1.6
+
+.cat-type__list
+	margin-bottom: 30px
+.cat-type__list-el
+	margin-bottom: 10px
+	font-family:Museo
+	font-weight: 500
+	position relative
+	padding-left: 20px
+	&:before
+		content ''
+		size 6px
+		round()
+		position absolute
+		left 0
+		top 5px
+		background: $blue
+.cat-type__img
+	width: 250px
+	bottom 0
+	z-index 10
+/*.cat-type__el--mark
+	background: $blue
+	color white
+	.cat-type__title
+		color white
+	.cat-type__list-el
+		&:before
+			content ''
+			background: white*/
+.cat-type__el--mark
+	.cat-type__el-shape
+		right -15%
+		top 0
+
+
+.cat-type__el--light
+	padding-left: 80px
+	.cat-type__el-shape
+		left -15%
+		top -10%
+.cat-type__el-info
+	width: 60%
+.cat-type__el-shape
+	position absolute
+	size 600px
+	img
+		width: 100%
+// add cource type === end

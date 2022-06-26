@@ -1,0 +1,90 @@
+// === Inputs ===
+/*.input
+	padding 18px 15px
+	border 1px solid $border-color
+	resize: none
+	outline: 0 !important
+	border-radius 4px
+	display block!important
+	placeholder($typePrimary)
+	tr(all)
+	line-height: 1.6
+	&:focus
+		border 1px solid black
+		background: white
+	&.disable
+		@extend .disabled
+	&:hover
+		border 1px solid $borderHover*/
+
+// calc border size
+for $listBrItem in $listBr
+	.br-{$listBrItem}
+		border-radius $listBrItem px
+
+.br-round
+	border-radius 50%
+
+.bor
+	border-width 1px
+	border-style solid
+
+.bor-t
+	border-top-width 1px
+	border-right-width 0
+	border-bottom-width 0
+	border-left-width 0
+	border-style solid
+
+.bor-b
+	border-top-width 0
+	border-right-width 0
+	border-bottom-width 1px
+	border-left-width 0
+	border-style solid
+
+.bor-b-dashed
+	border-top-width 0
+	border-right-width 0
+	border-bottom-width 1px
+	border-left-width 0
+	border-style dashed
+
+.bor-r
+	border-top-width 0
+	border-right-width 1px
+	border-bottom-width 0
+	border-left-width 0
+	border-style solid
+
+// calc border size === end
+
+
+// switch
+.switch
+	position relative
+	background: $gray
+	height: 34px
+	min-width: 62px
+	width: 62px
+	br(18px)
+	cp()
+	&:before
+		content ''
+		tr()
+		size 24px
+		round()
+		background: white
+		position absolute
+		left 6px
+		top 4.5px
+	&.active
+		background: $stateSuccess
+		&:before
+			content ''
+			size 24px
+			round()
+			background: white
+			position absolute
+			left calc(100% - 30px)
+// switch === end

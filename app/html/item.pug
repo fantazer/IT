@@ -26,6 +26,9 @@ include block_html/_include.pug
 						.panel__get.modal-get(data-modal="order") Записаться
 
 					.content__info-wrap
+						.g.g-4.gap-20
+							- for (var i=0;i<5;i++)
+								.type--main.br-8.bor.bor--border.p-16 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores illo ipsa qui quisquam veniam. Laborum obcaecati officia placeat quam totam?
 						h1.content__info-main-title OSA Курс «Service Desk и процессы оперативного управления ИТ-услугами в соответствии с ITIL®»
 
 						.content__info-about
@@ -106,6 +109,26 @@ include block_html/_include.pug
 								.advant_el-icon
 									+icon("big-license","icon")
 								.advant_el-text Выпускники получают удостоверение о повышении квалификации
+
+
+
+					.diagram
+						a(href="#").diagram-el.diagram-head.diagram--purp ITIL Master
+						.diagram-mid
+							.diagram-col.diagram-col--lg
+								a(href="#").diagram-col-head ITIL MP
+								.diagram-row
+									a(href="#").diagram-row__el CDS
+									a(href="#").diagram-row__el DSV
+									a(href="#").diagram-row__el HVIT
+									a(href="#").diagram-row__el.diagram-row__el--dark DPI
+							.diagram-col.diagram-col--sm
+								a(href="#").diagram-col-head ITIL SL
+								.diagram-row
+									a(href="#").diagram-row__el.diagram-row__el--dark DPI
+									a(href="#").diagram-row__el DITS
+						a(href="#").diagram-el.diagram-footer.diagram--purp ITIL Foundation
+
 
 
 

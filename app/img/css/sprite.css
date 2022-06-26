@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("../svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 79.5035em 2990em;
+    background-size: 79.5035em 3038.6em;
 }
 
 .no-svg .icon:before {
@@ -593,8 +593,17 @@
 
 
 
-  .icon.prize:before {
+  .icon.play-button:before {
       background-position: 0em -2019em;
+      width: 48.574em;
+      height: 48.574em;
+  }
+
+
+
+
+  .icon.prize:before {
+      background-position: 0em -2067.6em;
       width: 30.2262em;
       height: 30.2262em;
   }
@@ -603,7 +612,7 @@
 
 
   .icon.project:before {
-      background-position: 0em -2049.3em;
+      background-position: 0em -2097.9em;
       width: 51.2001em;
       height: 51.2001em;
   }
@@ -612,7 +621,7 @@
 
 
   .icon.projector-screen:before {
-      background-position: 0em -2100.6em;
+      background-position: 0em -2149.2em;
       width: 51.2em;
       height: 51.2em;
   }
@@ -621,7 +630,7 @@
 
 
   .icon.report:before {
-      background-position: 0em -2151.8em;
+      background-position: 0em -2200.4em;
       width: 6em;
       height: 6em;
   }
@@ -630,7 +639,7 @@
 
 
   .icon.share:before {
-      background-position: 0em -2157.8em;
+      background-position: 0em -2206.4em;
       width: 48.160000000000004em;
       height: 48.160000000000004em;
   }
@@ -639,7 +648,7 @@
 
 
   .icon.signs:before {
-      background-position: 0em -2206em;
+      background-position: 0em -2254.6em;
       width: 51.2em;
       height: 51.2em;
   }
@@ -648,7 +657,7 @@
 
 
   .icon.sketch:before {
-      background-position: 0em -2257.2em;
+      background-position: 0em -2305.8em;
       width: 51.1999em;
       height: 51.1999em;
   }
@@ -657,7 +666,7 @@
 
 
   .icon.soc-facebook:before {
-      background-position: 0em -2308.4em;
+      background-position: 0em -2357em;
       width: 51.2em;
       height: 51.2em;
   }
@@ -666,7 +675,7 @@
 
 
   .icon.soc-google:before {
-      background-position: 0em -2359.6em;
+      background-position: 0em -2408.2em;
       width: 9.6669em;
       height: 9.6669em;
   }
@@ -675,7 +684,7 @@
 
 
   .icon.soc-in:before {
-      background-position: 0em -2369.3em;
+      background-position: 0em -2417.9em;
       width: 43.011700000000005em;
       height: 43.011700000000005em;
   }
@@ -684,7 +693,7 @@
 
 
   .icon.soc-instagram:before {
-      background-position: 0em -2412.4em;
+      background-position: 0em -2461em;
       width: 43.8536em;
       height: 43.8536em;
   }
@@ -693,7 +702,7 @@
 
 
   .icon.soc-ok:before {
-      background-position: 0em -2456.3em;
+      background-position: 0em -2504.9em;
       width: 9.5481em;
       height: 9.5481em;
   }
@@ -702,7 +711,7 @@
 
 
   .icon.soc-twitter:before {
-      background-position: 0em -2465.9em;
+      background-position: 0em -2514.5em;
       width: 41.015499999999996em;
       height: 41.015499999999996em;
   }
@@ -711,7 +720,7 @@
 
 
   .icon.soc-vk:before {
-      background-position: 0em -2507em;
+      background-position: 0em -2555.6em;
       width: 51.2em;
       height: 51.2em;
   }
@@ -720,7 +729,7 @@
 
 
   .icon.soc-youtube:before {
-      background-position: 0em -2558.2em;
+      background-position: 0em -2606.8em;
       width: 6.4em;
       height: 6.4em;
   }
@@ -729,7 +738,7 @@
 
 
   .icon.speaker:before {
-      background-position: 0em -2564.6em;
+      background-position: 0em -2613.2em;
       width: 5.2026em;
       height: 5.2026em;
   }
@@ -738,7 +747,7 @@
 
 
   .icon.star:before {
-      background-position: 0em -2569.9em;
+      background-position: 0em -2618.5em;
       width: 5.386699999999999em;
       height: 5.386699999999999em;
   }
@@ -747,7 +756,7 @@
 
 
   .icon.study:before {
-      background-position: 0em -2575.3em;
+      background-position: 0em -2623.9em;
       width: 51.2001em;
       height: 51.2001em;
   }
@@ -756,7 +765,7 @@
 
 
   .icon.success:before {
-      background-position: 0em -2626.6em;
+      background-position: 0em -2675.2em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -765,7 +774,7 @@
 
 
   .icon.tag:before {
-      background-position: 0em -2631.8em;
+      background-position: 0em -2680.4em;
       width: 49.088499999999996em;
       height: 49.088499999999996em;
   }
@@ -774,7 +783,7 @@
 
 
   .icon.teamwork:before {
-      background-position: 0em -2680.9em;
+      background-position: 0em -2729.5em;
       width: 51.2em;
       height: 51.2em;
   }
@@ -783,7 +792,7 @@
 
 
   .icon.television:before {
-      background-position: 0em -2732.1em;
+      background-position: 0em -2780.7em;
       width: 6em;
       height: 6em;
   }
@@ -792,7 +801,7 @@
 
 
   .icon.translation:before {
-      background-position: 0em -2738.1em;
+      background-position: 0em -2786.7em;
       width: 47em;
       height: 47em;
   }
@@ -801,7 +810,7 @@
 
 
   .icon.user:before {
-      background-position: 0em -2785.1em;
+      background-position: 0em -2833.7em;
       width: 51.2em;
       height: 51.2em;
   }
@@ -810,7 +819,7 @@
 
 
   .icon.video-camera:before {
-      background-position: 0em -2836.3em;
+      background-position: 0em -2884.9em;
       width: 51.2001em;
       height: 51.2001em;
   }
@@ -819,7 +828,7 @@
 
 
   .icon.winner--color:before {
-      background-position: 0em -2887.6em;
+      background-position: 0em -2936.2em;
       width: 51.2em;
       height: 51.2em;
   }
@@ -828,7 +837,7 @@
 
 
   .icon.youtube:before {
-      background-position: 0em -2938.8em;
+      background-position: 0em -2987.4em;
       width: 51.2em;
       height: 51.2em;
   }

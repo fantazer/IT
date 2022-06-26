@@ -34,103 +34,34 @@ include block_html/_include.pug
 		.section.section--category
 			.main-cont
 				.section-title Категории курсов
-				.cat
-					.cat__el.cat__el--first.cat__el--active
-						.cat__el-content
-							.cat__el-icon
-								+icon("arrow-right","icon")
-							.cat__el-title Категория
-							.cat__el__code Цифровой бизнес
-							.cat__el__title Управление жизненным циклом услуг
-						.cat__el-sub
-							-
-								var els = [
-								'Основы ITIL®',
-								'Service Desk и процессы оперативного управления ИТ-услугами..',
-								'Проведение изменений в ИТ в соответствии с ITIL®',
-								'Оптимальное проектирование ИТ-услуг в соответствии с ITIL®: инф...',
-								'Управленческие инструменты организации отношений ИТ с бизнесом ...',
-								'Управление жизненным циклом услуг',
-								'Управление ИТ-активами. Основы и практики',
-								'Практические подходы для успешной работы'
-								];
-							each el in els
-								.cat__el-sub-item #{el}
-					-
-						var items = [
-							{
-								'name':'Управление развитием',
-								'icon':'news',
-							},
-							{
-							'name':'Бизнес-анализ',
-							'icon':'book',
-							},
-							{
-							'name':'Архитектура',
-							'icon':'classroom',
-							},
-							{
-							'name':'Разработка',
-							'icon':'copyright',
-							},
-							{
-							'name':'Тестирование',
-							'icon':'newspaper',
-							},
-							{
-							'name':'Технологии',
-							'icon':'sketch',
-							},
-							{
-							'name':'Данные и интелект',
-							'icon':'projector-screen',
-							},
-							{
-							'name':'Кибер безопасность',
-							'icon':'report',
-							},
-							{
-							'name':'Упарвление рисками',
-							'icon':'notebook-pen',
-							},
-							{
-							'name':'Упарвление компетенциями',
-							'icon':'teamwork',
-							},
-							{
-							'name':'Прорывные технологии',
-							'icon':'share',
-							},
-
-						];
-					each item in items
-						.cat__el
-							//.cat__el--bg
-								svg(class='icon')
-									use(xlink:href="#" + item.icon)
-							//.cat__el--filter
-							.cat__el-content
-								.cat__el-icon
-									+icon("arrow-right","icon")
-								.cat__el-title категория
-								.cat__el__code #{item.name}
-								.cat__el__title Управление жизненным циклом услуг
-							.cat__el-sub
-								-
-									var els = [
-									'Основы ITIL®',
-									'Service Desk и процессы оперативного управления ИТ-услугами..',
-									'Проведение изменений в ИТ в соответствии с ITIL®',
-									'Оптимальное проектирование ИТ-услуг в соответствии с ITIL®: инф...',
-									'Управленческие инструменты организации отношений ИТ с бизнесом ...',
-									'Управление жизненным циклом услуг',
-									'Управление ИТ-активами. Основы и практики',
-									'Практические подходы для успешной работы'
-									];
-								each el in els
-									.cat__el-sub-item #{el}
-				.row-btn-mid
+				.cat-type
+					.cat-type__el.cat-type__el--light
+						.cat-type__el-shape
+							img(src="img/shape.svg", alt="").cat-type__img
+						img(src="img/person-1.png", alt="").cat-type__img
+						.cat-type__el-info
+							.cat-type__title Очные курсы
+							.cat-type__text С марта 2017 года IT Expert – первая в России организация, аккредитованная институтом PEOPLECERT, проводящая обучение по ITIL
+							.cat-type__list
+								.cat-type__list-el 50+ курсов
+								.cat-type__list-el Опытные преподаватели
+								.cat-type__list-el Подготовка к экзаменам
+							.cat-type__get
+								.btn--md.btn--light Смотреть курсы
+					.cat-type__el.cat-type__el--mark
+						.cat-type__el-shape
+							img(src="img/shape.svg", alt="").cat-type__img
+						.cat-type__el-info
+							.cat-type__title Онлайн курсы
+							.cat-type__text В современной корпоративной среде продолжает ускоряться рост объема накопленных структурированных
+							.cat-type__list
+								.cat-type__list-el Более 30 курсов
+								.cat-type__list-el Обучение в любом месте
+								.cat-type__list-el Доступ к материалам
+							.cat-type__get
+								.btn--md.btn--light Смотреть курсы
+						img(src="img/person-2.png", alt="").cat-type__img
+				//.row-btn-mid
 					a(href="#").row-btn-mid__get
 						.btn--icon
 							span Все курсы
