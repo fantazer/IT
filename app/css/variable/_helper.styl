@@ -13,6 +13,8 @@
 
 // Utilities
 
+.h100
+	height: 100%
 
 .type--up
 	up()
@@ -38,6 +40,9 @@
 
 .hidden
 	display none !important
+
+.hide
+	display none
 
 .show
 	display block !important
@@ -151,3 +156,22 @@
 	width 100%
 	margin 0
 	animation:  slideInDown  1s 1 ease-in-out
+
+.cp
+	cp()
+
+.overflow
+	overflow: hidden
+
+.overflow-auto
+	overflow: auto
+
+.hideMobileScroll
+	+below(1024px)
+		&::-webkit-scrollbar
+			background-color:transparent!important
+			display none
+			 -webkit-appearance: none;
+
+.tr
+	transition all .4s

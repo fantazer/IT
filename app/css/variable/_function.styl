@@ -205,17 +205,14 @@ hover-underline($border-size = 1px, $type = 'solid', $color = null)
 
 table($border = true, $striped = true, $condensed = false)
 	max-width: 100%
-	border-collapse: collapse
 	border-spacing: 0
 	width: 100%
-	margin-bottom: 18px
-
 	th, td
-		padding: 8px
-		line-height: 18px
+		padding: 20px
 		text-align: left
 		vertical-align: top
 		border-top: 1px solid #ddd
+		color black
 
 	th
 		font-weight: bold
@@ -237,8 +234,8 @@ table($border = true, $striped = true, $condensed = false)
 	if $border
 		border: 1px solid #ddd
 		border-collapse: separate
-		*border-collapse: collapsed
 		border-radius: 4px
+		overflow: hidden
 
 		th + th, td + td, th + td, td + th
 			border-left: 1px solid #ddd
@@ -250,24 +247,24 @@ table($border = true, $striped = true, $condensed = false)
 
 		thead:first-child tr:first-child th:first-child
 		tbody:first-child tr:first-child td:first-child
-			border-radius: 4px 0 0 0
+			border-radius: 8px 0 0 0
 
 		thead:first-child tr:first-child th:last-child
 		tbody:first-child tr:first-child td:last-child
-			border-radius: 0 4px 0 0
+			border-radius: 0 8px 0 0
 
 		thead:last-child tr:last-child th:first-child
 		tbody:last-child tr:last-child td:first-child
-			border-radius: 0 0 0 4px
+			border-radius: 0 0 0 8px
 
 		thead:last-child tr:last-child th:last-child
 		tbody:last-child tr:last-child td:last-child
-			border-radius: 0 0 4px 0
+			border-radius: 0 0 8px 0
 
 	if $striped
 		tbody tr:nth-child(odd) td
 		tbody tr:nth-child(odd) th
-			background-color: #f9f9f9
+			background-color: white
 
 		tbody tr:hover td
 		tbody tr:hover th
@@ -416,6 +413,14 @@ icon-x($size = 40px, $color = #888, $stroke = 1px)
 		transform: rotate(45deg)
 	&:after
 		transform: rotate(-45deg)
+
+font(name,file,size)
+	@font-face
+		font-family: name
+		src: url('../fonts/'+file+'.woff2') format('woff2'),url('../fonts/'+file+'.woff') format('woff')
+		font-weight: size
+		font-style: normal
+		font-display: swap;
 
 //link font
 font-url(file)

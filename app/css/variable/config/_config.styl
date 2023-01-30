@@ -1,15 +1,12 @@
-font('Nunito-Regular','Nunito', 400)
-font('Nunito-Bold','Nunito', 700)
-$font = 'Nunito', sans-serif
-
 //$windowSize = (xl lg md sm)
 $windowSize = ("xl" 1280),\
 							("lg" 1024),\
 							("md" 768),\
-							("sm" 480)
+							("sm" 640)
 
 //Extends size
-$listExtend = (4),\
+$listExtend = (0),\
+							(4),\
 							(8),\
 							(10),\
 							(12),\
@@ -29,14 +26,14 @@ $gridGap = (4 8 12 16 20 24 32)
 
 $listType = ("xs" 12 10),\
 						("sm" 14 12),\
-						("main" 16 16),\
-						("md" 20 18),\
+						("main" 16 14),\
+						("md" 18 16),\
 						("mdx" 24 20),\
-						("lg" 32 24),\
-						("lgx" 44 32),\
+						("lg" 28 24),\
+						("lgx" 38 28),\
 						("xl" 52 44)
 
-$listTypeSimple = (12 14 16 18 20 24 32 44 64)
+$listTypeSimple = (10 12 14 16 18 20 24 28 32 44 64)
 
 //Icon size
 $listIcon = ("xs" 12),\
@@ -45,7 +42,8 @@ $listIcon = ("xs" 12),\
 						("mdx" 24),\
 						("lg" 32),\
 						("lgx" 44),\
-						("xl" 64)
+						("xl" 64),\
+						("xxl" 100),\
 
 //Border radius
 $listBr = (4 8 12 16 20 24 32 44 64)
@@ -56,33 +54,61 @@ $listFw = (300 400 500 600 700 900)
 //width-max container size
 $listWmax = (500 545 640 820 1320)
 
+//width-min container size
+$listWmin = (180 300)
+
+//z-index
+$listZindex = (10 20 30 40 50 100 500 1000 1100)
+
+//positions
+$position = (top right bottom left)
+
+//positionsValue
+$positionVal = (0 5 10 20 40)
+
+//opacityVal
+$opacityVal = (1 2 3 4 5 6 7 8 9 10)
+
 //color
-$blue = $mark = #3E51AB
-$blue-light = #1F6ED4
-$blue-bright = #002cff
+//$blue = $mark = #0028e5
+//$blue = $mark = #3E51AB
+//$blue = $mark = #0021bd
+$markCalc = #0d4cd3
+
+:root
+	--mark $markCalc
+$blue = $mark = var(--mark)
+$navy = #20369F
+$mark-dark = #2136AD
+$mark-simple = #f3f5f9
+$blue-light = $mark-light = #1F6ED4
+$blue-bright = $mark-bright = #002cff
 $sky = #39BAE8
 $sky-light = #B9EDF8
-$gray = #f9f9f9
+$red = #f20022
+
 $text-gray = #979797
 $yellow = #ffd312
 $green = #56955a
-$linkColor = black
+$linkColor = #5a5a5a
 
+$gray = #f9f9f9
 $grayPrimary = #565762
-$gray = #adaeb9
 $grayLight = #c4c5cc
 $graySnow = #f1f2f6
 
 $white = white
+$black = black
 $violet = $purpure = #6b33b2
 $orange = #ff7b27
 $blue = #0065bd
 $red = #ff4f4f
 $coralLight = #fff0f0
-$yellow = #ffa800
+$brownLight = #F6F4F1
+$brown = #F2EADE
 
 //TYPOGRAPHY COLORS
-$typeMain = black
+$typeMain = #3e3e3e
 $typePrimary = #5c5e6e
 $typeSecondary = #9699a8
 $typeDisable = #c8cad4
@@ -90,7 +116,7 @@ $typeDisable = #c8cad4
 //UI COLORS
 $borderHover = #bfc0c9
 $fieldBackground = #f1f2f6
-$border = $border-color = #dcdfe8
+$border = $border-color = #f3f3f3
 $overlay = rgba(32, 34, 44, 0.5)
 
 //STATE COLORS
@@ -104,9 +130,10 @@ $stateWarningBG = #ffedd8
 $stateWarning = #ff8a00
 
 $colors = {
-	'mark':$mark,
+	'mark':$markCalc,
 	'green':$green,
 	'white':$white,
+	'black':$black,
 	'grayPrimary':$grayPrimary,
 	'gray':$gray,
 	'grayLight':$grayLight,
@@ -116,6 +143,8 @@ $colors = {
 	'yellow':$yellow,
 	'blue':$blue,
 	'red':$red,
+	'brown':$brown,
+	'brownLight':$brownLight,
 	'typePrimary':$typePrimary,
 	'typeSecondary':$typeSecondary,
 	'typeDisable':$typeDisable,

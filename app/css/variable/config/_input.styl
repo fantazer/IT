@@ -1,21 +1,81 @@
 // === Inputs ===
-/*.input
-	padding 18px 15px
-	border 1px solid $border-color
+.input,.textarea,.select
+	padding 15px 20px
+	border 1px solid #dedede
 	resize: none
 	outline: 0 !important
-	border-radius 4px
+	border-radius 5px
 	display block!important
-	placeholder($typePrimary)
+	placeholder(red)
+	background: white
 	tr(all)
-	line-height: 1.6
 	&:focus
-		border 1px solid black
-		background: white
-	&.disable
-		@extend .disabled
-	&:hover
-		border 1px solid $borderHover*/
+		border 1px solid $mark
+		outline none!important
+
+.style-label
+	display flex
+	position relative
+	align-items center
+
+.check-el
+	input
+		position absolute
+		top 0
+		left -9999px
+	.sytle-input-element
+		width 24px
+		height 24px
+		position relative
+		display inline-block
+		margin-right 10px
+		background white
+		border 1px solid #cfcfcf
+		cp()
+		tr()
+		border-radius 5px
+		&:hover
+			border 1px solid #8d8d8d
+	.icon-check
+		display none
+	.sytle-input
+		&:checked ~ .sytle-input-element
+			flex(mid)
+			color white
+			background: $mark
+			border 1px solid $mark
+			.icon-check
+				display block
+				fill white
+				size 16px
+
+.style-label--radio
+	input
+		position absolute
+		top 0
+		left -9999px
+	.sytle-input-element
+		width 22px
+		height 22px
+		position relative
+		display inline-block
+		margin-right 10px
+		background white
+		border 1px solid #cfcfcf
+		round()
+		cp()
+	.icon-check
+		display none
+	.sytle-input
+		&:checked + .sytle-input-element
+			flex(mid)
+			color white
+			background: white
+			border 1px solid #cfcfcf
+			.icon-radio
+				round()
+				size 14px
+				background black
 
 // calc border size
 for $listBrItem in $listBr

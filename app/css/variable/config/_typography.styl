@@ -1,14 +1,23 @@
+font('Museo','MuseoSansCyrl-300', 400)
+font('Museo','MuseoSansCyrl-700', 700)
+font('PT Sans','PTSans-Regular', 400)
+font('PT Sans','PTSans-Bold', 700)
+$font = 'PT Sans', sans-serif
+$fontSecond = 'Museo', sans-serif
+
 //  ============================ Typography ============================
 // icon size
 for $listIconItem in $listIcon
 	.icon--{$listIconItem[0]},.icon--{$listIconItem[1]}
 		width $listIconItem[1] px
 		height $listIconItem[1] px
+		min-width $listIconItem[1] px
 	for $windowSizeItem in $windowSize
 		.{$windowSizeItem[0]}__icon--{$listIconItem[1]}
 			@media only screen and (max-width: $windowSizeItem[1]px)
 				width $listIconItem[1] px
 				height $listIconItem[1] px
+				min-width $listIconItem[1] px
 // icon size === end
 
 // line height
@@ -61,12 +70,46 @@ for $itemType in $typeAlign
 			@media only screen and (max-width: $windowSizeItem[1]px)
 				text-align $itemType[1]
 // type align === end
+.type--header
+	font-family Museo
 
 .type--ws
 	white-space nowrap
 
 .type--line
 	text-decoration: line-through
+
+h1
+	@extend .type--lgx
+	@extend .type--header
+	color black
+	font-family $fontSecond
+h2
+	@extend .type--header
+	@extend .type--lg
+	color black
+	font-family $fontSecond
+h3
+	@extend .type--header
+	@extend .type--lg
+	color black
+	font-family $fontSecond
+h4
+	@extend .type--header
+	@extend .type--main
+	color black
+	font-family $fontSecond
+h5
+	@extend .type--header
+	@extend .type--xs
+	color black
+	font-family $fontSecond
+a
+	color $linkColor
+	text-decoration: none
+	tr()
+	&:hover
+		color darken($linkColor,20)
 
 /*h5
 	@extend .type--sm
@@ -80,29 +123,21 @@ h1
 	@extend .type--xl
 
 // link
-a
-	color $linkColor
-	text-decoration: none
-	tr()
-	&:hover
-		color darken($linkColor,20)
-	&:visited
-		color darken($linkColor,30)*/
+*/
+
 
 .link--mark
 	color $mark
-	&:hover
-		color darken($mark,20)
-	&:visited
-		color darken($mark,30)
+	/*&:hover
+		color darken($mark-dark,20)*/
+
 
 .link--main
 	color $linkColor
 	hover-underline($linkColor)
 	&:hover
 		color darken($linkColor,20)
-	&:visited
-		color darken($linkColor,30)
+
 
 .link--text
 	color $linkColor
@@ -115,7 +150,6 @@ p
 	@extend .type--main
 
 .text
-	color $typeMain
 	h1,h2,h3,h4,h5
 		margin 3.5rem 0 2rem
 	h1:first-of-type,
@@ -156,3 +190,11 @@ p
 				top 6px
 			&:last-child
 				margin-bottom: 0
+	ol
+		margin-bottom: 30px
+		padding-left 26px
+		li
+			line-height: 1.6
+			margin-bottom: 16px
+	table
+		margin-bottom: 30px

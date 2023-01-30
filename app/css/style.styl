@@ -7,29 +7,65 @@
 @import "grid/extends.css"
 
 @import "variable/config/_config.styl"
-@import "variable/config/_grid.styl"
 
-@import "variable/config/_color.styl"
 @import "variable/config/_typography.styl"
+@import "variable/config/_btn.styl"
+@import "variable/config/_color.styl"
 @import "variable/config/_input.styl"
 
 @import "variable/_helper.styl"
 @import "variable/_default.styl"
-@import "variable/_elements.styl"
-@import "variable/_constant.styl"
-@import "../module/**/*"
 
 
 body
 	@extend .type--main
-	font-family $v-font
-	//color #717171
-	color #3e3e3e
-	line-height 1.2
-	letter-spacing 0.01em
+	font-family $font
+	//color $typeMain
+	color black
+	line-height 1.4
+	//letter-spacing 0.01em
+
+.main-cont-sm
+	center(800px,20px)
+
+.main-cont-md
+	center(1000px,20px)
 
 .main-cont
-	center(1200px,10px)
+	center(1200px,20px)
+
+.main-cont-lg
+	center(1600px,20px)
+
+.scroll-template
+	+above(1025px)
+		&::-webkit-scrollbar
+			-webkit-appearance: none
+			width: 4px
+			height: 8px
+			background: #DCDFE8
+			border-radius: 4px
+		&::-webkit-scrollbar-thumb
+			border-radius: 4px
+			background: $mark
+		scrollbar-color  #DCDFE8 #f8f8f8
+		scrollbar-width thin
+		overscroll-behavior contain
+.scroll-template-light
+	+above(1025px)
+		&::-webkit-scrollbar
+			-webkit-appearance: none
+			width: 4px
+			height: 8px
+			background: #f8f8f8
+			border-radius: 4px
+		&::-webkit-scrollbar-thumb
+			border-radius: 4px
+			background: $border-color
+		scrollbar-color #DCDFE8 #f8f8f8
+		scrollbar-width thin
+		overscroll-behavior contain
+
 
 .no-mark
 	transition none
@@ -46,7 +82,6 @@ body
 	+below(1024px)
 		padding: 0
 		height: 50px
-	padding: 10px 0
 	flex(between)
 .header-top__logo
 	@extend .type--xl
@@ -57,11 +92,24 @@ body
 .header-top__search
 	+below(1024px)
 		display: none
-	width: 50%
+	width: 45%
 	input
-		border-radius 40px
+		border-radius 24px
+		background none
+		border 1px solid #ffffff0f
+		//background: #172e9e
+		padding: 10px 20px
+		&::-webkit-input-placeholder
+			color:#ffffff70
+		&::-moz-placeholder
+			color:#ffffff70
+		&:-moz-placeholder
+			color:#ffffff70
+		&:-ms-input-placeholder
+			color:#ffffff70
+		color white
 		&:hover
-			border 1px solid lighten($blue,20)
+			border 1px solid #ffffff63
 		width: 100%
 .header-top__nav
 	+below(1024px)
@@ -76,7 +124,7 @@ body
 		display: none
 	&:hover
 		.icon
-			fill $blue-bright
+			fill $mark-bright
 	cp()
 	padding: 10px 20px
 	border-left 1px solid $border-color
@@ -86,14 +134,14 @@ body
 			size 20px
 		tr(all)
 		size 30px
-		fill $blue
+		fill $mark
 //.icon
 .header-top__nav-cource
 	+below(640px)
 		display: none
 	&:hover
 		.icon
-			fill $blue-bright
+			fill $mark-bright
 	cp()
 	padding: 10px 20px
 	border-left 1px solid $border-color
@@ -104,7 +152,7 @@ body
 			size 20px
 		tr(all)
 		size 30px
-		fill $blue
+		fill $mark
 .header-top__nav-phone
 	@extend .type--md
 	font-weight:700
@@ -125,10 +173,12 @@ body
 	+below(640px)
 		width: 100%
 	//background: #000
-	background: $blue
-.header-nav-wrap--open
-	transform translateX(0%)
-	overflow-y: auto
+	//background: $mark
+	background: #3e51ab
+	&.header-nav-wrap--open
+		transform translateX(0%)
+		overflow-y: auto
+
 .header-nav
 	+below(1024px)
 		height: 100vh
@@ -154,7 +204,7 @@ body
 	position: relative
 	cp()
 	&:hover
-		background: $blue-bright
+		background: $mark-bright
 	.icon
 		size 20px
 		fill white
@@ -172,7 +222,7 @@ body
 	font-family:Museo
 	padding: 15px 30px
 	display: block
-
+	font-size: 14px
 .header-nav__el-wrap
 	display: block
 .icon-nav-menu
@@ -297,7 +347,7 @@ body
 	flex(between)
 	margin-top: auto
 .banner-item__price
-	@extend .type--lxg
+	@extend .type--md
 	color black
 
 //.banner-item__date
@@ -315,6 +365,7 @@ body
 		margin: 30px 0
 	margin: 100px 0
 	position: relative
+/*
 .section-title
 	+below(768px)
 		text-align: center
@@ -327,6 +378,7 @@ body
 	color black
 	line-height: 1
 	display: block
+*/
 
 .popular
 	f()
@@ -354,7 +406,7 @@ body
 
 .popular__el__code
 	@extend .type--lg
-	color $blue
+	color $mark
 	margin-bottom: 10px
 
 
@@ -393,7 +445,6 @@ body
 	text-align: center
 //.banner-item__date
 .popular__el__get
-	background: $gray
 	margin-left: auto
 	cp()
 	//color white
@@ -406,7 +457,7 @@ body
 		font-weight:700
 	.icon
 		size 18px
-		fill $blue
+		fill $mark
 
 
 .popular__el-title
@@ -415,11 +466,10 @@ body
 .star-row
 	f()
 	margin-bottom: 20px
-	.icon
-		size 12px
-		margin-right: 5px
-		fill $yellow
+
 .header
+	//background $mark-dark
+	background #344396
 	+below(1024px)
 		background: white
 		position: relative
@@ -433,7 +483,9 @@ body
 .header-small
 	+below(1024px)
 		display: none!important
-	background: $gray
+	//background: $navy
+	background: #34418d
+
 
 .header-small-wrap
 	f()
@@ -501,11 +553,10 @@ body
 	+below(640px)
 		box-shadow 0 0 0
 		border-radius 5px
-	box-shadow 0px 8px 10px #c7c3c3
 	border-radius 5px 5px 0 0
 .cat__el__code
 	@extend .type--md
-	color $blue
+	color $mark
 	font-weight:700
 	margin-bottom: 10px
 .cat__el__title
@@ -565,7 +616,7 @@ body
 		content ''
 		position: absolute
 		size 4px
-		background: $blue
+		background: $mark
 		round()
 		left -10px
 		top 4px
@@ -588,12 +639,12 @@ body
 		content ''
 		size 3px
 		round()
-		background: lighten($blue,10)
+		background: lighten($markCalc,10)
 		left: -4px
 		position: absolute
 		top 6px
 	&:hover
-		color $blue
+		color $mark
 
 .cat__el-sub
 	+below(640px)
@@ -601,13 +652,12 @@ body
 		display: none
 	position: absolute
 	top 100%
-	background: white
+	background: $gray
 	z-index 5
-	left 0px
+	left 0
 	padding: 30px
 	display: none
 	border-radius 0 0 5px 5px
-	box-shadow 0px 8px 10px #c7c3c3
 	border-top 1px solid $border-color
 .section--extend
 	padding: 60px 0
@@ -676,9 +726,9 @@ body
 	f()
 	align-items: center
 .advant-list__el-title
-	@extend .type--lxg
+	@extend .type--md
 	margin-bottom: 10px
-	color $blue
+	color $mark
 .advant-list__el-icon
 	size 100px
 	round()
@@ -688,7 +738,7 @@ body
 	box-shadow 0 1px 10px #d5d4d4
 	.icon
 		size 40px
-		fill $blue
+		fill $mark
 .advant-list__el-text
 	max-width 300px
 	line-height: 1.6
@@ -716,13 +766,9 @@ body
 	&:hover
 		bsh-hover()
 .command-el__img
-	+below(640px)
-		margin-left: auto
-		margin-right: auto
-	size 100px
-	round()
 	bg-full()
-	background-position: center top
+	background-position center top
+	padding: 55% 10%
 
 .command-el__content
 	+below(640px)
@@ -737,7 +783,7 @@ body
 		text-align: center
 	@extend .type--md
 	font-weight:700
-	color $blue
+	color $mark
 	margin-bottom: 5px
 
 .command-el__staff
@@ -765,7 +811,7 @@ body
 	content ''
 	round()
 	size 8px
-	background: $blue
+	background: $mark
 
 .command-list
 	f()
@@ -860,7 +906,7 @@ body
 
 .news-list__el-date-val
 	font-weight:bold
-	color $blue
+	color $mark
 
 .news-list__el-date-day
 	text-align: center
@@ -868,7 +914,7 @@ body
 	opacity .8
 
 .section-title--blue
-	color $blue
+	color $mark
 	border-bottom 1px solid #3e51ab12
 
 .section--category
@@ -953,16 +999,8 @@ body
 	padding: 30px
 	background: white
 	margin-bottom: 30px
-	font-size: 15px
-	li
-		font-size: 14px
 
-.content__info-about
-	+below(768px)
-		font-size: 12px
-	font-size: 15px
-	li
-		font-size: 14px
+
 .content__info-wrap--near
 	+below(640px)
 		padding: 0
@@ -972,10 +1010,6 @@ body
 
 
 .content__info-wrap--read
-	p,li,a
-		+below(768px)
-			font-size: 13px
-		font-size: 15px
 	table
 		+below(768px)
 			td
@@ -986,15 +1020,15 @@ body
 	strong,b
 		color black
 	a
-		color $blue
-		text-decoration: none!imoprtant
+		color $mark
+		text-decoration: none!important
 		position: relative
 
 .toolbar__title
 	f()
 	padding: 20px 10px 10px 40px
 	font-weight: bold
-	color darken($blue,10)
+	color darken($markCalc,10)
 	border-radius 10px 10px 0 0
 	align-items: center
 	position: relative
@@ -1003,7 +1037,7 @@ body
 		content ''
 		position: absolute
 		size 10px
-		background: $blue
+		background: $mark
 		top 50%
 		left 15px
 		border-radius 4px
@@ -1030,8 +1064,8 @@ body
 .content__info-title
 	+below(768px)
 		text-align: center
-	@extend .type--lxg
-	color $blue
+	@extend .type--md
+	color $mark
 	margin-bottom: 30px
 	padding-bottom: 25px
 	border-bottom 1px solid #3e51ab0f
@@ -1046,13 +1080,13 @@ body
 
 .toolbar__list-more
 	flex(between)
-	color $blue
+	color $mark
 	font-weight bold
 	padding: 15px
 	cp()
 	.icon
 		size 12px
-		fill $blue
+		fill $mark
 		margin-right: 10px
 
 .panel
@@ -1072,7 +1106,7 @@ body
 .panel__info
 	margin-right: 10px
 .panel__day-val
-	@extend .type--lxg
+	@extend .type--md
 	color black
 .panel__price
 	padding: 0 20px
@@ -1081,7 +1115,7 @@ body
 	align-items: center
 	margin-right: 30px
 .panel__price-val
-	@extend .type--lxg
+	@extend .type--md
 	color black
 .panel__date
 	f()
@@ -1091,7 +1125,7 @@ body
 	margin-left: auto
 	//background: $green
 	//background: $yellow
-	background: darken($blue,5)
+	background: darken($markCalc,5)
 	padding: 20px 40px
 	font-weight: bold
 	color white
@@ -1101,22 +1135,24 @@ body
 	cp()
 	tr(all)
 	&:hover
-		background: lighten($blue,10)
-
+		background: lighten($markCalc,10)
 
 .nice-select
-	border-radius 25px!important
+	border-radius 8px!important
 	display: block
 	color #000000
-	font-size 14px
+	font-size 16px
 	font-weight 700
 	height: auto
-	line-height:auto
+	line-height:3.4
 	padding-left: 20px!important
 	padding-right:40px!important
-	border 1px solid rgba(62,81,171,0.06)
+	border 1px solid #dfdfdf
+	font-family: Museo
 	&:after
 		right: 18px
+		border-right 1px solid #dfdfdf
+		border-bottom 1px solid #dfdfdf
 	.list
 		width: calc(100% )
 		left 0px
@@ -1137,12 +1173,12 @@ select.select-beauty
 	border 1px solid $border-color
 
 .nice-select.open
-	border-radius  25px 25px 0 0!important
+	border-radius  12px 12px 0 0!important
 	border 1px solid rgba(68, 68, 68, 0.11)!important
 	border-bottom 0
 	.list
 		margin-top: 1px
-		border-radius 0 0 25px 25px!important
+		border-radius 0 0 12px 12px!important
 
 .tab
 	+below(640px)
@@ -1159,28 +1195,17 @@ select.select-beauty
 	text-align: center
 	font-weight:bold
 	&:hover
-		color $blue
+		color $mark
 .tab__el--active
-	border-bottom 2px solid $blue
+	border-bottom 2px solid $mark
 	font-weight 700
 	margin-bottom: -1px
-	color $blue
+	color $mark
 
 
 .tab-content
-	+below(768px)
-		font-size: 12px
-		li
-			font-size: 12px
 	display: none
-	line-height: 1.6
-	font-size: 15px
-	p,li
-		font-size: 14px
-		line-height: 1.6
-	h3
-		font-size: 15px
-		margin: 15px 0
+
 .tab-content--active
 	display: block!important
 
@@ -1365,10 +1390,10 @@ select.select-beauty
 	.icon
 		size 20px
 		margin-right: 15px
-		fill $blue
+		fill $mark
 .footer__bottom
 	padding: 15px
-	background: $blue
+	background: $mark
 .footer__bottom-text
 	+below(640px)
 		br
@@ -1401,11 +1426,11 @@ select.select-beauty
 .advant_el-icon
 	.icon
 		size 40px
-		//fill $blue
+		//fill $mark
 	margin-right: 20px
 .advant_el-text
 	line-height: 1.6
-	@extend .type--mxd
+	@extend .type--md
 	color $text-gray
 	font-size: 14px
 //modal
@@ -1509,7 +1534,7 @@ select.select-beauty
 .modal-title
 	+below(768px)
 		font-size: 20px
-	@extend .type--lxg
+	@extend .type--md
 	margin-bottom: 20px
 	text-align: center
 	//color white
@@ -1553,7 +1578,7 @@ select.select-beauty
 	color black
 	font-size: 12px
 	a
-		color $blue
+		color $mark
 .field-error
 	.error
 		display: none!important
@@ -1613,7 +1638,7 @@ select.select-beauty
 	margin-bottom: 5px
 	color black
 .review__el-staff
-	color $blue-light
+	color $mark-light
 	margin-bottom: 10px
 .review__el-text
 	line-height: 1.6
@@ -1651,11 +1676,11 @@ select.select-beauty
 	font-weight:bold
 	color black
 
-.order-get
+/*.order-get
 	@extend .btn--md
 	@extend .btn--mark
 	width: 100%
-	margin-top: 40px
+	margin-top: 40px*/
 
 .header-nav__el--order
 	margin-left: auto
@@ -1674,14 +1699,14 @@ select.select-beauty
 	+below(768px)
 		display: none
 	padding: 30px 20px
-	//border 1px solid $blue
+	//border 1px solid $mark
 	position: relative
 	overflow hidden
 .toolbar-article__head
 	position: absolute
 	top 0
 	right: 0
-	background: $blue
+	background: $mark
 	color white
 	padding: 5px 10px
 //.toolbar-article__slider
@@ -1690,8 +1715,8 @@ select.select-beauty
 .toolbar-article__date
 	margin-bottom: 10px
 .toolbar-article__title
-	@extend .type--lxg
-	color $blue
+	@extend .type--md
+	color $mark
 	margin-bottom: 20px
 	tr(all)
 	&:hover
@@ -1734,16 +1759,12 @@ select.select-beauty
 	padding: 15px 20px 15px 20px
 	br(10px)
 	tr(all)
-	bsh()
 	f()
 	fl()
 	background: white
 	width: calc(100%/ 3 - 20px)
 	margin: 10px
-	&:hover
-		+below(640px)
-			box-shadow 0 0 0
-		box-shadow 0px 10px 10px #c5c2c2
+
 
 .b-el-title__top
 	flex(between)
@@ -1756,8 +1777,8 @@ select.select-beauty
 	font-weight:700
 	color black
 .b-el-title
-	@extend .type--lxg
-	color $blue
+	@extend .type--md
+	color $mark
 	margin-bottom: 10px
 .b-el-cont
 	f()
@@ -1780,7 +1801,7 @@ select.select-beauty
 	justify-content: center
 	.icon
 		size 20px
-		fill $blue
+		fill $mark
 .b-el-attr__val
 	+below(640px)
 		font-size: 10px
@@ -1794,20 +1815,12 @@ select.select-beauty
 	padding: 50px 0
 
 .news-slider__el
-	+below(768px)
-		box-shadow 0 0 0
 	padding: 40px 20px
 	background: white
-	br(10px)
-	bsh()
+	br(8px)
 	tr(all)
 	margin-bottom: 20px
-	border 1px solid #f3f1f1
-	&:hover
-		+below(768px)
-			box-shadow 0 0 0
-			border 1px solid #f3f1f1
-		bsh-hover()
+	border 1px solid $border-color
 
 .news-slider__el-date
 	margin-bottom: 10px
@@ -1837,7 +1850,6 @@ select.select-beauty
 		display: none
 	.icon
 		size 20px
-		fill $brown
 	.icon-close
 		display: none
 
@@ -1851,7 +1863,7 @@ select.select-beauty
 	+above(1024px)
 		display: none!important
 	display: none
-	background: darken($blue,20)
+	background: darken($markCalc,20)
 .slider-el
 	color white
 	flex(mid)
@@ -1873,7 +1885,7 @@ select.select-beauty
 	cp()
 	&:hover
 		.icon
-			fill $blue
+			fill $mark
 	.icon
 		size 18px
 
@@ -1997,8 +2009,8 @@ select.select-beauty
 		font-size: 26px
 		margin-bottom: 10px
 		display: block
-	@extend .type--lxg
-	color $blue
+	@extend .type--md
+	color $mark
 	margin-bottom: 5px
 
 .schedule__descr
@@ -2030,7 +2042,7 @@ select.select-beauty
 	tr(all)
 	.icon
 		+below(640px)
-			fill $blue
+			fill $mark
 			opacity:1
 		size 14px
 		opacity: .4
@@ -2162,19 +2174,19 @@ select.select-beauty
 	flex(mid)
 	cp()
 	tr(all)
-	border 1px solid $blue
+	border 1px solid $mark
 	margin-left: 20px
 	&:hover
-		background: $blue
+		background: $mark
 		.icon
 			fill white
 	.icon
 		tr(all)
 		size 16px
-		fill $blue
+		fill $mark
 
 .schedule-main-title__icon--active
-	background: $blue
+	background: $mark
 	.icon
 		fill white
 
@@ -2207,10 +2219,10 @@ select.select-beauty
 	@extend .type--lg
 	margin-bottom: 20px
 	up()
-	color white
+	color black
 	font-size: 44px
 .intro__text
-	color white
+	color black
 	opacity: .8
 	line-height: 1.6
 	margin-bottom: 30px
@@ -2280,7 +2292,6 @@ select.select-beauty
 		.icon
 			fill white
 	.header-top__search
-		placeholder(rgba(255, 255, 255, 0.61))
 		input
 			background: transparent
 			border 1px solid rgba(255, 255, 255, 0.61)
@@ -2382,7 +2393,7 @@ select.select-beauty
 		margin-bottom: 30px
 	+below(640px)
 		text-align: left
-	@extend .type--lxg
+	@extend .type--md
 	color black
 	margin-bottom: 20px
 
@@ -2413,7 +2424,7 @@ select.select-beauty
 		display: none
 		size 20px
 		margin-right: 10px
-		fill $blue
+		fill $mark
 .staff-cert__slider
 	margin: 50px 0
 .staff-cert__slider-el
@@ -2452,7 +2463,7 @@ select.select-beauty
 .news-grid__el-date
 	font-weight:bold
 	margin-bottom: 30px
-	color $blue
+	color $mark
 .news-grid__el-title
 	@extend .type--md
 	font-weight:bold
@@ -2474,8 +2485,8 @@ select.select-beauty
 	tr(all)
 	&:hover
 		bsh-hover()
-		background: $blue
-		border-color $blue
+		background: $mark
+		border-color $mark
 		.choose-row__title
 			color white
 			opacity:.6
@@ -2502,8 +2513,8 @@ select.select-beauty
 
 .choose-row--active
 	bsh-hover()
-	background: $blue
-	border-color $blue
+	background: $mark
+	border-color $mark
 	.choose-row__title
 		color white
 		opacity:.6
@@ -2569,8 +2580,8 @@ select.select-beauty
 .sale__el--head
 	margin-bottom: 10px
 .sale__el--name
-	@extend .type--lxg
-	color $blue
+	@extend .type--md
+	color $mark
 	margin-bottom: 10px
 .sale__el--text
 	line-height: 1.6
@@ -2617,7 +2628,7 @@ select.select-beauty
 	padding: 30px
 
 .adress-title
-	@extend .type--mmd
+	@extend .type--mdx
 	margin-bottom: 40px
 
 
@@ -2630,7 +2641,7 @@ select.select-beauty
 	margin-right: 20px
 	.icon
 		size 30px
-		fill darken($blue,10)
+		fill darken($markCalc,10)
 //.adress-row__cont
 
 .adress-row__title
@@ -2642,10 +2653,10 @@ select.select-beauty
 		font-size: 14px
 	font-size: 16px
 	font-weight: bold
-	color darken($blue,10)
+	color darken($markCalc,10)
 	font-family: Museo
 	a
-		color darken($blue,10)
+		color darken($markCalc,10)
 
 .adress-row-wrap
 	margin-bottom: 30px
@@ -2674,7 +2685,7 @@ select.select-beauty
 	color black
 .manager__el-phone
 	margin-bottom: 10px
-	color darken($blue,10)
+	color darken($markCalc,10)
 	font-family: Museo
 	font-weight: bold
 	display: block
@@ -2711,7 +2722,7 @@ select.select-beauty
 	margin: 20px 0
 
 .toolbar-code
-	color $blue
+	color $mark
 	font-weight: 700
 	font-family: Museo
 
@@ -2724,14 +2735,14 @@ select.select-beauty
 		margin: 20px auto
 	margin-bottom: 20px
 
-.old_h3,.section-title,.article-title
+/*.old_h3,.section-title,.article-title
 	+below(768px)
 		font-size: 16px
 	color black
 	margin-bottom: 20px
 	display: block
 	font-size: 28px
-	font-weight: bold
+	font-weight: bold*/
 
 .client-list__banner
 	line-height: 1.6
@@ -2770,7 +2781,7 @@ select.select-beauty
 	br(10px)
 	background: white
 	a
-		color $blue
+		color $mark
 		text-decoration: none!imoprtant
 		position: relative
 		&:before
@@ -2779,7 +2790,7 @@ select.select-beauty
 			bottom -2px
 			height: 1px
 			width: 100%
-			background: $blue
+			background: $mark
 			opacity: .4
 
 .mark-box
@@ -2837,7 +2848,7 @@ select.select-beauty
 	+below(640px)
 		font-size: 16px
 		font-weight:700
-		color $blue
+		color $mark
 	max-width 350px
 
 .schedule__more-text--save
@@ -3032,7 +3043,7 @@ select.select-beauty
 	position: fixed
 	bottom 30px
 	left 0
-	background: $blue
+	background: $mark
 	padding: 10px
 	height: 60px
 	width: 70px
@@ -3092,7 +3103,7 @@ select.select-beauty
 	+below(480px)
 		width: 100%
 	@extend .btn--md
-	@extend .btn--light-blue
+	@extend .btn--light-mark
 	font-weight: 700
 	width: 250px
 
@@ -3241,13 +3252,13 @@ select.select-beauty
 		position absolute
 		left 0
 		top 5px
-		background: $blue
+		background: $mark
 .cat-type__img
 	width: 250px
 	bottom 0
 	z-index 10
 /*.cat-type__el--mark
-	background: $blue
+	background: $mark
 	color white
 	.cat-type__title
 		color white
@@ -3274,3 +3285,6 @@ select.select-beauty
 	img
 		width: 100%
 // add cource type === end
+
+
+

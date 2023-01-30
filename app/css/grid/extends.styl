@@ -147,3 +147,13 @@ for $windowSizeItem in $windowSize
 
 //simple extend === end
 
+// positions
+for $positionValItem in $positionVal
+	for $positionItem in $position
+		.{$positionItem}-{$positionValItem}
+			{$positionItem} ($positionValItem)px
+		for $windowSizeItem in $windowSize
+			.{$windowSizeItem[0]}__{$positionItem}-{$positionValItem}
+				@media only screen and (max-width: $windowSizeItem[1]px)
+					{$positionItem} ($positionValItem)px
+// positions === end
